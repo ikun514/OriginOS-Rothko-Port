@@ -1,5 +1,5 @@
-OriginOS 6 (vivo PD2339) port - experience package v28
-=====================================================
+OriginOS 6 (vivo PD2339) port - experience package v28 (full boot chain)
+=======================================================================
 
 Target device : Redmi K70 Ultra (rothko, 2407FRK8EC, MT6989)
 Port source   : vivo PD2339 (iQOO Neo9 Pro / Neo9S Pro) OriginOS 6 / Android 16 / 16.2.13.1.W10
@@ -8,19 +8,40 @@ Project       : https://github.com/ikun514/OriginOS-Rothko-Port
 == Contents ==
   flash_all.bat                    one-click flash script (Windows)
   tools\adb.exe, fastboot.exe ...  adb / fastboot binaries
-  images\super_v28.img             super partition image (system/vendor/product/odm/... all logical partitions)
-  images\vendor_boot_patched.img   patched vendor_boot (AVB tokens removed, required for booting)
+  images\super_v28.img             super partition image (all logical partitions)
+  images\vendor_boot_patched.img   patched vendor_boot - MODIFIED BY THE PORT (AVB tokens removed, REQUIRED)
+  images\boot_a.img                stock boot          (unchanged by the port, included for consistency)
+  images\init_boot_a.img           stock init_boot     (unchanged by the port, included for consistency)
+  images\dtbo_a.img                stock dtbo          (unchanged by the port, included for consistency)
+  images\vbmeta_a.img              stock vbmeta        (unchanged by the port, included for consistency)
+  images\vbmeta_system_a.img       stock vbmeta_system (unchanged by the port, included for consistency)
+  images\vbmeta_vendor_a.img       stock vbmeta_vendor (unchanged by the port, included for consistency)
   SHA256SUMS.txt                   checksums
+
+== Which partitions are actually ported? ==
+  Inside super (all replaced/modified):
+    system      = vivo OriginOS 6 system (+ patched libvivo_servers/libsensorservice, portfix init hooks,
+                  removed SetupWizard, real model props, permissive allow rules)
+    product     = vivo product + rothko Device overlays (DevicesAndroidOverlay/DevicesOverlay)
+    odm         = rothko odm with ro.product.odm.brand/manufacturer = vivo,
+                  xiaomi citsensorservice rc removed (was spinning at 99% CPU)
+    system_ext  = vivo system_ext (ported)
+    vendor / mi_ext / vendor_dlkm / system_dlkm / odm_dlkm = stock rothko (unchanged)
+  Outside super:
+    vendor_boot = stock rothko with first-stage fstab AVB tokens removed  <-- modified, included
+    boot / init_boot / dtbo / vbmeta* = not modified by the port; stock copies included so that
+                  the flashed boot chain is consistent (note: flashing stock init_boot removes
+                  KernelSU/Magisk root if you had it - the port does not need root)
 
 == Requirements ==
   1. Redmi K70 Ultra with unlocked bootloader
-  2. Stock HyperOS 3.0.303 base firmware (all non-super partitions stay stock)
+  2. Stock HyperOS 3.0.303 base firmware (must match the included stock boot chain)
   3. Windows with fastboot driver installed (device shows Android Bootloader Interface)
 
 == Flash steps ==
   1. Power off; hold Volume-Down + Power to enter bootloader (FASTBOOT screen)
   2. Connect USB cable
-  3. Run flash_all.bat and follow prompts (flashes vendor_boot + super, optional /data wipe)
+  3. Run flash_all.bat and follow prompts
   4. First boot takes 1-3 minutes; the script then enables USB debugging and mounts external storage
 
 == Working features (tested on v28) ==

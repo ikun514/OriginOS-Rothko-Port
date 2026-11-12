@@ -408,3 +408,15 @@ overlay list                    -> Devices overlays [x]
 - 内容: flash_all.bat、tools\adb.exe/fastboot.exe/AdbWinApi.dll/AdbWinUsbApi.dll、images\super_v28.img、images\vendor_boot_patched.img、SHA256SUMS.txt、README-experience.txt、分享说明.txt
 - flash_all.bat 流程: 校验 fastboot -> 刷 vendor_boot -> 刷 super -> 可选 fastboot -w -> 重启 -> adb wait-for-device -> 自动开 USB 调试 + sm mount emulated;0
 - GitHub 仓库同步: commit 76a4c41（含体验包制作脚本与说明）
+### 体验包 v2（完整刷机包，2026-08-12 13:05 重打包）
+- 目录: G:\OriginOS_Work\release\OriginOS6_rothko_v28_experience\
+- 压缩包: G:\OriginOS_Work\release\OriginOS6_rothko_v28_experience.zip（9.18 GB，15 个条目）
+- SHA256: F4902E65F002D511D73394F305DE7CBA95637DA32603E3E2A6CD670A228568DE
+- 相比初版补全了完整启动链：新增 boot_a.img、init_boot_a.img、dtbo_a.img、vbmeta_a.img、vbmeta_system_a.img、vbmeta_vendor_a.img（均为原厂，未修改，仅为一致性）
+- 移植实际修改的分区：
+  - super 内：system（vivo system + lib 补丁 + portfix init 注入 + 移除 SetupWizard + 真实型号 props + permissive allow）；product（vivo product + rothko Device overlay）；system_ext（vivo）；odm（rothko odm + brand=vivo + 删除 citsensorservice rc）
+  - super 内 vendor / mi_ext / vendor_dlkm / system_dlkm / odm_dlkm 保持 rothko 原厂
+  - super 外：vendor_boot（去 AVB，必需）—— 已包含
+  - boot / init_boot / dtbo / vbmeta*：移植未修改；包里放原厂副本以保证刷机链一致（刷原厂 init_boot 会移除设备上已有的 KernelSU/Magisk root；本移植不需要 root）
+- flash_all.bat 顺序：vbmeta - vbmeta_system - vbmeta_vendor - boot - init_boot - dtbo - vendor_boot(patched) - super - 可选 -w - 重启 - adb wait-for-device - 自动开 USB 调试 + sm mount emulated;0
+- 制作脚本：scripts/make_experience_package3.ps1；bat/README 源文件在 05_flash/experience/
