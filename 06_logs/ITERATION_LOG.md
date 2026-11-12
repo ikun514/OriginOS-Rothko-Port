@@ -200,3 +200,9 @@ KSU 模块同步更新：post-fs-data 做 permissive + 一次性清理 HyperOS �
 - 刷 v12 super 后执行 fastboot -w 干净启动：用户确认 **桌面正常、设置能打开、关于手机正常** → 之前 settings 崩是 /data 跨版本残留导致，非镜像问题。
 - 交付： 7_docs/STATUS_2026-08-12_HANDOVER.md（含全部证据、根因、SOP、资产、P0–P4 计划、回滚）。
 - 待办（下一轮）：adb/USB(MTP) + 基带（怀疑 SELinux Enforcing）；vivo 账号登录；开发者选项；product overlay 验证。
+
+## v0.11 v25/v26：功能收尾（2026-08-12 11:20-11:55）
+- v25：model props=Redmi K70 Ultra；init service 开机自动化（自动开 USB 调试 + 跳过 OOBE），两项分别重置→重启验证通过；USB adb 正常。
+- v26：product overlay（rothko DevicesAndroidOverlay/DevicesOverlay）合入，cmd overlay list 显示两个 overlay 已启用；设置正常。
+- 相机：media.camera 未注册（vivo 私有相机栈），用户确认移植包不要求 vivo 相机。
+- GitHub 仓库已建立并推送（private）：https://github.com/ikun514/OriginOS-Rothko-Port

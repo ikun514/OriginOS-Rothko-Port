@@ -1,0 +1,78 @@
+﻿com.google.android.networkstack.tethering
+--- com.google.android.networkstack.tethering.overlay
+
+com.android.networkstack.inprocess
+--- com.android.networkstack.inprocess.overlay
+
+com.android.networkstack
+[x] com.android.networkstack.overlay
+
+com.android.connectivity.resources
+--- com.vivo.android.connectivity.common.resources.overlay
+--- com.vivo.android.connectivity.manufacturer.resources.overlay
+--- com.vivo.android.connectivity.platform.resources.overlay
+
+android
+[x] com.mediatek.frameworkresoverlay
+[x] com.mediatek.FrameworkResOverlayExt
+[x] com.google.android.overlay.gmsconfig.common
+[x] com.miui.systemui.overlay.devices.android
+[ ] com.android.internal.display.cutout.emulation.corner
+[ ] com.android.internal.display.cutout.emulation.double
+[ ] com.android.internal.display.cutout.emulation.hole
+[ ] com.android.internal.display.cutout.emulation.tall
+[ ] com.android.internal.systemui.navbar.threebutton
+[ ] com.android.theme.font.notoserifsource
+[ ] com.android.internal.display.cutout.emulation.waterfall
+[ ] com.android.internal.systemui.navbar.transparent
+[ ] com.android.role.notes.enabled
+[ ] com.android.internal.systemui.navbar.gestural
+[x] com.android.systemui:neutral
+[x] com.android.systemui:accent
+[x] com.android.systemui:dynamic
+[ ] com.android.systemui:vivo
+
+com.android.providers.settings
+--- com.mediatek.SettingsProviderResOverlay
+
+com.android.se
+[x] com.android.se.resources.overlay
+
+com.google.android.networkstack
+--- com.google.android.networkstack.overlay
+
+com.android.wifi.resources
+[x] com.android.wifi.resources.overlay
+[x] com.mediatek.wifi.system.resources.overlay
+[x] com.vivo.android.wifi.common.resources.overlay
+[x] com.vivo.android.wifi.manufacturer.resources.overlay
+--- com.vivo.android.wifi.platform.resources.overlay
+
+com.google.android.connectivity.resources
+--- com.vivo.android.connectivity.mainline.common.resources.overlay
+--- com.vivo.android.connectivity.mainline.manufacturer.resources.overlay
+--- com.vivo.android.connectivity.mainline.platform.resources.overlay
+
+com.android.networkstack.tethering
+[x] com.android.networkstack.tethering.overlay
+
+com.android.cellbroadcastreceiver.module
+--- com.mediatek.cellbroadcastuiresoverlay
+
+com.android.settings
+--- com.mediatek.MtkSettingsResOverlay
+[ ] com.android.settings:accent_settings0
+
+com.android.networkstack.tethering.inprocess
+--- com.android.networkstack.tethering.inprocess.overlay
+
+com.google.android.wifi.resources
+--- com.android.wifi.mainline.resources.overlay
+--- com.mediatek.wifi.system.mainline.resources.overlay
+--- com.vivo.android.wifi.mainline.common.resources.overlay
+--- com.vivo.android.wifi.mainline.manufacturer.resources.overlay
+--- com.vivo.android.wifi.mainline.platform.resources.overlay
+
+com.android.systemui
+[x] com.miui.systemui.devices.overlay
+

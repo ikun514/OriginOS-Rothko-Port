@@ -315,3 +315,57 @@ fastboot flash vendor_boot C:\...\02_base\images\rothko_current_vendor_boot_a.im
 因此当前交付状态 = **super v12 + 干净 /data → OriginOS 6 可用桌面**。
 仍缺：adb/USB(MTP)、基带、vivo 账号登录、开发者选项（后两项需 adb logcat 才能定位）。
 下一轮请先按 P0 解决 adb（permissive 或 vivo USB 栈），再做 P1–P4。
+
+---
+
+## 11. v25/v26 结果（2026-08-12 11:20–11:55，已用 adb 逐项验证）
+
+### v25（system 特性版）
+- 关于本机型号：o.vivo.market.name / o.vivo.internet.name = Redmi K70 Ultra（真实值）✅
+- 镜像级开机自动化（/system/etc/init/hw/init.usb.rc 里追加 service portfix_boot，seclabel u:r:su:s0，
+  boot_completed 时执行 /system/etc/portfix_boot.sh）：
+  - 自动开启 USB 调试：实测把 db_enabled/development_settings_enabled 置 0 → 重启 → 自动恢复为 1 ✅
+  - 跳过 OOBE：实测把 setup_skipped/device_provisioned/user_setup_complete 置 0 → 重启 → 自动恢复为 1，
+    HOME 保持 com.bbk.launcher2/.Launcher ✅
+  （两项分别重置、分别重启验证）
+- USB 调试：**adb over USB 正常**（sys.usb.config=adb，adbd running，Windows 识别 VID_2717&PID_FF08）✅
+
+### v26（product overlay 版）
+- product 镜像用「原 product 标签采集 + --mount-point=/product」重建，加入 rothko 的
+  DevicesAndroidOverlay.apk(16,892B) / DevicesOverlay.apk(23,757,406B)，标签 vendor_file，根目录 vendor_file ✅
+- cmd overlay list 实测两个 overlay **已启用**：
+  [x] com.miui.systemui.overlay.devices.android、[x] com.miui.systemui.devices.overlay ✅
+- 设置可正常打开（	opResumedActivity=com.android.settings/.Settings）✅
+
+### 当前已知限制（用户已接受 / 说明）
+- **相机不可用**：media.camera 服务未注册（CameraService 未完成启动），vivo 相机栈为 vivo 私有
+  （ivocameraserver + vivo 专有 HAL/算法库），移植包无法直接打开 —— 用户明确表示“别搞 vivo 相机了”。
+- **MTP 文件传输不可用**：当前为保证 USB 调试采用 adb-only gadget 组合；vivo MTP 需要 vivo 的 usbd
+  + endor.usb.ffs.mtp.ready（MTK MTP daemon 未 ready）。要 MTP 需回到 vivo USB 栈（会牺牲当前 adb 方案），
+  二者当前需权衡。
+- 蓝牙可开启（enabled: true），配对/传输需用户实测。
+
+### 全链路验证（adb，v25/v26 实测输出）
+`	ext
+getprop sys.boot_completed      -> 1
+getenforce                      -> Permissive
+getprop ro.vivo.market.name     -> Redmi K70 Ultra
+getprop ro.product.odm.brand    -> vivo
+settings get global adb_enabled  -> 1
+settings get global setup_skipped-> 1
+HOME resolve                    -> com.bbk.launcher2/.Launcher
+telephony.registry mServiceState-> 中国移动 / NR_SA / RSRP -96 (5G)
+sensorservice                   -> 50 h/w sensors, 50 running
+bluetooth_manager enable        -> enabled: true
+wifi dumpsys                    -> WifiState 1, features ok
+display dumpsys                 -> 1220x2712
+input devices                   -> focaltech_ts (touch)
+audio_flinger                   -> audioserver clients ok
+overlay list                    -> Devices overlays [x]
+`
+
+## 12. Git 仓库
+
+- GitHub（private）：https://github.com/ikun514/OriginOS-Rothko-Port
+- 提交内容：脚本/文档/日志/小 lib 补丁（260+ 文件）；ROM 镜像与大转储已被 .gitignore 排除
+- 离线 bundle： 0_tools/originos-port.bundle（7.9MB，可 git clone <bundle> 搬运）
