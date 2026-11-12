@@ -1,0 +1,295 @@
+﻿--------- beginning of crash
+11-12 12:38:14.892  5042  5042 I thermal_core: mtk-brm-change-id:I4b22c22d8511bdb8c07debbac82b1564676111e8
+11-12 12:38:14.892  5042  5042 I thermal_core: mtk-brm-merge-id:none
+11-12 12:38:14.900  5045  5045 I mbrain  : mtk-brm-commit-id:ae0a2d453f02722de8c4339e3094ad56c1aed979
+11-12 12:38:14.900  5045  5045 I mbrain  : mtk-brm-change-id:I0b3a7d77433b28d2993e36b3a6b8e9832e0fc7b1
+11-12 12:38:14.900  5045  5045 I mbrain  : mtk-brm-merge-id:none
+11-12 12:38:14.928  5045  5045 I libmbrain: mtk-brm-commit-id:4bf917f901558bb3853b2f5944cd744d0b4c6adf
+11-12 12:38:14.928  5045  5045 I libmbrain: mtk-brm-change-id:I431c3b4c21153ad8b4fde0fc22cd06e7b5307cd8
+11-12 12:38:14.928  5045  5045 I libmbrain: mtk-brm-merge-id:none
+11-12 12:39:20.293 10399 19487 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:39:20.293 10399 19487 E AndroidRuntime: Process: com.vivo.gallery, PID: 10399
+11-12 12:39:20.293 10399 19487 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:39:20.293 10399 19487 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:39:20.293 10399 19487 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:39:20.293 10399 19487 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:39:20.293 10399 19487 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasImageType(Unknown Source:20)
+11-12 12:39:20.293 10399 19487 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:32)
+11-12 12:39:20.293 10399 19487 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:39:20.307 10399 31400 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:39:20.307 10399 31400 E AndroidRuntime: Process: com.vivo.gallery, PID: 10399
+11-12 12:39:20.307 10399 31400 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:39:20.307 10399 31400 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:39:20.307 10399 31400 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:39:20.307 10399 31400 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:39:20.307 10399 31400 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasImageType(Unknown Source:20)
+11-12 12:39:20.307 10399 31400 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:32)
+11-12 12:39:20.307 10399 31400 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:39:20.308 10399 15096 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:39:20.308 10399 15096 E AndroidRuntime: Process: com.vivo.gallery, PID: 10399
+11-12 12:39:20.308 10399 15096 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:39:20.308 10399 15096 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:39:20.308 10399 15096 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:39:20.308 10399 15096 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:39:20.308 10399 15096 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasVideoCodecType(Unknown Source:20)
+11-12 12:39:20.308 10399 15096 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:66)
+11-12 12:39:20.308 10399 15096 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:39:20.310  1559  3091 E AndroidRuntime: *** FATAL EXCEPTION IN SYSTEM PROCESS: binder:1559_F
+11-12 12:39:20.310  1559  3091 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:39:20.310  1559  3091 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:39:20.310  1559  3091 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:39:20.310  1559  3091 E AndroidRuntime: 	at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:965)
+11-12 12:39:20.310  1559  3091 E AndroidRuntime: 	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1377)
+11-12 12:39:20.310  1559  3091 E AndroidRuntime: 	at java.util.concurrent.Executors$DelegatedExecutorService.execute(Executors.java:715)
+11-12 12:39:20.310  1559  3091 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.addErrorToDropBox(ActivityManagerService.java:11606)
+11-12 12:39:20.310  1559  3091 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.handleApplicationCrashInner(ActivityManagerService.java:10900)
+11-12 12:39:20.310  1559  3091 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.handleApplicationCrash(ActivityManagerService.java:10774)
+11-12 12:39:20.310  1559  3091 E AndroidRuntime: 	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:3537)
+11-12 12:39:20.310  1559  3091 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:3296)
+11-12 12:39:20.310  1559  3091 E AndroidRuntime: 	at android.os.Binder.execTransactInternal(Binder.java:1436)
+11-12 12:39:20.310  1559  3091 E AndroidRuntime: 	at android.os.Binder.execTransact(Binder.java:1380)
+11-12 12:39:20.316 10399 18848 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:39:20.316 10399 18848 E AndroidRuntime: Process: com.vivo.gallery, PID: 10399
+11-12 12:39:20.316 10399 18848 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:39:20.316 10399 18848 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:39:20.316 10399 18848 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:39:20.316 10399 18848 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:39:20.316 10399 18848 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasFacing(Unknown Source:20)
+11-12 12:39:20.316 10399 18848 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:46)
+11-12 12:39:20.316 10399 18848 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:39:20.318 10399 19167 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:39:20.318 10399 19167 E AndroidRuntime: Process: com.vivo.gallery, PID: 10399
+11-12 12:39:20.318 10399 19167 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:39:20.318 10399 19167 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:39:20.318 10399 19167 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:39:20.318 10399 19167 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:39:20.318 10399 19167 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasImageType(Unknown Source:20)
+11-12 12:39:20.318 10399 19167 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:32)
+11-12 12:39:20.318 10399 19167 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:39:20.319 10399 16142 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:39:20.319 10399 16142 E AndroidRuntime: Process: com.vivo.gallery, PID: 10399
+11-12 12:39:20.319 10399 16142 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:39:20.319 10399 16142 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:39:20.319 10399 16142 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:39:20.319 10399 16142 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:39:20.319 10399 16142 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasFacing(Unknown Source:20)
+11-12 12:39:20.319 10399 16142 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:46)
+11-12 12:39:20.319 10399 16142 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:39:20.319 10399 12868 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:39:20.319 10399 12868 E AndroidRuntime: Process: com.vivo.gallery, PID: 10399
+11-12 12:39:20.319 10399 12868 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:39:20.319 10399 12868 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:39:20.319 10399 12868 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:39:20.319 10399 12868 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:39:20.319 10399 12868 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasVideoCodecType(Unknown Source:20)
+11-12 12:39:20.319 10399 12868 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:66)
+11-12 12:39:20.319 10399 12868 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:39:20.321 10399 22808 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:39:20.321 10399 22808 E AndroidRuntime: Process: com.vivo.gallery, PID: 10399
+11-12 12:39:20.321 10399 22808 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:39:20.321 10399 22808 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:39:20.321 10399 22808 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:39:20.321 10399 22808 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:39:20.321 10399 22808 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasBokehVideoType(Unknown Source:20)
+11-12 12:39:20.321 10399 22808 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:86)
+11-12 12:39:20.321 10399 22808 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:39:20.323 10399 14497 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:39:20.323 10399 14497 E AndroidRuntime: Process: com.vivo.gallery, PID: 10399
+11-12 12:39:20.323 10399 14497 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:39:20.323 10399 14497 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:39:20.323 10399 14497 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:39:20.323 10399 14497 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:39:20.323 10399 14497 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasLivePhoto(Unknown Source:20)
+11-12 12:39:20.323 10399 14497 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:18)
+11-12 12:39:20.323 10399 14497 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:39:26.722 11984 12028 I meow_lib: mtk-brm-commit-id:9d1b0623a6f41711fe139a6f79cd3baeb9ea843a
+11-12 12:39:26.722 11984 12028 I meow_lib: mtk-brm-change-id:I8f1714af0c8f09e69f657b1cd28e5836cb35e02f
+11-12 12:39:26.722 11984 12028 I meow_lib: mtk-brm-merge-id:none
+11-12 12:39:26.770 11984 12028 I libMEOW_gift: mtk-brm-commit-id:baddce1afc7f505d669af7d6f39eac4d950348d3
+11-12 12:39:26.770 11984 12028 I libMEOW_gift: mtk-brm-change-id:Iefbd3d0ed7e413bb0602db9f0bc751032ab085cd
+11-12 12:39:26.770 11984 12028 I libMEOW_gift: mtk-brm-merge-id:none
+11-12 12:39:32.022 11990 11990 I meow_lib: mtk-brm-commit-id:9d1b0623a6f41711fe139a6f79cd3baeb9ea843a
+11-12 12:39:32.022 11990 11990 I meow_lib: mtk-brm-change-id:I8f1714af0c8f09e69f657b1cd28e5836cb35e02f
+11-12 12:39:32.022 11990 11990 I meow_lib: mtk-brm-merge-id:none
+11-12 12:39:32.055 11990 11990 I libMEOW_gift: mtk-brm-commit-id:baddce1afc7f505d669af7d6f39eac4d950348d3
+11-12 12:39:32.056 11990 11990 I libMEOW_gift: mtk-brm-change-id:Iefbd3d0ed7e413bb0602db9f0bc751032ab085cd
+11-12 12:39:32.056 11990 11990 I libMEOW_gift: mtk-brm-merge-id:none
+11-12 12:40:21.208 18369 26493 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:40:21.208 18369 26493 E AndroidRuntime: Process: com.vivo.gallery, PID: 18369
+11-12 12:40:21.208 18369 26493 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.208 18369 26493 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.208 18369 26493 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.208 18369 26493 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:40:21.208 18369 26493 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasFacing(Unknown Source:20)
+11-12 12:40:21.208 18369 26493 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:46)
+11-12 12:40:21.208 18369 26493 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:40:21.208 18369 32526 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:40:21.208 18369 32526 E AndroidRuntime: Process: com.vivo.gallery, PID: 18369
+11-12 12:40:21.208 18369 32526 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.208 18369 32526 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.208 18369 32526 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.208 18369 32526 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:40:21.208 18369 32526 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasLivePhoto(Unknown Source:20)
+11-12 12:40:21.208 18369 32526 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:18)
+11-12 12:40:21.208 18369 32526 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:40:21.208 18369 27333 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:40:21.208 18369 27333 E AndroidRuntime: Process: com.vivo.gallery, PID: 18369
+11-12 12:40:21.208 18369 27333 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.208 18369 27333 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.208 18369 27333 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.208 18369 27333 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:40:21.208 18369 27333 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasLivePhoto(Unknown Source:20)
+11-12 12:40:21.208 18369 27333 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:18)
+11-12 12:40:21.208 18369 27333 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:40:21.208 18369  8415 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:40:21.208 18369  8415 E AndroidRuntime: Process: com.vivo.gallery, PID: 18369
+11-12 12:40:21.208 18369  8415 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.208 18369  8415 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.208 18369  8415 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.208 18369  8415 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:40:21.208 18369  8415 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasCameraRefocus(Unknown Source:20)
+11-12 12:40:21.208 18369  8415 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:4)
+11-12 12:40:21.208 18369  8415 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:40:21.209 18369 24017 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:40:21.209 18369 24017 E AndroidRuntime: Process: com.vivo.gallery, PID: 18369
+11-12 12:40:21.209 18369 24017 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.209 18369 24017 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.209 18369 24017 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.209 18369 24017 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:40:21.209 18369 24017 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasLivePhoto(Unknown Source:20)
+11-12 12:40:21.209 18369 24017 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:18)
+11-12 12:40:21.209 18369 24017 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:40:21.211 18369 27595 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:40:21.211 18369 27595 E AndroidRuntime: Process: com.vivo.gallery, PID: 18369
+11-12 12:40:21.211 18369 27595 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.211 18369 27595 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.211 18369 27595 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.211 18369 27595 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:40:21.211 18369 27595 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasCameraRefocus(Unknown Source:20)
+11-12 12:40:21.211 18369 27595 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:4)
+11-12 12:40:21.211 18369 27595 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:40:21.211 18369 27179 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:40:21.211 18369 27179 E AndroidRuntime: Process: com.vivo.gallery, PID: 18369
+11-12 12:40:21.211 18369 27179 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.211 18369 27179 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.211 18369 27179 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.211 18369 27179 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:40:21.211 18369 27179 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasLivePhoto(Unknown Source:20)
+11-12 12:40:21.211 18369 27179 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:18)
+11-12 12:40:21.211 18369 27179 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:40:21.213 18369  8420 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:40:21.213 18369  8420 E AndroidRuntime: Process: com.vivo.gallery, PID: 18369
+11-12 12:40:21.213 18369  8420 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.213 18369  8420 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.213 18369  8420 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.213 18369  8420 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:40:21.213 18369  8420 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasCameraRefocus(Unknown Source:20)
+11-12 12:40:21.213 18369  8420 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:4)
+11-12 12:40:21.213 18369  8420 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:40:21.214 18369  8422 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:40:21.214 18369  8422 E AndroidRuntime: Process: com.vivo.gallery, PID: 18369
+11-12 12:40:21.214 18369  8422 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.214 18369  8422 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.214 18369  8422 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.214 18369  8422 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:40:21.214 18369  8422 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasCameraRefocus(Unknown Source:20)
+11-12 12:40:21.214 18369  8422 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:4)
+11-12 12:40:21.214 18369  8422 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:40:21.215 12441 13237 E AndroidRuntime: *** FATAL EXCEPTION IN SYSTEM PROCESS: binder:12441_14
+11-12 12:40:21.215 12441 13237 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.215 12441 13237 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.215 12441 13237 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.215 12441 13237 E AndroidRuntime: 	at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:965)
+11-12 12:40:21.215 12441 13237 E AndroidRuntime: 	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1377)
+11-12 12:40:21.215 12441 13237 E AndroidRuntime: 	at java.util.concurrent.Executors$DelegatedExecutorService.execute(Executors.java:715)
+11-12 12:40:21.215 12441 13237 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.addErrorToDropBox(ActivityManagerService.java:11606)
+11-12 12:40:21.215 12441 13237 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.handleApplicationCrashInner(ActivityManagerService.java:10900)
+11-12 12:40:21.215 12441 13237 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.handleApplicationCrash(ActivityManagerService.java:10774)
+11-12 12:40:21.215 12441 13237 E AndroidRuntime: 	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:3537)
+11-12 12:40:21.215 12441 13237 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:3296)
+11-12 12:40:21.215 12441 13237 E AndroidRuntime: 	at android.os.Binder.execTransactInternal(Binder.java:1436)
+11-12 12:40:21.215 12441 13237 E AndroidRuntime: 	at android.os.Binder.execTransact(Binder.java:1380)
+11-12 12:40:21.216 18369  8427 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:40:21.216 18369  8427 E AndroidRuntime: Process: com.vivo.gallery, PID: 18369
+11-12 12:40:21.216 18369  8427 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.216 18369  8427 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.216 18369  8427 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.216 18369  8427 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:40:21.216 18369  8427 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasCameraRefocus(Unknown Source:20)
+11-12 12:40:21.216 18369  8427 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:4)
+11-12 12:40:21.216 18369  8427 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:40:21.217 18369 23846 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:40:21.217 18369 23846 E AndroidRuntime: Process: com.vivo.gallery, PID: 18369
+11-12 12:40:21.217 18369 23846 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.217 18369 23846 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.217 18369 23846 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.217 18369 23846 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:40:21.217 18369 23846 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasImageType(Unknown Source:20)
+11-12 12:40:21.217 18369 23846 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:32)
+11-12 12:40:21.217 18369 23846 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:40:21.217 18369 19632 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:40:21.217 18369 19632 E AndroidRuntime: Process: com.vivo.gallery, PID: 18369
+11-12 12:40:21.217 18369 19632 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.217 18369 19632 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.217 18369 19632 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.217 18369 19632 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:40:21.217 18369 19632 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasBokehVideoType(Unknown Source:20)
+11-12 12:40:21.217 18369 19632 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:86)
+11-12 12:40:21.217 18369 19632 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:40:21.218 18369 20698 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:40:21.218 18369 20698 E AndroidRuntime: Process: com.vivo.gallery, PID: 18369
+11-12 12:40:21.218 18369 20698 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.218 18369 20698 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.218 18369 20698 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.218 18369 20698 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:40:21.218 18369 20698 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasFacing(Unknown Source:20)
+11-12 12:40:21.218 18369 20698 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:46)
+11-12 12:40:21.218 18369 20698 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:40:21.219 18369 21963 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:40:21.219 18369 21963 E AndroidRuntime: Process: com.vivo.gallery, PID: 18369
+11-12 12:40:21.219 18369 21963 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.219 18369 21963 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.219 18369 21963 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.219 18369 21963 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:40:21.219 18369 21963 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasLivePhoto(Unknown Source:20)
+11-12 12:40:21.219 18369 21963 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:18)
+11-12 12:40:21.219 18369 21963 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:40:21.229 18369  8433 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:40:21.229 18369  8433 E AndroidRuntime: Process: com.vivo.gallery, PID: 18369
+11-12 12:40:21.229 18369  8433 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.229 18369  8433 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.229 18369  8433 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.229 18369  8433 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:40:21.229 18369  8433 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasCameraRefocus(Unknown Source:20)
+11-12 12:40:21.229 18369  8433 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:4)
+11-12 12:40:21.229 18369  8433 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:40:21.229 18369 23657 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:40:21.229 18369 23657 E AndroidRuntime: Process: com.vivo.gallery, PID: 18369
+11-12 12:40:21.229 18369 23657 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.229 18369 23657 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.229 18369 23657 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.229 18369 23657 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:40:21.229 18369 23657 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasFacing(Unknown Source:20)
+11-12 12:40:21.229 18369 23657 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:46)
+11-12 12:40:21.229 18369 23657 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:40:21.229 18369  8430 E AndroidRuntime: FATAL EXCEPTION: VG_CheckColumnExist
+11-12 12:40:21.229 18369  8430 E AndroidRuntime: Process: com.vivo.gallery, PID: 18369
+11-12 12:40:21.229 18369  8430 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:40:21.229 18369  8430 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:40:21.229 18369  8430 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:40:21.229 18369  8430 E AndroidRuntime: 	at com.vivo.data_api.utils.u.e(Unknown Source:70)
+11-12 12:40:21.229 18369  8430 E AndroidRuntime: 	at com.vivo.data_api.utils.u.hasCameraRefocus(Unknown Source:20)
+11-12 12:40:21.229 18369  8430 E AndroidRuntime: 	at com.vivo.data_api.item.g.updateProjection2(Unknown Source:4)
+11-12 12:40:21.229 18369  8430 E AndroidRuntime: 	at com.vivo.data_api.utils.u$b.run(Unknown Source:12)
+11-12 12:40:22.459 26050  8819 I meow_lib: mtk-brm-commit-id:9d1b0623a6f41711fe139a6f79cd3baeb9ea843a
+11-12 12:40:22.459 26050  8819 I meow_lib: mtk-brm-change-id:I8f1714af0c8f09e69f657b1cd28e5836cb35e02f
+11-12 12:40:22.459 26050  8819 I meow_lib: mtk-brm-merge-id:none
+11-12 12:40:22.511 26050  8819 I libMEOW_gift: mtk-brm-commit-id:baddce1afc7f505d669af7d6f39eac4d950348d3
+11-12 12:40:22.511 26050  8819 I libMEOW_gift: mtk-brm-change-id:Iefbd3d0ed7e413bb0602db9f0bc751032ab085cd
+11-12 12:40:22.511 26050  8819 I libMEOW_gift: mtk-brm-merge-id:none
+11-12 12:40:27.231  8834  8834 I meow_lib: mtk-brm-commit-id:9d1b0623a6f41711fe139a6f79cd3baeb9ea843a
+11-12 12:40:27.231  8834  8834 I meow_lib: mtk-brm-change-id:I8f1714af0c8f09e69f657b1cd28e5836cb35e02f
+11-12 12:40:27.232  8834  8834 I meow_lib: mtk-brm-merge-id:none
+11-12 12:40:27.261  8834  8834 I libMEOW_gift: mtk-brm-commit-id:baddce1afc7f505d669af7d6f39eac4d950348d3
+11-12 12:40:27.261  8834  8834 I libMEOW_gift: mtk-brm-change-id:Iefbd3d0ed7e413bb0602db9f0bc751032ab085cd
+11-12 12:40:27.261  8834  8834 I libMEOW_gift: mtk-brm-merge-id:none

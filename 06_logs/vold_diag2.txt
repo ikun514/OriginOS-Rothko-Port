@@ -1,0 +1,55 @@
+﻿===== find libblkid =====
+
+===== vold NEEDED libs =====
+ 0x0000000000000001 (NEEDED)             Shared library: [libprocessgroup.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libz.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [android.system.keystore2-V5-ndk.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [android.hardware.boot@1.0.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [android.hardware.boot-V1-ndk.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [android.hardware.gatekeeper-V1-ndk.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [android.hardware.gatekeeper@1.0.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [android.security.authorization-ndk.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboot_control_client.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libbase.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libbinder.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libbinder_ndk.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libcrypto.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libcrypto_utils.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libcutils.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libext4_utils.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libf2fs_sparseblock.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgatekeeper.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgsi.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libhardware.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libhardware_legacy.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libincfs.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libhidlbase.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libkeymint_support.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [liblog.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [liblogwrap.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libselinux.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libsysutils.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libutils.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libvdecrypt.so]
+
+===== linkerconfig paths for system namespace =====
+28:[system]
+29-additional.namespaces = com_android_adbd,com_android_adservices,com_android_appsearch,com_android_art,com_android_bt,com_android_conscrypt,com_android_extservices,com_android_i18n,com_android_media,com_android_mediaprovider,com_android_neuralnetworks,com_android_ondevicepersonalization,com_android_os_statsd,com_android_resolv,com_android_runtime,com_android_tethering,com_android_uprobestats,com_android_uwb,com_android_virt,com_android_wifi,product,rs,sphal,vndk
+30-namespace.default.isolated = true
+31-namespace.default.visible = true
+32-namespace.default.search.paths = /system/${LIB}
+33-namespace.default.search.paths += /system_ext/${LIB}
+34-namespace.default.permitted.paths = /system/${LIB}/drm
+35-namespace.default.permitted.paths += /system/${LIB}/extractors
+36-namespace.default.permitted.paths += /system/${LIB}/hw
+
+===== try mount emulated volume =====
+private mounted null
+emulated;0 mounted null
+total 6
+drwxrws--x 5 media_rw media_rw 3452 2026-11-12 12:43 Android
+drwxrws--- 3 media_rw media_rw 3452 2026-11-12 09:17 Fox
+
+===== vold current pid / status =====
+VOLD=running PID=478
+DONE

@@ -369,3 +369,34 @@ overlay list                    -> Devices overlays [x]
 - GitHub（private）：https://github.com/ikun514/OriginOS-Rothko-Port
 - 提交内容：脚本/文档/日志/小 lib 补丁（260+ 文件）；ROM 镜像与大转储已被 .gitignore 排除
 - 离线 bundle： 0_tools/originos-port.bundle（7.9MB，可 git clone <bundle> 搬运）
+
+---
+
+## 13. v27/v28 修复与新发现（2026-08-12 12:00–12:50）
+
+### v27：删除 /system/app/Vivo3rdAlgoService（用户建议）
+- 相册仍然崩溃，说明不是 Vivo3rdAlgoService 的问题（但删除无害，保留）。
+
+### v28：两个关键修复
+1. **卡顿根因 = 小米 citsensorservice 99% CPU 空转**
+   - dumpsys cpuinfo：99% 1841/vendor.xiaomi.sensor.citsensorservice.aidl；loadavg 高达 918。
+   - 处理：从 **odm 镜像** 删除 /odm/etc/init/vendor.xiaomi.sensor.citsensorservice.aidl.rc（odm v08）。
+   - 结果：init.svc.citsensorservice 为空、loadavg 从 918 → 10~25 ✅（卡顿主因解决）
+2. **gallery / 媒体库 / 系统崩溃根因 = 外部存储卷未挂载（vold 崩溃）**
+   - content query content://media/external/images/media → IllegalArgumentException: Volume external_primary not found
+   - old 启动即崩溃：Fatal signal 6 (SIGABRT) ... Abort message: 'Check failed: android::vold::sBlkidContext != nullptr '
+     （vold main+6376；**系统里找不到 libblkid.so**：/system/lib64、/system_ext/lib64、/product、/vendor、/odm、/apex 都没有）
+   - 后果：/sdcard、/storage/emulated/0 未挂载 → MediaStore 报错 → vivo 相册的列检查线程风暴
+     （OutOfMemoryError: pthread_create ... Try again，pid_max 32768 被打满）→ 系统卡顿/崩溃循环。
+   - **临时 workaround（可用）**：重启后执行 db shell sm mount emulated;0 → /storage/emulated/0 出现，卷状态变为 emulated;0 mounted。
+   - 根治方向（下一轮）：在镜像里补齐 libblkid.so（从 vivo/MTK 同代固件取，放入 /system/lib64 或 vold 可见的 namespace），
+     或改为 rothko 的 vold + 对应 StorageManagerService 兼容；修好后相册/媒体/部分蓝牙问题应连带恢复。
+3. 其它确认
+   - 相机：media.camera 未注册（vivo 私有相机栈），移植包暂不可用（用户已接受）。
+   - 震动：ibrator_manager 无可用 vibrator（rothko 只有 Xiaomi IVibrator/vibratorfeature 实例，AOSP 找不到 default 实例）→ 需 HAL 桥接。
+   - 状态栏高度：vivo SystemUI 用自己的资源，Xiaomi Devices overlay 只作用于 framework-res，需要 vivo SystemUI 的 RRO/改资源。
+   - 蓝牙：能开，扫描时 Bluetooth remote service has died/t_close（HCI 服务死亡），疑似受存储/资源问题连带影响，待存储修好复测。
+
+### 交付（体验包，G 盘）
+- G:\OriginOS_Work\release\OriginOS6_rothko_v28_experience\（含 flash_all.bat + tools\adb.exe/fastboot.exe + images\super_v28.img/vendor_boot_patched.img + SHA256SUMS.txt + README）
+- G:\OriginOS_Work\release\OriginOS6_rothko_v28_experience.zip（同内容压缩包，可直接分享）

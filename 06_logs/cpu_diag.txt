@@ -1,0 +1,65 @@
+﻿===== dumpsys cpuinfo (top) =====
+Load: 918.46 / 238.98 / 80.72
+CPU usage from 85542ms to 80304ms ago (2026-11-12 12:22:49.392 to 2026-11-12 12:22:54.629):
+  99% 1841/vendor.xiaomi.sensor.citsensorservice.aidl: 99% user + 0% kernel
+  97% 3453/system_server: 69% user + 27% kernel / faults: 66928 minor 528 major
+    45% 3453/system_server: 30% user + 14% kernel
+    11% 3489/Verification th: 11% user + 0.1% kernel
+    8.4% 3464/HeapTaskDaemon: 7.8% user + 0.5% kernel
+    4% 3484/android.display: 2.4% user + 1.5% kernel
+    0.7% 3483/android.io: 0.5% user + 0.1% kernel
+    0.5% 3463/Jit thread pool: 0.3% user + 0.1% kernel
+    0.5% 3482/android.ui: 0.3% user + 0.1% kernel
+    0.5% 3535/CpuTracker: 0.1% user + 0.3% kernel
+   +0% 3548/VivoDisplayStat: 0% user + 0% kernel
+   +0% 3550/VivoSurfaceCont: 0% user + 0% kernel
+   +0% 3551/RefreshRateAdju: 0% user + 0% kernel
+   +0% 3552/PackageManagerB: 0% user + 0% kernel
+   +0% 3553/DoubleInstanceL: 0% user + 0% kernel
+   +0% 3554/DefaultPermGran: 0% user + 0% kernel
+   +0% 3555/VivoPmsImplHand: 0% user + 0% kernel
+   +0% 3556/PmsUtilsHandler: 0% user + 0% kernel
+   +0% 3558/VivoArtManager: 0% user + 0% kernel
+   +0% 3559/pool-12-thread-: 0% user + 0% kernel
+   +0% 3560/frame_lock: 0% user + 0% kernel
+   +0% 3561/PackageManager: 0% user + 0% kernel
+   +0% 3562/PermissionServi: 0% user + 0% kernel
+   +0% 3563/DefaultPermGran: 0% user + 0% kernel
+   +0% 3572/system-server-i: 0% user + 0% kernel
+   +0% 3573/PackageInstalle: 0% user + 0% kernel
+   +0% 3575/binder:3453_3: 0% user + 0% kernel
+   +0% 3576/binder:3453_4: 0% user + 0% kernel
+   +0% 3578/OverlayManager: 0% user + 0% kernel
+   +0% 3579/VivoOverlay: 0% user + 0% kernel
+   +0% 3583/pool-16-thread-: 0% user + 0% kernel
+   +0% 3584/system-server-i: 0% user + 0% kernel
+   +0% 3585/SensorUnderLigh: 0% user + 0% kernel
+   +0% 3586/sensordetect: 0% user + 0% kernel
+   +0% 3587/HealthServiceBi: 0% user + 0% kernel
+   +0% 3590/roid.usagestats: 0% user + 0% kernel
+   +0% 3591/eduling.default: 0% user + 0% kernel
+   +0% 3592/SensorEventAckR: 0% user + 0% kernel
+
+===== process start churn (last 5000 log lines) =====
+
+===== crash churn by process =====
+      2 Process: com.vivo.dis
+
+===== threads total =====
+260.48 189.96 76.63 3/5828 11076
+procs=1001
+
+===== top 10 by threads =====
+501 3453 system_server
+163 4340 m.android.phone
+155 3922 ndroid.systemui
+141 8069 vo.hiboard:news
+139 6715 om.vivo.hiboard
+128 4408 m.bbk.launcher2
+119 1499 camerahalserver
+99 3945 com.vivo.abe
+93 4175 droid.bluetooth
+88 4250 main
+85 1242 mi_thermald
+84 6423 m.vivo.connbase
+DONE

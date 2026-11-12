@@ -1,0 +1,155 @@
+﻿===== uptime / boot time =====
+ 12:23:04 up 3 min,  0 users,  load average: 788.10, 233.44, 80.61
+828121538
+Thu Nov 12 12:23:04 CST 2026
+
+===== crash buffer (full tail 120) =====
+11-12 12:21:13.238  1541  1541 I mbrain  : mtk-brm-change-id:I0b3a7d77433b28d2993e36b3a6b8e9832e0fc7b1
+11-12 12:21:13.238  1541  1541 I mbrain  : mtk-brm-merge-id:none
+11-12 12:21:13.247  1541  1541 I libmbrain: mtk-brm-commit-id:4bf917f901558bb3853b2f5944cd744d0b4c6adf
+11-12 12:21:13.247  1541  1541 I libmbrain: mtk-brm-change-id:I431c3b4c21153ad8b4fde0fc22cd06e7b5307cd8
+11-12 12:21:13.247  1541  1541 I libmbrain: mtk-brm-merge-id:none
+11-12 12:21:13.250  1472  1472 I libpq_sec: mtk-brm-commit-id:830a1af0e466ef4274b8ac8145e4c4196a22137b
+11-12 12:21:13.250  1472  1472 I libpq_sec: mtk-brm-change-id:I063def0b061518f39a9591c46e91aa99a624714c
+11-12 12:21:13.250  1472  1472 I libpq_sec: mtk-brm-merge-id:none
+11-12 12:21:13.330  1646  1646 I libpq_sec: mtk-brm-commit-id:830a1af0e466ef4274b8ac8145e4c4196a22137b
+11-12 12:21:13.330  1646  1646 I libpq_sec: mtk-brm-change-id:I063def0b061518f39a9591c46e91aa99a624714c
+11-12 12:21:13.330  1646  1646 I libpq_sec: mtk-brm-merge-id:none
+11-12 12:21:13.389  1675  1675 I libpq_sec: mtk-brm-commit-id:830a1af0e466ef4274b8ac8145e4c4196a22137b
+11-12 12:21:13.389  1675  1675 I libpq_sec: mtk-brm-change-id:I063def0b061518f39a9591c46e91aa99a624714c
+11-12 12:21:13.389  1675  1675 I libpq_sec: mtk-brm-merge-id:none
+11-12 12:21:14.234  1499  1499 I caics_algo: mtk-brm-commit-id:13b5f2a1ebbecb82e3898dd41922f70f199e50ff
+11-12 12:21:14.234  1499  1499 I caics_algo: mtk-brm-change-id:I4260c971d731b542818aac96725266c809617407
+11-12 12:21:14.234  1499  1499 I caics_algo: mtk-brm-merge-id:none
+11-12 12:21:14.234  1499  1499 I vaics_algo: mtk-brm-commit-id:13b5f2a1ebbecb82e3898dd41922f70f199e50ff
+11-12 12:21:14.234  1499  1499 I vaics_algo: mtk-brm-change-id:I4260c971d731b542818aac96725266c809617407
+11-12 12:21:14.234  1499  1499 I vaics_algo: mtk-brm-merge-id:none
+11-12 12:21:14.240  1499  1499 I mcnr_algo: mtk-brm-commit-id:dd4929e6a71bd0be06b2d18234833692e8dec44f
+11-12 12:21:14.240  1499  1499 I mcnr_algo: mtk-brm-change-id:I4260c971d731b542818aac96725266c809617407
+11-12 12:21:14.240  1499  1499 I mcnr_algo: mtk-brm-merge-id:none
+11-12 12:21:14.267  1499  1499 I libpq_sec: mtk-brm-commit-id:830a1af0e466ef4274b8ac8145e4c4196a22137b
+11-12 12:21:14.267  1499  1499 I libpq_sec: mtk-brm-change-id:I063def0b061518f39a9591c46e91aa99a624714c
+11-12 12:21:14.267  1499  1499 I libpq_sec: mtk-brm-merge-id:none
+11-12 12:21:15.815  1829  2040 I meow_lib: mtk-brm-commit-id:9d1b0623a6f41711fe139a6f79cd3baeb9ea843a
+11-12 12:21:15.815  1829  2040 I meow_lib: mtk-brm-change-id:I8f1714af0c8f09e69f657b1cd28e5836cb35e02f
+11-12 12:21:15.815  1829  2040 I meow_lib: mtk-brm-merge-id:none
+11-12 12:21:15.847  1829  2040 I libMEOW_gift: mtk-brm-commit-id:baddce1afc7f505d669af7d6f39eac4d950348d3
+11-12 12:21:15.847  1829  2040 I libMEOW_gift: mtk-brm-change-id:Iefbd3d0ed7e413bb0602db9f0bc751032ab085cd
+11-12 12:21:15.847  1829  2040 I libMEOW_gift: mtk-brm-merge-id:none
+11-12 12:21:17.898  1383  1383 I meow_lib: mtk-brm-commit-id:9d1b0623a6f41711fe139a6f79cd3baeb9ea843a
+11-12 12:21:17.899  1383  1383 I meow_lib: mtk-brm-change-id:I8f1714af0c8f09e69f657b1cd28e5836cb35e02f
+11-12 12:21:17.899  1383  1383 I meow_lib: mtk-brm-merge-id:none
+11-12 12:21:17.918  1383  1383 I libMEOW_gift: mtk-brm-commit-id:baddce1afc7f505d669af7d6f39eac4d950348d3
+11-12 12:21:17.918  1383  1383 I libMEOW_gift: mtk-brm-change-id:Iefbd3d0ed7e413bb0602db9f0bc751032ab085cd
+11-12 12:21:17.918  1383  1383 I libMEOW_gift: mtk-brm-merge-id:none
+11-12 12:22:35.680  7309  7447 E AndroidRuntime: FATAL EXCEPTION: Timer-0
+11-12 12:22:35.680  7309  7447 E AndroidRuntime: Process: com.vivo.dis, PID: 7309
+11-12 12:22:35.680  7309  7447 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:22:35.680  7309  7447 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:22:35.680  7309  7447 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:22:35.680  7309  7447 E AndroidRuntime: 	at java.util.Timer.<init>(Timer.java:223)
+11-12 12:22:35.680  7309  7447 E AndroidRuntime: 	at java.util.Timer.<init>(Timer.java:205)
+11-12 12:22:35.680  7309  7447 E AndroidRuntime: 	at java.util.Timer.<init>(Timer.java:178)
+11-12 12:22:35.680  7309  7447 E AndroidRuntime: 	at ld.a.i(ConfigurationBaseClass.java:15)
+11-12 12:22:35.680  7309  7447 E AndroidRuntime: 	at kd.e.g(FileFilterConfig.java:130)
+11-12 12:22:35.680  7309  7447 E AndroidRuntime: 	at ld.a$a.run(ConfigurationBaseClass.java:87)
+11-12 12:22:35.680  7309  7447 E AndroidRuntime: 	at java.util.TimerThread.mainLoop(Timer.java:634)
+11-12 12:22:35.680  7309  7447 E AndroidRuntime: 	at java.util.TimerThread.run(Timer.java:577)
+11-12 12:22:35.688  7309  7454 E AndroidRuntime: FATAL EXCEPTION: Timer-1
+11-12 12:22:35.688  7309  7454 E AndroidRuntime: Process: com.vivo.dis, PID: 7309
+11-12 12:22:35.688  7309  7454 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:22:35.688  7309  7454 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:22:35.688  7309  7454 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:22:35.688  7309  7454 E AndroidRuntime: 	at java.util.Timer.<init>(Timer.java:223)
+11-12 12:22:35.688  7309  7454 E AndroidRuntime: 	at java.util.Timer.<init>(Timer.java:205)
+11-12 12:22:35.688  7309  7454 E AndroidRuntime: 	at java.util.Timer.<init>(Timer.java:178)
+11-12 12:22:35.688  7309  7454 E AndroidRuntime: 	at ld.a.i(ConfigurationBaseClass.java:15)
+11-12 12:22:35.688  7309  7454 E AndroidRuntime: 	at kd.d.g(ConstantsConfig.java:130)
+11-12 12:22:35.688  7309  7454 E AndroidRuntime: 	at ld.a$a.run(ConfigurationBaseClass.java:87)
+11-12 12:22:35.688  7309  7454 E AndroidRuntime: 	at java.util.TimerThread.mainLoop(Timer.java:634)
+11-12 12:22:35.688  7309  7454 E AndroidRuntime: 	at java.util.TimerThread.run(Timer.java:577)
+11-12 12:22:35.693  2661  3110 E AndroidRuntime: *** FATAL EXCEPTION IN SYSTEM PROCESS: binder:2661_6
+11-12 12:22:35.693  2661  3110 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+11-12 12:22:35.693  2661  3110 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+11-12 12:22:35.693  2661  3110 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:1113)
+11-12 12:22:35.693  2661  3110 E AndroidRuntime: 	at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:965)
+11-12 12:22:35.693  2661  3110 E AndroidRuntime: 	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1377)
+11-12 12:22:35.693  2661  3110 E AndroidRuntime: 	at java.util.concurrent.Executors$DelegatedExecutorService.execute(Executors.java:715)
+11-12 12:22:35.693  2661  3110 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.addErrorToDropBox(ActivityManagerService.java:11606)
+11-12 12:22:35.693  2661  3110 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.handleApplicationCrashInner(ActivityManagerService.java:10900)
+11-12 12:22:35.693  2661  3110 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.handleApplicationCrash(ActivityManagerService.java:10774)
+11-12 12:22:35.693  2661  3110 E AndroidRuntime: 	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:3537)
+11-12 12:22:35.693  2661  3110 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:3296)
+11-12 12:22:35.693  2661  3110 E AndroidRuntime: 	at android.os.Binder.execTransactInternal(Binder.java:1436)
+11-12 12:22:35.693  2661  3110 E AndroidRuntime: 	at android.os.Binder.execTransact(Binder.java:1380)
+11-12 12:22:40.259  2916  2961 I meow_lib: mtk-brm-commit-id:9d1b0623a6f41711fe139a6f79cd3baeb9ea843a
+11-12 12:22:40.259  2916  2961 I meow_lib: mtk-brm-change-id:I8f1714af0c8f09e69f657b1cd28e5836cb35e02f
+11-12 12:22:40.259  2916  2961 I meow_lib: mtk-brm-merge-id:none
+11-12 12:22:41.730  2916  2961 I libMEOW_gift: mtk-brm-commit-id:baddce1afc7f505d669af7d6f39eac4d950348d3
+11-12 12:22:41.730  2916  2961 I libMEOW_gift: mtk-brm-change-id:Iefbd3d0ed7e413bb0602db9f0bc751032ab085cd
+11-12 12:22:41.730  2916  2961 I libMEOW_gift: mtk-brm-merge-id:none
+11-12 12:22:47.307  2922  2922 I meow_lib: mtk-brm-commit-id:9d1b0623a6f41711fe139a6f79cd3baeb9ea843a
+11-12 12:22:47.307  2922  2922 I meow_lib: mtk-brm-change-id:I8f1714af0c8f09e69f657b1cd28e5836cb35e02f
+11-12 12:22:47.307  2922  2922 I meow_lib: mtk-brm-merge-id:none
+11-12 12:22:47.350  2922  2922 I libMEOW_gift: mtk-brm-commit-id:baddce1afc7f505d669af7d6f39eac4d950348d3
+11-12 12:22:47.350  2922  2922 I libMEOW_gift: mtk-brm-change-id:Iefbd3d0ed7e413bb0602db9f0bc751032ab085cd
+11-12 12:22:47.350  2922  2922 I libMEOW_gift: mtk-brm-merge-id:none
+
+===== newest tombstones =====
+total 817676
+-rw-rw-r-- 1 tombstoned system   155255 2026-11-12 12:20 tombstone_31
+-rw-rw-r-- 1 tombstoned system    90039 2026-11-12 12:20 tombstone_31.pb
+-rw-rw-r-- 1 tombstoned system 30326295 2026-11-12 12:18 tombstone_30
+-rw-rw-r-- 1 tombstoned system 19656365 2026-11-12 12:18 tombstone_30.pb
+-rw-rw-r-- 1 tombstoned system 30006884 2026-11-12 12:17 tombstone_29
+-rw-rw-r-- 1 tombstoned system 19273602 2026-11-12 12:17 tombstone_29.pb
+-rw-rw-r-- 1 tombstoned system 30061543 2026-11-12 12:16 tombstone_28
+--- /data/tombstones/tombstone_09
+Softversion: unknown
+Time: 2026-11-12 10:18:07
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'vivo/rothko/rothko:16/BP2A.250605.031.A3/compiler260908202554:user/release-keys'
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2026-11-12 10:18:07.099770461+0800
+Process uptime: 0s
+Cmdline: /system/bin/init second_stage
+pid: 1329, tid: 1329, name: init  >>> /system/bin/init <<<
+uid: 0
+tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+--- /data/tombstones/tombstone_08
+Softversion: unknown
+Time: 2026-11-12 09:52:04
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'vivo/rothko/rothko:16/BP2A.250605.031.A3/compiler260908202554:user/release-keys'
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2026-11-12 09:52:04.084287923+0800
+Process uptime: 0s
+Cmdline: /system/bin/init second_stage
+pid: 1323, tid: 1323, name: init  >>> /system/bin/init <<<
+uid: 0
+tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+
+===== BT error lines around death =====
+11-12 12:23:03.058  4175  4175 I bt_btif_sock: [btif_sock.cc(180)] btsock_listen: Attempting listen for socket connections for device: 00:00:00:00:00:00, type: 3, channel: 4131, app_uid: 1002, data_path: 0, hub_id: 0, endpoint_id: 0, max_rx_packet_size: 0
+11-12 12:23:03.058  4175  4175 I bluetooth: [btif_sock_l2cap.cc(380)] btsock_l2cap_alloc_l: Allocated l2cap socket structure socket_id:4
+11-12 12:23:03.059  4175  5117 I bluetooth: [btif_sock_l2cap.cc(490)] on_srv_l2cap_listen_started: Listening for L2CAP connection for device: 00:00:00:00:00:00, channel: 4131, app_uid: 1002, id: 4, is_le: false
+11-12 12:23:03.059  4175  5117 I bluetooth: [btif_sock_l2cap.cc(404)] send_app_psm_or_chan_l: Sending l2cap socket socket_id:4 channel:4131
+11-12 12:23:03.060  4175  4175 I bt_btif_sdp_server: [btif_sdp_server.cc(298)] create_sdp_record: handle = 0x00000003
+11-12 12:23:03.061  4175  5117 I bt_btif_sdp_server: [btif_sdp_server.cc(402)] on_create_record_event: Sdp Server id=3
+11-12 12:23:03.061  4175  5117 I bt_btif_sdp_server: [btif_sdp_server.cc(412)] on_create_record_event: Record type= 5
+
+===== system_server crash? =====
+adb.exe : grep: bad regex 'FATAL EXCEPTION IN SYSTEM PROCESS|*** FATAL': repetition-operator operand invalid
+所在位置 行:8 字符: 1
++ & $adb shell "sh /data/local/tmp/diag3.sh" 2>&1 | Out-File -Encoding  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (grep: bad regex...operand invalid:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+DONE

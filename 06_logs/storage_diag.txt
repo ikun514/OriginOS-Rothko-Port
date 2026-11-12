@@ -1,0 +1,108 @@
+﻿===== fstab userdata / media lines =====
+63:/dev/block/by-name/metadata /metadata f2fs noatime,nosuid,nodev,discard wait,check,formattable,first_stage_mount
+65:/dev/block/by-name/userdata /data f2fs noatime,nosuid,nodev,discard,noflush_merge,fsync_mode=nobarrier,reserve_root=134217,resgid=1065,gc_merge,atgc,age_extent_cache,inlinecrypt wait,check,formattable,quota,latemount,resize,reservedsize=128m,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption,fsverity
+87:/devices/platform/soc/11240000.mmc* auto auto defaults voldmanaged=sdcard1:auto,encryptable=userdata
+
+===== first stage fstab (if visible) =====
+
+===== crypto / storage props =====
+[dev.mnt.blk.data_mirror.storage_area]: [sdc91]
+[dev.mnt.dev.data_mirror.storage_area]: [dm-47]
+[dev.mnt.rootdisk.data_mirror.storage_area]: [sdc]
+[external_storage.casefold.enabled]: [1]
+[external_storage.projid.enabled]: [1]
+[external_storage.sdcardfs.enabled]: [0]
+[init.svc.storaged]: [running]
+[init.svc.vold]: [running]
+[init.svc_debug_pid.storaged]: [1704]
+[init.svc_debug_pid.vold]: [507]
+reboot,vold-fcoldd,1794457205
+[ro.appsearch.feature.enable_isolated_storage]: []
+[ro.boottime.storaged]: [18283914769]
+[ro.boottime.vold]: [4671327999]
+[ro.crypto.metadata.enabled]: [true]
+[ro.crypto.metadata.mount_fstab]: [1]
+[ro.crypto.state]: [encrypted]
+[ro.crypto.type]: [file]
+[ro.crypto.volume.filenames_mode]: [aes-256-cts]
+[ro.product.ab_ota_partitions]: [apusys,audio_dsp,boot,ccu,connsys_gnss,cust,dpm,dtbo,gpueb,gz,init_boot,ise,lk,logo,mcf_ota,mcupm,modem,mvpu_algo,odm,odm_dlkm,pi_img,preloader_raw,product,pvmfw,scp,spmfw,sspm,storage,system,system_dlkm,system_ext,tee,vbmeta,vbmeta_oem,vbmeta_system,vbmeta_vendor,vbmeta_vgc,vcp,vendor,vendor_boot,vendor_dlkm,vgc]
+
+===== mounts data =====
+/dev/block/dm-47 /data f2fs rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc=on,gc_merge,discard,discard_unit=block,user_xattr,inline_xattr,acl,inline_data,inline_dentry,noflush_merge,barrier,extent_cache,age_extent_cache,mode=adaptive,active_logs=6,reserve_root=134217,resuid=0,resgid=1065,inlinecrypt,alloc_mode=default,checkpoint_merge,fsync_mode=nobarrier,compress_algorithm=lz4,compress_log_size=2,compress_mode=fs,atgc,memory=normal,lookup_mode=perf 0 0
+/dev/block/loop29 /apex/com.android.media@360000009 ext4 ro,dirsync,seclabel,nodev,noatime 0 0
+/dev/block/loop32 /apex/com.android.media.swcodec@360000009 ext4 ro,dirsync,seclabel,nodev,noatime 0 0
+/dev/block/loop30 /apex/com.android.mediaprovider@360000009 ext4 ro,dirsync,seclabel,nodev,noatime 0 0
+/dev/block/loop32 /apex/com.android.media.swcodec ext4 ro,dirsync,seclabel,nodev,noatime 0 0
+/dev/block/loop30 /apex/com.android.mediaprovider ext4 ro,dirsync,seclabel,nodev,noatime 0 0
+/dev/block/loop29 /apex/com.android.media ext4 ro,dirsync,seclabel,nodev,noatime 0 0
+
+===== vold logs (dmesg) =====
+[  173.600701] selinux: SELinux: Skipping restorecon on directory(/data/misc_ce/0/apexdata/com.android.wifi)
+[  173.607580] vold: cryptfs snapshot begin 
+[  173.608103] vold: num_dirty_segment = 3932, num_free_segments = 168649
+[  173.608124] vold: f_bfree = 86875837, f_bavail = 86741620, f_files = 11880957, f_ffree = 11665149, f_favail = 11665149, free_bytes = 355293675520
+[  173.608254] vold: Fail to find match file from /logdata/cryptfs
+[  173.608273] vold: Creating directories for /logdata/cryptfs/cryptfs-0-20261112_124041-user0
+[  173.608289] vold: Fail to creating root directories for: /logdata/cryptfs: Read-only file system
+[  175.450332] type=1400 audit(1794458443.388:46927): avc:  denied  { open } for  comm="binder:9741_C" path="/data/bbkcore/PermissionManager_custom_4017.json" dev="dm-47" ino=48413 scontext=u:r:system_app:s0 tcontext=u:object_r:vivo_data_file:s0 tclass=file permissive=1
+[  175.450412] type=1400 audit(1794458443.388:46928): avc:  denied  { getattr } for  comm="binder:9741_C" path="/data/bbkcore/PermissionManager_custom_4017.json" dev="dm-47" ino=48413 scontext=u:r:system_app:s0 tcontext=u:object_r:vivo_data_file:s0 tclass=file permissive=1
+[  177.486813] type=1400 audit(1794458445.424:47050): avc:  denied  { execute } for  comm="GDT_SINGLE_THRE" path="/data/data/com.vivo.hiboard/app_adnet/dynamic_cf17021bbb6b827ff9c1f98634f443f1/libtquic_jni.so" dev="dm-47" ino=100441 scontext=u:r:platform_app:s0:c512,c768 tcontext=u:object_r:app_data_file:s0:c512,c768 tclass=file permissive=1 app=com.vivo.hiboard
+[  181.842241] init: starting service 'exec 53 (/system/bin/rm -rf /data/vendor/camera/dump)'...
+[  181.846459] init: ... started service 'exec 53 (/system/bin/rm -rf /data/vendor/camera/dump)' has pid 14022
+[  181.846502] init: SVC_EXEC service 'exec 53 (/system/bin/rm -rf /data/vendor/camera/dump)' pid 14022 (uid 0 gid 1000+0 context u:r:shell:s0) started; waiting...
+[  181.882307] init: Service 'exec 53 (/system/bin/rm -rf /data/vendor/camera/dump)' (pid 14022) exited with status 0 waiting took 0.037000 seconds
+[  181.882337] init: Sending signal 9 to service 'exec 53 (/system/bin/rm -rf /data/vendor/camera/dump)' (pid 14022) process group...
+[  182.662211] type=1400 audit(1794458450.596:48465): avc:  denied  { execute } for  comm="GDT_SINGLE_THRE" path="/data/data/com.vivo.hiboard/app_adnet/dynamic_db4e5e5c238f508b76e06dd0bed61b91/libtquic_jni.so" dev="dm-47" ino=101404 scontext=u:r:platform_app:s0:c512,c768 tcontext=u:object_r:app_data_file:s0:c512,c768 tclass=file permissive=1 app=com.vivo.hiboard
+[  185.828685] type=1400 audit(1794458453.768:48771): avc:  denied  { open } for  comm="ThemeLimited-1" path="/data/bbkcore/theme/local/cache/cache_info.xml" dev="dm-47" ino=50546 scontext=u:r:platform_app:s0:c512,c768 tcontext=u:object_r:vivo_data_file:s0:c512,c768 tclass=file permissive=1 app=com.bbk.theme
+[  187.096281] type=1400 audit(1794458455.036:48944): avc:  denied  { getattr } for  comm="ThemeLimited-1" path="/data/bbkcore/theme/local" dev="dm-47" ino=50543 scontext=u:r:platform_app:s0:c512,c768 tcontext=u:object_r:vivo_data_file:s0:c512,c768 tclass=dir permissive=1 app=com.bbk.theme
+[  190.799990] type=1400 audit(1794458458.740:49006): avc:  denied  { open } for  comm="binder:9741_3" path="/data/bbkcore/VivoWifiBlockScanResults_custom_7019.xml" dev="dm-47" ino=43538 scontext=u:r:system_app:s0 tcontext=u:object_r:vivo_data_file:s0 tclass=file permissive=1
+[  190.800078] type=1400 audit(1794458458.740:49007): avc:  denied  { getattr } for  comm="binder:9741_3" path="/data/bbkcore/VivoWifiBlockScanResults_custom_7019.xml" dev="dm-47" ino=43538 scontext=u:r:system_app:s0 tcontext=u:object_r:vivo_data_file:s0 tclass=file permissive=1
+[  208.613485] vold: Vold 3.0 (the awakening) firing up
+[  208.613676] vold: Detected support for: ext4 f2fs vfat
+[  208.613707] vold: Check failed: android::vold::sBlkidContext != nullptr 
+[  208.687268] logd: packagelistparser: /data/system/packages.list:368: too few fields in line
+[  208.857297] logd: packagelistparser: /data/system/packages.list:368: too few fields in line
+
+===== sm list-volumes / disks =====
+private mounted null
+
+===== storage service dump =====
+Disks:
+
+Volumes:
+
+Records:
+
+Primary storage UUID: null
+
+Internal storage (null) total size: 1000000000000 (953674 MiB)
+
+CE unlocked users: [0]
+System unlocked users: []
+
+mObbMounts:
+
+mObbPathToStateMap:
+
+Media cloud providers: {}
+
+Last maintenance: 2026-11-12 01:09:58
+
+===== /storage dirs =====
+/storage/emulated:
+total 0
+drwxr-xr-x 3 root  root       60 2026-11-12 12:37 .
+drwx--x--- 4 shell everybody 100 2026-11-12 12:37 ..
+drwxr-xr-x 2 root  root       40 2026-11-12 12:37 0
+
+/storage/emulated/0:
+total 0
+drwxr-xr-x 2 root root 40 2026-11-12 12:37 .
+drwxr-xr-x 3 root root 60 2026-11-12 12:37 ..
+total 0
+drwx--x--- 4 shell everybody 100 2026-11-12 12:37 .
+drwxr-xr-x 3 root  root       60 2026-11-12 12:37 ..
+drwxr-xr-x 3 root  root       60 2026-11-12 12:37 emulated
+lrwxrwxrwx 1 root  root        7 2026-11-12 12:37 sdcard0 -> /sdcard
+drwxr-xr-x 2 root  root       40 2026-11-12 12:37 self
+DONE

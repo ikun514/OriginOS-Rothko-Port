@@ -1,0 +1,55 @@
+﻿===== load / count =====
+578.01 221.47 79.93 10/6088 9538
+processes=1008
+threads-max=87399
+pid-max=32768
+
+===== cgroup pids =====
+
+===== top processes by thread count =====
+9 491 logd
+6 510 binder:510_2
+5 552 tee-supplicant
+4 1 init
+2 554 aee_aed64_v2
+2 493 servicemanager
+2 492 lmkd
+1 99 kworker/5:1-kdmflush/254:47
+1 98 uas
+1 97 nvme-delete-wq
+1 96 nvme-reset-wq
+1 95 nvme-wq
+1 94 dmabuf-deferred-free-worker
+1 93 kworker/4:1-mm_percpu_wq
+1 92 kworker/0:1-events
+1 91 kworker/7:2-mm_percpu_wq
+1 90 kthrotld
+1 9 mm_percpu_wq
+1 89 kworker/2:1-mm_percpu_wq
+1 88 erofs_worker/7
+
+===== meminfo =====
+MemTotal:       11447224 kB
+MemFree:         2409356 kB
+MemAvailable:    7521652 kB
+Buffers:           10408 kB
+Cached:          4002696 kB
+SwapCached:         1700 kB
+Active:          3550620 kB
+Inactive:        2297332 kB
+Active(anon):    1824584 kB
+Inactive(anon):    31972 kB
+Active(file):    1726036 kB
+Inactive(file):  2265360 kB
+
+===== recent OOM / thread errors =====
+11-12 12:23:25.107  3453  3499 D OomAdjuster: Not killing cached processes
+11-12 12:23:29.671  2922  2922 I Zygote  : Process 9121 exited due to signal 9 (Killed)
+
+===== crash-looping processes =====
+11-12 12:22:35.680  7309  7447 E AndroidRuntime: FATAL EXCEPTION: Timer-0
+11-12 12:22:35.680  7309  7447 E AndroidRuntime: Process: com.vivo.dis, PID: 7309
+11-12 12:22:35.688  7309  7454 E AndroidRuntime: FATAL EXCEPTION: Timer-1
+11-12 12:22:35.688  7309  7454 E AndroidRuntime: Process: com.vivo.dis, PID: 7309
+11-12 12:22:35.693  2661  3110 E AndroidRuntime: *** FATAL EXCEPTION IN SYSTEM PROCESS: binder:2661_6
+DONE

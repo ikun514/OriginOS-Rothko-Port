@@ -206,3 +206,8 @@ KSU 模块同步更新：post-fs-data 做 permissive + 一次性清理 HyperOS �
 - v26：product overlay（rothko DevicesAndroidOverlay/DevicesOverlay）合入，cmd overlay list 显示两个 overlay 已启用；设置正常。
 - 相机：media.camera 未注册（vivo 私有相机栈），用户确认移植包不要求 vivo 相机。
 - GitHub 仓库已建立并推送（private）：https://github.com/ikun514/OriginOS-Rothko-Port
+
+## v0.12 v27/v28：卡顿与相册根因（2026-08-12 12:00-12:50）
+- 卡顿根因：odm 里小米 endor.xiaomi.sensor.citsensorservice.aidl 99% CPU 空转（loadavg 918）；odm v08 删除该 rc 后 loadavg 降到 10~25。
+- 相册/媒体根因：vold 启动崩溃（Check failed: android::vold::sBlkidContext != nullptr，系统中缺 libblkid.so）→ 外部存储卷未挂载 → MediaStore Volume external_primary not found → 相册线程风暴 + 系统级崩溃；workaround db shell sm mount emulated;0 可用。
+- 已暂停排障，按用户要求同步 GitHub 并制作 G 盘体验包（super v28 + patched vendor_boot + adb/fastboot + flash_all.bat）。

@@ -1,0 +1,107 @@
+﻿===== D-state tasks =====
+  149 D     [hang_detect]
+  152 D     [wdtk-0]
+  153 D     [wdtk-1]
+  154 D     [wdtk-2]
+  155 D     [wdtk-3]
+  156 D     [wdtk-4]
+  157 D     [wdtk-5]
+  158 D     [wdtk-6]
+  159 D     [wdtk-7]
+  203 D     [cmdq_buffer_usage]
+  247 D     [VIS_CHECK_335HEARTBEAT]
+  741 D     [ccci_poll]
+  790 D     [kworker/u16:7+vcore_wq]
+  976 D     [lb:g_manager]
+count=14
+
+===== stacks of D tasks (first 5) =====
+--- pid 149 hang_detect
+[<0>] msleep+0x2c/0x44
+[<0>] hang_detect_thread+0xac/0x3f4 [monitor_hang]
+[<0>] kthread+0x104/0x1d4
+[<0>] ret_from_fork+0x10/0x20
+--- pid 152 wdtk-0
+[<0>] kwdt_thread+0x150/0xb34 [aee_hangdet]
+[<0>] kthread+0x104/0x1d4
+[<0>] ret_from_fork+0x10/0x20
+--- pid 153 wdtk-1
+[<0>] kwdt_thread+0x150/0xb34 [aee_hangdet]
+[<0>] kthread+0x104/0x1d4
+[<0>] ret_from_fork+0x10/0x20
+--- pid 154 wdtk-2
+[<0>] kwdt_thread+0x150/0xb34 [aee_hangdet]
+[<0>] kthread+0x104/0x1d4
+[<0>] ret_from_fork+0x10/0x20
+--- pid 155 wdtk-3
+[<0>] kwdt_thread+0x150/0xb34 [aee_hangdet]
+[<0>] kthread+0x104/0x1d4
+[<0>] ret_from_fork+0x10/0x20
+
+===== vibrator services =====
+19	android.frameworks.vibrator.IVibratorControlService/default: [android.frameworks.vibrator.IVibratorControlService]
+85	android.hardware.vibrator.IVibrator/vibratorfeature: [android.hardware.vibrator.IVibrator]
+173	external_vibrator_service: [android.os.IExternalVibratorService]
+456	vibrator_manager: [android.os.IVibratorManagerService]
+461	vivo_4d_game_vibrator_service: [com.vivo.framework.vivo4dgamevibrator.IVivo4DGameVibratorService]
+init.svc.vibratorfeature=running
+
+===== framework vibrator errors in logcat =====
+11-12 12:02:40.658  1334  1334 E adbd    : service_to_fd shell,v2,raw:cmd vibrator 2>&1 | head -5; cmd vibrator vibrate 300 2>&1 | head -3
+11-12 12:02:40.692   501   501 I auditd  : avc:  denied  { find } for pid=5953 uid=0 name=vibrator scontext=u:r:su:s0 tcontext=u:object_r:vibrator_service:s0 tclass=service_manager permissive=1
+11-12 12:02:40.692  5953  5953 W cmd     : Can't find service vibrator
+11-12 12:02:40.713  5958  5958 W cmd     : Can't find service vibrator
+11-12 12:02:52.409  1334  1334 E adbd    : service_to_fd shell,v2,raw:service list | grep -iE vibrat|rich; getprop | grep -iE vibrat
+11-12 12:02:52.455  6030  6030 W service : Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: android.frameworks.vibrator.IVibratorControlService/default
+11-12 12:03:08.187  6114  6114 W service : Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: android.frameworks.vibrator.IVibratorControlService/default
+11-12 12:03:08.255   501   501 I auditd  : avc:  denied  { find } for pid=6114 uid=0 name=android.hardware.vibrator.IVibrator/vibratorfeature scontext=u:r:su:s0 tcontext=u:object_r:hal_vibrator_service:s0 tclass=service_manager permissive=1
+11-12 12:03:08.255  6114  6114 W service : Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: android.hardware.vibrator.IVibrator/vibratorfeature
+11-12 12:03:08.312  6114  6114 W service : Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: external_vibrator_service
+11-12 12:03:08.460   501   501 I auditd  : avc:  denied  { find } for pid=6114 uid=0 name=vibrator_manager scontext=u:r:su:s0 tcontext=u:object_r:vibrator_manager_service:s0 tclass=service_manager permissive=1
+
+===== slow operations / ANR-ish in logcat =====
+
+===== gfx / jank stats =====
+Applications Graphics Acceleration Info:
+Uptime: 825652 Realtime: 825652
+
+** Graphics info for pid 3412 [com.bbk.launcher2] **
+
+Stats since: 24672174770ns
+Total frames rendered: 12758
+Janky frames: 90 (0.71%)
+Janky frames (legacy): 638 (5.00%)
+50th percentile: 6ms
+90th percentile: 13ms
+95th percentile: 18ms
+99th percentile: 31ms
+Number Missed Vsync: 10
+Number High input latency: 24265
+Number Slow UI thread: 75
+Number Slow bitmap uploads: 3
+Number Slow issue draw commands: 53
+Number Frame deadline missed: 90
+Number Frame deadline missed (legacy): 24
+
+===== top D-state io =====
+Tasks: 960 total,   2 running, 958 sleeping,   0 stopped,   0 zombie
+  Mem:    11178M total,     9725M used,     1453M free,        7M buffers
+ Swap:    11140M total,      875M used,    10264M free,     3924M cached
+800%cpu 143%user   0%nice  89%sys 554%idle   0%iow   7%irq   7%sirq   0%host
+%CPU STAT [ARGS]
+ 0.0 S     zygote64
+ 0.0 S     wpa_supplicant -O/data/vendor/wifi/wpa/sockets -dd -g@android:wpa_wlan0
+ 0.0 S     wlan_assistant
+ 0.0 S     wificond
+ 0.0 S     wifi_dump
+ 0.0 S     webview_zygote
+ 0.0 S     vtservice_aidl
+ 0.0 S     vtservice
+ 0.0 S<    vspflinger
+ 0.0 S     vsimd_mitee
+ 0.0 S     vold --blkid_context=u:r:blkid:s0 --blkid_untrusted_context=u:r:blkid_untrusted:s0 --fsck_context=u:r:fsck:s0 --fsck_untrusted_context=u:r:fsck_untrusted:s0
+ 0.0 S     vndservicemanager /dev/vndbinder
+ 0.0 S     vivosymphonyservice
+ 0.0 S     vendor.xiaomi.sensor.citsensorservice.aidl
+ 0.0 S     vendor.xiaomi.hw.touchfeature-service
+DONE
