@@ -1,0 +1,19 @@
+﻿odm_a uncompressed_bytes=1272663031 files=1114
+system_a uncompressed_bytes=1333839501 files=3524
+odm_a alg=lz4hc repacked_bytes=814264320 original_bytes=881057792 ratio_vs_orig=0.9242 seconds=22
+odm_a alg=lz4 repacked_bytes=893153280 original_bytes=881057792 ratio_vs_orig=1.0137 seconds=3
+system_a alg=lz4hc repacked_bytes=804454400 original_bytes=879894528 ratio_vs_orig=0.9143 seconds=10
+system_a alg=lz4 repacked_bytes=911020032 original_bytes=879894528 ratio_vs_orig=1.0354 seconds=3
+---
+Filesystem magic number:                      0xE0F5E1E2
+Filesystem blocksize:                         4096
+Filesystem blocks:                            210773
+Filesystem inode metadata start block:        0
+Filesystem shared xattr metadata start block: 0
+Filesystem root nid:                          58
+Filesystem lz4_max_distance:                  65535
+Filesystem sb_size:                           128
+Filesystem inode count:                       4207
+Filesystem created:                           Thu Jan  1 08:00:00 2009
+Filesystem features:                          sb_csum mtime xattr_filter 0padding 
+Filesystem UUID:                              ae00654b-bcc4-5d60-911b-fbb88cca7492

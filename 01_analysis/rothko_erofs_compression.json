@@ -1,0 +1,302 @@
+{
+  "super": "C:\\Users\\Administrator\\Documents\\deepseek-harness\\default-workspace\\OriginOS_Rothko_Port\\02_base\\images\\rothko_current_super.img",
+  "partitions": [
+    {
+      "name": "odm_a",
+      "partition_size": 881057792,
+      "magic": "0xe0f5e1e2",
+      "block_size": 4096,
+      "blkszbits": 12,
+      "root_nid": 45,
+      "inodes": 1285,
+      "build_time": 1230768000,
+      "blocks": 211052,
+      "meta_blkaddr": 0,
+      "xattr_blkaddr": 0,
+      "uuid": "26a7714d39685974a69be2d0a67bd8f1",
+      "volume_name": "",
+      "feature_compat": 7,
+      "feature_compat_decoded": [
+        "sb_csum",
+        "mtime",
+        "big_pcluster?"
+      ],
+      "feature_incompat": 1,
+      "feature_incompat_decoded": [
+        "zero_padding"
+      ],
+      "compr_cfgs": false,
+      "legacy_lz4": true,
+      "available_compr_algs": 0,
+      "compr_desc": [
+        "lz4(legacy,max_distance=65535)"
+      ],
+      "compressed": true,
+      "total_bytes_used": 864468992
+    },
+    {
+      "name": "odm_dlkm_a",
+      "partition_size": 348160,
+      "magic": "0xe0f5e1e2",
+      "block_size": 4096,
+      "blkszbits": 12,
+      "root_nid": 38,
+      "inodes": 6,
+      "build_time": 1230768000,
+      "blocks": 11,
+      "meta_blkaddr": 0,
+      "xattr_blkaddr": 0,
+      "uuid": "496e6804ba0e560980c21a1f97efb5fe",
+      "volume_name": "",
+      "feature_compat": 7,
+      "feature_compat_decoded": [
+        "sb_csum",
+        "mtime",
+        "big_pcluster?"
+      ],
+      "feature_incompat": 1,
+      "feature_incompat_decoded": [
+        "zero_padding"
+      ],
+      "compr_cfgs": false,
+      "legacy_lz4": true,
+      "available_compr_algs": 0,
+      "compr_desc": [
+        "lz4(legacy,max_distance=65535)"
+      ],
+      "compressed": true,
+      "total_bytes_used": 45056
+    },
+    {
+      "name": "product_a",
+      "partition_size": 4478963712,
+      "magic": "0xe0f5e1e2",
+      "block_size": 4096,
+      "blkszbits": 12,
+      "root_nid": 39,
+      "inodes": 1893,
+      "build_time": 1230768000,
+      "blocks": 1073002,
+      "meta_blkaddr": 0,
+      "xattr_blkaddr": 0,
+      "uuid": "60014d27f46c59ee92680b6a00f4fe58",
+      "volume_name": "",
+      "feature_compat": 7,
+      "feature_compat_decoded": [
+        "sb_csum",
+        "mtime",
+        "big_pcluster?"
+      ],
+      "feature_incompat": 1,
+      "feature_incompat_decoded": [
+        "zero_padding"
+      ],
+      "compr_cfgs": false,
+      "legacy_lz4": true,
+      "available_compr_algs": 0,
+      "compr_desc": [
+        "lz4(legacy,max_distance=65535)"
+      ],
+      "compressed": true,
+      "total_bytes_used": 4395016192
+    },
+    {
+      "name": "system_a",
+      "partition_size": 879894528,
+      "magic": "0xe0f5e1e2",
+      "block_size": 4096,
+      "blkszbits": 12,
+      "root_nid": 58,
+      "inodes": 4207,
+      "build_time": 1230768000,
+      "blocks": 210773,
+      "meta_blkaddr": 0,
+      "xattr_blkaddr": 0,
+      "uuid": "ae00654bbcc45d60911bfbb88cca7492",
+      "volume_name": "",
+      "feature_compat": 7,
+      "feature_compat_decoded": [
+        "sb_csum",
+        "mtime",
+        "big_pcluster?"
+      ],
+      "feature_incompat": 1,
+      "feature_incompat_decoded": [
+        "zero_padding"
+      ],
+      "compr_cfgs": false,
+      "legacy_lz4": true,
+      "available_compr_algs": 0,
+      "compr_desc": [
+        "lz4(legacy,max_distance=65535)"
+      ],
+      "compressed": true,
+      "total_bytes_used": 863326208
+    },
+    {
+      "name": "system_dlkm_a",
+      "partition_size": 7471104,
+      "magic": "0xe0f5e1e2",
+      "block_size": 4096,
+      "blkszbits": 12,
+      "root_nid": 38,
+      "inodes": 72,
+      "build_time": 1230768000,
+      "blocks": 1768,
+      "meta_blkaddr": 0,
+      "xattr_blkaddr": 0,
+      "uuid": "1aa4bcf44ca65c0992e7e33d67b33798",
+      "volume_name": "",
+      "feature_compat": 7,
+      "feature_compat_decoded": [
+        "sb_csum",
+        "mtime",
+        "big_pcluster?"
+      ],
+      "feature_incompat": 1,
+      "feature_incompat_decoded": [
+        "zero_padding"
+      ],
+      "compr_cfgs": false,
+      "legacy_lz4": true,
+      "available_compr_algs": 0,
+      "compr_desc": [
+        "lz4(legacy,max_distance=65535)"
+      ],
+      "compressed": true,
+      "total_bytes_used": 7241728
+    },
+    {
+      "name": "system_ext_a",
+      "partition_size": 936296448,
+      "magic": "0xe0f5e1e2",
+      "block_size": 4096,
+      "blkszbits": 12,
+      "root_nid": 43,
+      "inodes": 2493,
+      "build_time": 1230768000,
+      "blocks": 224288,
+      "meta_blkaddr": 0,
+      "xattr_blkaddr": 0,
+      "uuid": "28cc3feb530553859d16a16fc47f4d36",
+      "volume_name": "",
+      "feature_compat": 7,
+      "feature_compat_decoded": [
+        "sb_csum",
+        "mtime",
+        "big_pcluster?"
+      ],
+      "feature_incompat": 1,
+      "feature_incompat_decoded": [
+        "zero_padding"
+      ],
+      "compr_cfgs": false,
+      "legacy_lz4": true,
+      "available_compr_algs": 0,
+      "compr_desc": [
+        "lz4(legacy,max_distance=65535)"
+      ],
+      "compressed": true,
+      "total_bytes_used": 918683648
+    },
+    {
+      "name": "vendor_a",
+      "partition_size": 1644707840,
+      "magic": "0xe0f5e1e2",
+      "block_size": 4096,
+      "blkszbits": 12,
+      "root_nid": 48,
+      "inodes": 6262,
+      "build_time": 1230768000,
+      "blocks": 394000,
+      "meta_blkaddr": 0,
+      "xattr_blkaddr": 0,
+      "uuid": "9323e33db3b052bc9d5c59a90e89d38a",
+      "volume_name": "",
+      "feature_compat": 7,
+      "feature_compat_decoded": [
+        "sb_csum",
+        "mtime",
+        "big_pcluster?"
+      ],
+      "feature_incompat": 1,
+      "feature_incompat_decoded": [
+        "zero_padding"
+      ],
+      "compr_cfgs": false,
+      "legacy_lz4": true,
+      "available_compr_algs": 0,
+      "compr_desc": [
+        "lz4(legacy,max_distance=65535)"
+      ],
+      "compressed": true,
+      "total_bytes_used": 1613824000
+    },
+    {
+      "name": "vendor_dlkm_a",
+      "partition_size": 21970944,
+      "magic": "0xe0f5e1e2",
+      "block_size": 4096,
+      "blkszbits": 12,
+      "root_nid": 39,
+      "inodes": 281,
+      "build_time": 1230768000,
+      "blocks": 5243,
+      "meta_blkaddr": 0,
+      "xattr_blkaddr": 0,
+      "uuid": "ffae86d5b9b25623a4ce5fecfa3d7ad7",
+      "volume_name": "",
+      "feature_compat": 7,
+      "feature_compat_decoded": [
+        "sb_csum",
+        "mtime",
+        "big_pcluster?"
+      ],
+      "feature_incompat": 1,
+      "feature_incompat_decoded": [
+        "zero_padding"
+      ],
+      "compr_cfgs": false,
+      "legacy_lz4": true,
+      "available_compr_algs": 0,
+      "compr_desc": [
+        "lz4(legacy,max_distance=65535)"
+      ],
+      "compressed": true,
+      "total_bytes_used": 21475328
+    },
+    {
+      "name": "mi_ext_a",
+      "partition_size": 126640128,
+      "magic": "0xe0f5e1e2",
+      "block_size": 4096,
+      "blkszbits": 12,
+      "root_nid": 38,
+      "inodes": 143,
+      "build_time": 1230768000,
+      "blocks": 30431,
+      "meta_blkaddr": 0,
+      "xattr_blkaddr": 0,
+      "uuid": "9e3d169a6b135ec3b3f64be8afde2f3c",
+      "volume_name": "",
+      "feature_compat": 7,
+      "feature_compat_decoded": [
+        "sb_csum",
+        "mtime",
+        "big_pcluster?"
+      ],
+      "feature_incompat": 1,
+      "feature_incompat_decoded": [
+        "zero_padding"
+      ],
+      "compr_cfgs": false,
+      "legacy_lz4": true,
+      "available_compr_algs": 0,
+      "compr_desc": [
+        "lz4(legacy,max_distance=65535)"
+      ],
+      "compressed": true,
+      "total_bytes_used": 124645376
+    }
+  ]
+}

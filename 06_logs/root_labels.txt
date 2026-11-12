@@ -1,0 +1,19 @@
+﻿=== original odm root/apex ===
+mount rc=0
+ROOT: u:object_r:vendor_file:s0 drwxr-xr-x root:root
+ls: /mnt/oo/apex: No such file or directory
+no /apex in odm
+app
+bin
+etc
+firmware
+lib
+lib32
+lib64
+mitee
+vendor
+=== system root label (for reference) ===
+SYSTEM ROOT: u:object_r:rootfs:s0
+=== vendor root label (for reference) ===
+VENDOR ROOT: u:object_r:vendor_file:s0
+DONE

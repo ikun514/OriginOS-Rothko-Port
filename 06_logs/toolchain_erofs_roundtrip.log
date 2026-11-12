@@ -1,0 +1,139 @@
+﻿=== erofs roundtrip 2026-11-12T01:12:11.8635601+08:00 ===
+01:12:11 1) build local tree: C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\04_build\lab\erofs_roundtrip\tree
+01:12:12    WARN: cannot create symlink on Windows (Cannot find path 'C:\system\bin\sh' because it does not exist.); symlink covered by existing device tests
+01:12:12    local tree: 18 files, 400,869 bytes
+--- local sha256 ---
+0a249fd9ae54c55a3d5096764ecef6b7646665ce40901908c89828ba6ca44fd5  priv-app/PrivApp/PrivApp.apk
+1a5b0b49f79c4338d02f8893d88e3e1a6bbe54bd660d057775ab6a3cca61772d  etc/file_10.conf
+1c97b7941211e66dcb466db21b0258fae1d19f4149176f76d0661c80515f1813  etc/file_11.conf
+2db155c5f06e3e496bc5ac4f211d753788e57033edff43412ce7902fae634ae7  etc/file_06.conf
+3cc724eb175f5689738992351dc7c5c8acc2c0841712e9eb695fd382c690e340  etc/file_03.conf
+400aba2b38da1cb39569739b58f1a3b54801ee2e0e951ef8a451adfa1124d3e9  etc/file_08.conf
+70bb89702bfab3998f4d42800e85a9f0c1492e9f5e59dfc162686fbb8cc6565f  etc/file_02.conf
+740801127c1263e33caea713c6185c7b836f78ee8bfaa3b9e777eca3d226a702  etc/file_01.conf
+79a220f63b85b9fc0b869c10948dcaddfcf95b96310f961804ed5d86416d8fab  etc/file_05.conf
+9b0cf921fb80c5911a748b2ff7a84d740db1b22ab1ce5501fbdd04adc3797221  etc/file_09.conf
+adfae7b880a2c7faa9028d2bd719ef6eac416ba4d2fe73b4e2fd2ba12b36ede9  etc/file_04.conf
+af3538678742ddaffcd87533f929f8d7788aea80af71dd143f6d9ae82e46f689  usr/share/doc/read me first.txt
+d84a82e6f71702bf44cabd6440389c763532b467c71ce98b4cc4b6adb1212780  app/SystemApp/SystemApp.apk
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  bin/test_service.sh
+f0193eff7dd1617a5627fe782dc7476eedbb3da8bccfb26b7b7e2ad7e66d60c3  etc/file_07.conf
+f682a5ef26796a5f98678d3a028d07c8853e6c5fc01005b55bd95852d00fc917  usr/share/doc/涓枃璇存槑.txt
+f8be74567d4aaa20be96625f46b7bf1c147d7b7998cd316427b41d42dc129993  etc/file_00.conf
+ffd942c186d53c8bc32c623a9d0a8309d4dddf3828ed90667db50e4ed35d8651  etc/init/init.test.rc
+01:12:12 2) create tar.gz
+01:12:12    archive: C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\04_build\lab\erofs_roundtrip\tree.tar.gz (394,880 bytes)
+01:12:12 3) push scripts + archive
+01:12:12    push: C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\scripts\toolchain\dev_lib.sh: 1 file pushed, 0 skipped. 10.9 MB/s (2698 bytes in 0.000s)
+01:12:12    push: C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\scripts\toolchain\pack_erofs.sh: 1 file pushed, 0 skipped. 13.0 MB/s (2782 bytes in 0.000s)
+01:12:13    push: C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\scripts\toolchain\pack_ext4.sh: 1 file pushed, 0 skipped. 9.6 MB/s (2818 bytes in 0.000s)
+01:12:13    push: C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\scripts\toolchain\roundtrip_erofs.sh: 1 file pushed, 0 skipped. 13.5 MB/s (3054 bytes in 0.000s)
+01:12:13    push: C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\04_build\lab\erofs_roundtrip\tree.tar.gz: 1 file pushed, 0 skipped. 11.5 MB/s (394880 bytes in 0.033s)
+01:12:13 4) run on device: sh /data/local/tmp/toolchain/roundtrip_erofs.sh /data/local/tmp/tree.tar.gz /data/local/tmp/lab/roundtrip /data/local/tmp/lab/roundtrip/tree.erofs
+01:12:15 [01:12:14] == 1. 解包来源 tar.gz ==
+01:12:15 -rw-rw-rw- 1 shell shell 394880 2026-11-12 01:12 /data/local/tmp/tree.tar.gz
+01:12:15 [01:12:14] src files: 18, dirs: 14
+01:12:15 [01:12:14] == 2. 目录 -> erofs 镜像 (lz4hc, mount-point /system, file_contexts) ==
+01:12:15 [01:12:14] mkfs.erofs -d2 -T 1700000000 --mount-point=/system --file-contexts=/system/etc/selinux/plat_file_contexts -L system -zlz4hc,level=9 -C16384 /data/local/tmp/lab/roundtrip/tree.erofs /data/local/tmp/lab/roundtrip/src
+01:12:15 Build completed.
+01:12:15 
+01:12:15 ------
+01:12:15 Filesystem UUID: 07dd0ac2-a12d-43de-8589-59243dbee060
+01:12:15 Filesystem total blocks: 99 (of 4096-byte blocks)
+01:12:15 Filesystem total inodes: 32
+01:12:15 Filesystem total metadata blocks: 3
+01:12:15 Filesystem total deduplicated bytes (of source files): 0
+01:12:15 [01:12:14] image: 405504 bytes
+01:12:15 [01:12:14] fsck.erofs verify
+01:12:15 [01:12:14] dump.erofs superblock
+01:12:15 Filesystem magic number:                      0xE0F5E1E2
+01:12:15 Filesystem blocksize:                         4096
+01:12:15 Filesystem blocks:                            99
+01:12:15 Filesystem inode metadata start block:        0
+01:12:15 Filesystem shared xattr metadata start block: 0
+01:12:15 Filesystem root nid:                          38
+01:12:15 Filesystem compr_algs:                        lz4
+01:12:15 Filesystem sb_size:                           128
+01:12:15 Filesystem inode count:                       32
+01:12:15 Filesystem created:                           Wed Nov 15 06:13:20 2023
+01:12:15 Filesystem features:                          sb_csum mtime xattr_filter 0padding compr_cfgs big_pcluster 
+01:12:15 Filesystem UUID:                              07dd0ac2-a12d-43de-8589-59243dbee060
+01:12:15 [01:12:14] erofs image size: 405504
+01:12:15 [01:12:14] == 3. loop 挂载 (SELinux Enforcing, 仅给镜像文件改 label) ==
+01:12:15 Enforcing
+01:12:15 [01:12:15] mounted /data/local/tmp/lab/roundtrip/tree.erofs on /data/local/tmp/lab/roundtrip/mnt via /dev/block/loop44 (erofs)
+01:12:15 /dev/block/loop44 on /data/local/tmp/lab/roundtrip/mnt type erofs (ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround)
+01:12:15 [01:12:15] == 4. 内容校验: sha256 逐个文件比对 ==
+01:12:15 [01:12:15] CHECKSUMS_MATCH (18 entries)
+01:12:15 [01:12:15] -- sample --
+01:12:15 d84a82e6f71702bf44cabd6440389c763532b467c71ce98b4cc4b6adb1212780  ./app/SystemApp/SystemApp.apk
+01:12:15 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./bin/test_service.sh
+01:12:15 f8be74567d4aaa20be96625f46b7bf1c147d7b7998cd316427b41d42dc129993  ./etc/file_00.conf
+01:12:15 740801127c1263e33caea713c6185c7b836f78ee8bfaa3b9e777eca3d226a702  ./etc/file_01.conf
+01:12:15 70bb89702bfab3998f4d42800e85a9f0c1492e9f5e59dfc162686fbb8cc6565f  ./etc/file_02.conf
+01:12:15 [01:12:15] -- selinux labels in mounted image --
+01:12:15 u:object_r:system_file:s0     app
+01:12:15 u:object_r:system_file:s0     bin
+01:12:15 u:object_r:system_file:s0     etc
+01:12:15 u:object_r:system_lib_file:s0 lib64
+01:12:15 u:object_r:system_file:s0     overlay
+01:12:15 u:object_r:system_file:s0     priv-app
+01:12:15 u:object_r:system_file:s0     usr
+01:12:15 [01:12:15] -- symlink check --
+01:12:15 [01:12:15] == 5. 卸载 + 恢复文件 label ==
+01:12:15 [01:12:15] == 6. 写报告 ==
+01:12:15 [01:12:16] report: /data/local/tmp/lab/roundtrip/roundtrip_report.txt
+01:12:15 === EROFS ROUNDTRIP REPORT ===
+01:12:15 time: Thu Nov 12 01:12:15 CST 2026
+01:12:15 device: rothko / 16
+01:12:15 kernel: 6.1.138-android14-11-g6ab8c9a86a33-ab14396278
+01:12:15 selinux: Enforcing
+01:12:15 mkfs.erofs: mkfs.erofs (erofs-utils) 1.8.3
+01:12:15 src_tgz: /data/local/tmp/tree.tar.gz
+01:12:15 src_entries: 18
+01:12:15 image: /data/local/tmp/lab/roundtrip/tree.erofs
+01:12:15 image_size: 405504
+01:12:15 mount_fstype: erofs
+01:12:15 checksums_match: YES
+01:12:15 --- dump.erofs ---
+01:12:15 Filesystem magic number:                      0xE0F5E1E2
+01:12:15 Filesystem blocksize:                         4096
+01:12:15 Filesystem blocks:                            99
+01:12:15 Filesystem inode metadata start block:        0
+01:12:15 Filesystem shared xattr metadata start block: 0
+01:12:15 Filesystem root nid:                          38
+01:12:15 Filesystem compr_algs:                        lz4
+01:12:15 Filesystem sb_size:                           128
+01:12:15 Filesystem inode count:                       32
+01:12:15 Filesystem created:                           Wed Nov 15 06:13:20 2023
+01:12:15 Filesystem features:                          sb_csum mtime xattr_filter 0padding compr_cfgs big_pcluster 
+01:12:15 Filesystem UUID:                              07dd0ac2-a12d-43de-8589-59243dbee060
+01:12:15 --- src sha256 ---
+01:12:15 d84a82e6f71702bf44cabd6440389c763532b467c71ce98b4cc4b6adb1212780  ./app/SystemApp/SystemApp.apk
+01:12:15 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./bin/test_service.sh
+01:12:15 f8be74567d4aaa20be96625f46b7bf1c147d7b7998cd316427b41d42dc129993  ./etc/file_00.conf
+01:12:15 740801127c1263e33caea713c6185c7b836f78ee8bfaa3b9e777eca3d226a702  ./etc/file_01.conf
+01:12:15 70bb89702bfab3998f4d42800e85a9f0c1492e9f5e59dfc162686fbb8cc6565f  ./etc/file_02.conf
+01:12:15 3cc724eb175f5689738992351dc7c5c8acc2c0841712e9eb695fd382c690e340  ./etc/file_03.conf
+01:12:15 adfae7b880a2c7faa9028d2bd719ef6eac416ba4d2fe73b4e2fd2ba12b36ede9  ./etc/file_04.conf
+01:12:15 79a220f63b85b9fc0b869c10948dcaddfcf95b96310f961804ed5d86416d8fab  ./etc/file_05.conf
+01:12:15 2db155c5f06e3e496bc5ac4f211d753788e57033edff43412ce7902fae634ae7  ./etc/file_06.conf
+01:12:15 f0193eff7dd1617a5627fe782dc7476eedbb3da8bccfb26b7b7e2ad7e66d60c3  ./etc/file_07.conf
+01:12:15 400aba2b38da1cb39569739b58f1a3b54801ee2e0e951ef8a451adfa1124d3e9  ./etc/file_08.conf
+01:12:15 9b0cf921fb80c5911a748b2ff7a84d740db1b22ab1ce5501fbdd04adc3797221  ./etc/file_09.conf
+01:12:15 1a5b0b49f79c4338d02f8893d88e3e1a6bbe54bd660d057775ab6a3cca61772d  ./etc/file_10.conf
+01:12:15 1c97b7941211e66dcb466db21b0258fae1d19f4149176f76d0661c80515f1813  ./etc/file_11.conf
+01:12:15 [01:12:16] == DONE ==
+01:12:15    device run finished in 2.0s
+01:12:15 5) pull image + report
+01:12:15    pull: /data/local/tmp/lab/roundtrip/tree.erofs: 1 file pulled, 0 skipped. 10.5 MB/s (405504 bytes in 0.037s)
+01:12:16    pull: /data/local/tmp/lab/roundtrip/roundtrip_report.txt: 1 file pulled, 0 skipped. 0.1 MB/s (2709 bytes in 0.021s)
+01:12:16    pull: /data/local/tmp/lab/roundtrip/mnt.sha256: 1 file pulled, 0 skipped. 0.1 MB/s (1596 bytes in 0.020s)
+01:12:16 6) verify
+01:12:16    image C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\04_build\lab\from_device\tree.erofs: 405,504 bytes sha256=88738057a21be2f27ff6a0d22c5484970da8c5f545d3eee6ea8dd28a002c93ae erofs_magic@1024=e2e1f5e0
+01:12:16    erofs magic ok: True
+01:12:16    checksums_match: YES
+01:12:16    image_size: 405504
+01:12:16    src_entries: 18
+01:12:16    local files: 18, device-report files: 18, only-local: 0
+01:12:16 === DONE (log: C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\06_logs\toolchain_erofs_roundtrip.log) ===

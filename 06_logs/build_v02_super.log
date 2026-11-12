@@ -1,0 +1,30 @@
+﻿=== build_v02_super 2026-11-12T01:31:34.0602475+08:00 ===
+01:31:34 1) input images
+01:31:34    product_a           393,981,952 B      375.73 MiB  G:\OriginOS_Work\03_port\images\product.img
+01:31:34    vendor_a          1,644,707,840 B    1,568.52 MiB  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_vendor_a.img
+01:31:34    system_ext_a        411,910,144 B      392.83 MiB  G:\OriginOS_Work\03_port\images\system_ext.img
+01:31:34    odm_a               881,057,792 B      840.24 MiB  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_odm_a.img
+01:31:34    system_a          7,934,083,072 B    7,566.53 MiB  G:\OriginOS_Work\03_port\images\system.img
+01:31:34    mi_ext_a            126,640,128 B      120.77 MiB  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_mi_ext_a.img
+01:31:34    vendor_dlkm_a        21,970,944 B       20.95 MiB  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_vendor_dlkm_a.img
+01:31:34    system_dlkm_a         7,471,104 B        7.13 MiB  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_system_dlkm_a.img
+01:31:34    odm_dlkm_a              348,160 B        0.33 MiB  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_odm_dlkm_a.img
+01:31:34    
+Name                Size Path                                                                                          
+----                ---- ----                                                                                          
+product_a      393981952 G:\OriginOS_Work\03_port\images\product.img                                                   
+vendor_a      1644707840 C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02...
+system_ext_a   411910144 G:\OriginOS_Work\03_port\images\system_ext.img                                                
+odm_a          881057792 C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02...
+system_a      7934083072 G:\OriginOS_Work\03_port\images\system.img                                                    
+mi_ext_a       126640128 C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02...
+vendor_dlkm_a   21970944 C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02...
+system_dlkm_a    7471104 C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02...
+odm_dlkm_a        348160 C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02...
+
+
+
+01:31:34 2) size budget
+01:31:34    sum of partitions      = 11,422,171,136 B (10.64 GiB)
+01:31:34    group main_a max       = 9,652,142,080 B (8.99 GiB)   slack = -1,770,029,056 B (-1.65 GiB)
+01:31:34    device data capacity   = 9,662,627,840 B (device 9,663,676,416 - first_logical 1,048,576)   slack = -1,759,543,296 B

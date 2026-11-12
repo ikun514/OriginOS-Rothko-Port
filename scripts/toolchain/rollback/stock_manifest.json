@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-11-12T01:30:00+08:00",
+  "purpose": "rollback to stock rothko super + vendor_boot",
+  "device": {
+    "product": "rothko",
+    "model": "Redmi K70 Ultra",
+    "android": "16 (BP2A.250605.031.A3)",
+    "kernel": "6.1.138-android14-11",
+    "slot_suffix": "_a",
+    "ab_update": true,
+    "super_partition_size": 9663676416,
+    "vendor_boot_partition_size": 67108864
+  },
+  "files": [
+    {
+      "name": "rothko_current_super.img",
+      "local_path": "02_base/images/rothko_current_super.img",
+      "partition": "super",
+      "target_dev": "/dev/block/by-name/super",
+      "size": 9663676416,
+      "sha256": "dc61e94414b3f8c7c998dc787e101437e2105a374dab683d9ca6c3ba9be9bdbd"
+    },
+    {
+      "name": "rothko_current_vendor_boot_a.img",
+      "local_path": "02_base/images/rothko_current_vendor_boot_a.img",
+      "partition": "vendor_boot_a",
+      "target_dev": "/dev/block/by-name/vendor_boot_a",
+      "size": 67108864,
+      "sha256": "dd453a760bb6066264fafdf756aceba0ba659f4a1e2ca0673608a9cee255d0d3"
+    }
+  ],
+  "recovery_notes": [
+    "Android mode: /sdcard/work/rollback is writable by shell (FUSE); adb push there",
+    "recovery (OrangeFox): mount /data then use /data/media/0/work/rollback; abort without writing if data is not mounted/decrypted",
+    "order: verify both images sha256 -> dd super -> dd vendor_boot -> sync -> full read-back sha256 -> PASS/FAIL -> reboot",
+    "super write ~2-4 min, read-back ~1-2 min (9GB)",
+    "vendor_boot restores current slot only (ro.boot.slot_suffix, currently _a); optional --both-slots"
+  ]
+}

@@ -1,0 +1,15 @@
+total 0
+drwxr-xr-x 3 root root  280 2026-11-12 03:21 .
+drwxr-xr-x 5 root root 2940 2026-11-12 03:21 ..
+drwxr-xr-x 2 root root  260 2026-11-12 03:21 by-uuid
+lrwxrwxrwx 1 root root   15 2026-11-12 03:21 mi_ext_a -> /dev/block/dm-5
+lrwxrwxrwx 1 root root   15 2026-11-12 03:21 odm_a -> /dev/block/dm-3
+lrwxrwxrwx 1 root root   15 2026-11-12 03:21 odm_dlkm_a -> /dev/block/dm-8
+lrwxrwxrwx 1 root root   15 2026-11-12 03:21 product_a -> /dev/block/dm-0
+lrwxrwxrwx 1 root root   15 2026-11-12 03:21 system_a -> /dev/block/dm-4
+lrwxrwxrwx 1 root root   15 2026-11-12 03:21 system_dlkm_a -> /dev/block/dm-7
+lrwxrwxrwx 1 root root   15 2026-11-12 03:21 system_ext_a -> /dev/block/dm-2
+lrwxrwxrwx 1 root root   16 2026-11-12 03:21 userdata -> /dev/block/dm-10
+lrwxrwxrwx 1 root root   15 2026-11-12 03:21 userdata-wrapper -> /dev/block/dm-9
+lrwxrwxrwx 1 root root   15 2026-11-12 03:21 vendor_a -> /dev/block/dm-1
+lrwxrwxrwx 1 root root   15 2026-11-12 03:21 vendor_dlkm_a -> /dev/block/dm-6

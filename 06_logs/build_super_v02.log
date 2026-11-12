@@ -1,0 +1,30 @@
+﻿=== build_super_v02_checked 2026-11-12T01:41:56.0603336+08:00 ===
+01:41:56 1) inputs
+01:41:56    product_a          393,981,952 B      375.73 MiB  G:\OriginOS_Work\03_port\images\product.img
+01:41:56    vendor_a         1,644,707,840 B    1,568.52 MiB  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_vendor_a.img
+01:41:56    system_ext_a       411,910,144 B      392.83 MiB  G:\OriginOS_Work\03_port\images\system_ext.img
+01:41:56    odm_a              881,057,792 B      840.24 MiB  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_odm_a.img
+01:41:56    system_a         5,894,299,648 B    5,621.24 MiB  G:\OriginOS_Work\04_build\_fake_system_5894299648.img
+01:41:56    mi_ext_a           126,640,128 B      120.77 MiB  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_mi_ext_a.img
+01:41:56    vendor_dlkm_a       21,970,944 B       20.95 MiB  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_vendor_dlkm_a.img
+01:41:56    system_dlkm_a        7,471,104 B        7.13 MiB  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_system_dlkm_a.img
+01:41:56    odm_dlkm_a             348,160 B        0.33 MiB  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_odm_dlkm_a.img
+01:41:56 2) exact 1MiB-align layout (same algorithm as make_super.py)
+01:41:56    product_a       start=    1,048,576  end=  395,030,528  (    375.73 MiB)
+01:41:56    vendor_a        start=  395,313,152  end=2,040,020,992  (  1,568.52 MiB)
+01:41:56    system_ext_a    start=2,040,528,896  end=2,452,439,040  (    392.83 MiB)
+01:41:56    odm_a           start=2,452,619,264  end=3,333,677,056  (    840.24 MiB)
+01:41:56    system_a        start=3,334,471,680  end=9,228,771,328  (  5,621.24 MiB)
+01:41:56    mi_ext_a        start=9,229,565,952  end=9,356,206,080  (    120.77 MiB)
+01:41:56    vendor_dlkm_a   start=9,356,443,648  end=9,378,414,592  (     20.95 MiB)
+01:41:56    system_dlkm_a   start=9,378,463,744  end=9,385,934,848  (      7.13 MiB)
+01:41:56    odm_dlkm_a      start=9,386,852,352  end=9,387,200,512  (      0.33 MiB)
+01:41:56    sum(partitions) = 9,382,387,712 B (8.74 GiB)
+01:41:56    data_end        = 9,387,200,512 B (8.74 GiB)   (first_logical=1,048,576, align_padding=3,764,224 B = 3.59 MiB)
+01:41:56    device_size     = 9,663,676,416 B   free_after_data = 276,475,904 B (263.67 MiB)
+01:41:56    group main_a max= 9,652,142,080 B   free_vs_group(sum) = 269,754,368 B (257.26 MiB)
+01:41:56    group main_a max= 9,652,142,080 B   free_vs_group(data_end) = 264,941,568 B (252.67 MiB)
+01:41:56    budget: PASS
+01:41:56    manifest -> C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\01_analysis\v02_super_manifest.json
+01:41:56 DryRun: skip build
+01:41:56 === DONE (dry run) ===

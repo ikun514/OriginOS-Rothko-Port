@@ -1,0 +1,108 @@
+{
+  "input": "C:\\Users\\Administrator\\Documents\\deepseek-harness\\default-workspace\\OriginOS_Rothko_Port\\02_base\\images\\rothko_current_vendor_boot_a.img",
+  "output": "G:\\OriginOS_Work\\02_base\\rothko_vendor_boot_patched.img",
+  "output_size": 67108864,
+  "output_sha256": "7847b5ccf1720b41dc30ea08b414ce2cee0b6fcbb38acbae0e513c7cf5bf887f",
+  "self_check": "PASS",
+  "info": {
+    "image_end": 62873600,
+    "new_vrsize": 62417530,
+    "total_size": 67108864
+  },
+  "removed_avb_tokens": [
+    [
+      "/system",
+      "avb=vbmeta_system"
+    ],
+    [
+      "/system",
+      "avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey"
+    ],
+    [
+      "/system",
+      "avb=vbmeta_system"
+    ],
+    [
+      "/system",
+      "avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey"
+    ],
+    [
+      "/system_ext",
+      "avb=vbmeta_system"
+    ],
+    [
+      "/system_ext",
+      "avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey"
+    ],
+    [
+      "/system_ext",
+      "avb=vbmeta_system"
+    ],
+    [
+      "/system_ext",
+      "avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey"
+    ],
+    [
+      "/vendor",
+      "avb"
+    ],
+    [
+      "/vendor",
+      "avb"
+    ],
+    [
+      "/product",
+      "avb"
+    ],
+    [
+      "/product",
+      "avb"
+    ],
+    [
+      "/mnt/vendor/mi_ext",
+      "avb=vbmeta"
+    ],
+    [
+      "/mnt/vendor/mi_ext",
+      "avb=vbmeta"
+    ],
+    [
+      "/odm",
+      "avb"
+    ],
+    [
+      "/odm",
+      "avb"
+    ],
+    [
+      "/vendor_dlkm",
+      "avb"
+    ],
+    [
+      "/vendor_dlkm",
+      "avb"
+    ],
+    [
+      "/odm_dlkm",
+      "avb"
+    ],
+    [
+      "/odm_dlkm",
+      "avb"
+    ],
+    [
+      "/system_dlkm",
+      "avb"
+    ],
+    [
+      "/system_dlkm",
+      "avb"
+    ],
+    [
+      "/vbmeta_system",
+      "avb=vbmeta"
+    ]
+  ],
+  "cmdline": "bootopt=64S3,32N2,64N2 androidboot.selinux=permissive",
+  "avb_signature_note": "vbmeta blob 保留但签名与新镜像不匹配：刷机必须禁用 AVB 验证，或使用 --strip-avb"
+}

@@ -1,0 +1,102 @@
+﻿===== 1) pstore console: usb / vusbd / gadget =====
+T!40U mt_usb[get_`rnp%rt
+  0.usb-`hy
+] GEt_urb_tyPe onnine*1 usb_4yp
+%M gat_usb_TIpa
+.061314EK  DR85U get_`hapcerZTY0e .Ld)Na:! type;6 usbNt1p%:!
+Usb_
+mnliF%:0 dY`d(& uSbWth0e
+0 Dq `2006 usb_dfl!%iped:  urb	`"0
+2`!000,usb0: `te3_e0]ejabde
+* cEF usb v!ore
+usb_
+tyPd*uSb
+usbA
+l_bh`2FeUdcDe uwiTch_pmacXnOrm!l=
+ g!0OuS"_4q a oj$ind:1 usb\4ypd:3
+(ini` f`(D Usb `sy a-0"
+`hna:1 dype:& usbV4y`
+
+===== 2) pstore: init service failures =====
+
+===== 3) pstore: selinux state =====
+
+===== 4) tombstones (names only) =====
+--- /data/tombstones/tombstone_00
+Softversion: unknown
+Time: 2026-11-12 09:11:28
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'vivo/rothko/rothko:16/BP2A.250605.031.A3/compiler260908202554:user/release-keys'
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2026-07-01 08:01:21.149917848+0800
+Process uptime: 13s
+--- /data/tombstones/tombstone_01
+Softversion: unknown
+Time: 2026-11-12 09:11:56
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'vivo/rothko/rothko:16/BP2A.250605.031.A3/compiler260908202554:user/release-keys'
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2026-11-12 09:11:54.908388694+0800
+Process uptime: 10s
+--- /data/tombstones/tombstone_02
+Softversion: unknown
+Time: 2026-11-12 09:15:32
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'vivo/rothko/rothko:16/BP2A.250605.031.A3/compiler260908202554:user/release-keys'
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2026-11-12 09:15:30.182694783+0800
+Process uptime: 10s
+--- /data/tombstones/tombstone_03
+Softversion: unknown
+Time: 2026-11-12 09:31:44
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'vivo/rothko/rothko:16/BP2A.250605.031.A3/compiler260908202554:user/release-keys'
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2026-11-12 09:31:44.042397846+0800
+Process uptime: 0s
+--- /data/tombstones/tombstone_04
+Softversion: unknown
+Time: 2026-11-12 09:32:46
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'vivo/rothko/rothko:16/BP2A.250605.031.A3/compiler260908202554:user/release-keys'
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2026-11-12 09:32:43.395736925+0800
+Process uptime: 7s
+--- /data/tombstones/tombstone_05
+Softversion: unknown
+Time: 2026-11-12 09:34:33
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'vivo/rothko/rothko:16/BP2A.250605.031.A3/compiler260908202554:user/release-keys'
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2026-11-12 09:34:31.249384623+0800
+Process uptime: 10s
+--- /data/tombstones/tombstone_06
+Softversion: unknown
+Time: 2026-11-12 09:37:18
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'vivo/rothko/rothko:16/BP2A.250605.031.A3/compiler260908202554:user/release-keys'
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2026-11-12 09:37:16.741235326+0800
+Process uptime: 11s
+--- /data/tombstones/tombstone_07
+Softversion: unknown
+Time: 2026-11-12 09:37:22
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'vivo/rothko/rothko:16/BP2A.250605.031.A3/compiler260908202554:user/release-keys'
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2026-11-12 09:37:20.086873249+0800
+Process uptime: 13s
+
+===== 5) pmsg =====
+
+===== 6) vivo logs about usb =====
+/data/vendor/bsplog/charge/charge_logger/charge_logger_a.csv
+DONE

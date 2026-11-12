@@ -1,0 +1,515 @@
+{
+ "payload": "C:\\Users\\Administrator\\Downloads\\Compressed\\payload.bin",
+ "payload_size": 9312066522,
+ "version": 2,
+ "manifest_size": 26419,
+ "metadata_signature_size": 267,
+ "header_size": 24,
+ "data_blob_offset": 26710,
+ "block_size": 4096,
+ "minor_version": 0,
+ "dynamic_partition_metadata": {
+  "snapshot_enabled": false,
+  "vabc_enabled": true,
+  "vabc_compression_param": "",
+  "cow_version": 0
+ },
+ "n_partitions": 38,
+ "partitions": [
+  {
+   "name": "apusys",
+   "size": 1822720,
+   "computed_size": 1822720,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "0f08452f893fc5408d95c7becd4aafceb555537fddcb7e5250008966d430c418",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "audio_dsp",
+   "size": 15806464,
+   "computed_size": 15806464,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "af2cfc5eec760652f0096b208a77bccecc9b1be0abff8fe3dc2584718ce390fb",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "boot",
+   "size": 100663296,
+   "computed_size": 100663296,
+   "n_ops": 3,
+   "op_counts": {
+    "REPLACE_ZSTD": 3
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "50c03fc589cb1734da60c69a121352c151215302386babd458752d4a10c2be50",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "ccu",
+   "size": 110592,
+   "computed_size": 110592,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "051c97ac230e3e53b25ea995d23189971d54cd066023182b8774f9f16827fdcd",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "connsys_gnss",
+   "size": 3809280,
+   "computed_size": 3809280,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "833b7f4845f723d2893b77292c0cdc8634c43abfc75cf19d55b1989b0c2a440e",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "dpm",
+   "size": 815104,
+   "computed_size": 815104,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "a8eecaaff16b1e1914b83387f4da5afe7d2e8252bb83ab2ba76cd1a346d41504",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "dtbo",
+   "size": 290816,
+   "computed_size": 290816,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "76612bc6fed6da49b09936be9591ca6e864d0bbeb2d88d4dab7e48858ab393a4",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "gpueb",
+   "size": 802816,
+   "computed_size": 802816,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "b50abb204dc94323ddae37fa10a21d8726aac4cf950734b99a76327bf9cd383b",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "gz",
+   "size": 3297280,
+   "computed_size": 3297280,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "a7ed84d27cdfe380cea98450e4c78ea1d3395ea65c7c92507244f2d4be4ebea7",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "init_boot",
+   "size": 8388608,
+   "computed_size": 8388608,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "9e6b57653786700efac7872b96b8f458779f36edef38602fa4ec1f8bb01a3643",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "ise",
+   "size": 520192,
+   "computed_size": 520192,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "63f625bff647b662653e8852b8f01ae99d1e650951ab0bf28a25b405c0dca87e",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "lk",
+   "size": 3657728,
+   "computed_size": 3657728,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "d580092bb67699e840dcd2016cee7f2d4258a6c4f7f867eba60866da0f9dc8a8",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "logo",
+   "size": 4423680,
+   "computed_size": 4423680,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "44654dd92759fca1e2592e259de5e8db9db11996315afa6be0847f4ddd2fd823",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "mcf_ota",
+   "size": 29999104,
+   "computed_size": 29999104,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "fd85f4b200e00131b9ee33dfad18019db0e98954a85cc7878abc9b985f1d7880",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "mcupm",
+   "size": 1077248,
+   "computed_size": 1077248,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "bb29bc3436e5a8a78fbb80a4ec8bbb14093cb1a5474b266310ec3e491a6c4b01",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "modem",
+   "size": 74448896,
+   "computed_size": 74448896,
+   "n_ops": 3,
+   "op_counts": {
+    "REPLACE_ZSTD": 3
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "12bf6b7cd8cb1b239935a1ea6aa30370f829adb1d5a729b34a824a408988afba",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "mvpu_algo",
+   "size": 61440,
+   "computed_size": 61440,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "dbe2e73ca3716a702058468fae02ca52ed196d791985190c601a09503ebfeaea",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "odm",
+   "size": 4780032,
+   "computed_size": 4780032,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "a5c17dffc407ad2486d438803583643a050d500dc9c7f4f78318bcf753aa7236",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "odm_dlkm",
+   "size": 348160,
+   "computed_size": 348160,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "c721305e92f9dd35f640457c456ab337d16bb87791feee4a1570787e9b935a06",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "pi_img",
+   "size": 167936,
+   "computed_size": 167936,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "fe58fcc50b29b2479151454cc9626570584d88603c77f8f9a4819d503eeb9d18",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "preloader_raw",
+   "size": 884736,
+   "computed_size": 884736,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "7c3208c8cc18a2345c5033fc40cdb4e46ec9075ad687cb228afb52135d7e9906",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "product",
+   "size": 393981952,
+   "computed_size": 393981952,
+   "n_ops": 12,
+   "op_counts": {
+    "REPLACE_ZSTD": 12
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "2a396f7ae00da1993cb48b6a4af4d59ce066bdb1f1d1dc7959797fe8d82f0136",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "pvmfw",
+   "size": 4194304,
+   "computed_size": 4194304,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "62728e8ee7aae7f4e46f1243f4dbdb2077e5edc9c8a848c2d31b2b0f9ed74cbe",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "scp",
+   "size": 3469312,
+   "computed_size": 3469312,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "bead2558ea52f3c62d10147bbe0aa1fb10c2636a208bc7bbd394cccda56b4251",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "spmfw",
+   "size": 36864,
+   "computed_size": 36864,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "54796048af1d177f0e9c1ec2f9162af14d54ad72c040f18d18a6611b8a880640",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "sspm",
+   "size": 892928,
+   "computed_size": 892928,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "fafbd16d3314bdf4088dec4c554ae7bd6b96b13306bcd1a10b8188a42597023d",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "storage",
+   "size": 54525952,
+   "computed_size": 54525952,
+   "n_ops": 2,
+   "op_counts": {
+    "REPLACE_ZSTD": 2
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "bd4565496d1c83e29a2baf3fa16fb0d0d634c3781d987f8a834a3716f641d66c",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "system",
+   "size": 7934083072,
+   "computed_size": 7934083072,
+   "n_ops": 237,
+   "op_counts": {
+    "REPLACE_ZSTD": 236,
+    "REPLACE": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "1578259256eb1660f34364344b2959abb8f8bbc5f1feff213b6a4da57c77e2d6",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "system_dlkm",
+   "size": 14913536,
+   "computed_size": 14913536,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "9950b3a1c2850ef7296c573e25fac4f5b97d8dd329628922cf392d5e083e2791",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "system_ext",
+   "size": 411910144,
+   "computed_size": 411910144,
+   "n_ops": 13,
+   "op_counts": {
+    "REPLACE_ZSTD": 13
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "f3235ab89fbda7180ed934897e1e31d225e3a506db6f0912c462c2bc02389468",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "tee",
+   "size": 1650688,
+   "computed_size": 1650688,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "a97ac85e7e9276102ead3d8ee07057932a571f54e384bb46ee31d35608d76c6a",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "vbmeta",
+   "size": 8192,
+   "computed_size": 8192,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "dccbcd59ce09273a723ccf055f90829fbb9920926c45496053180641f40f3d9b",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "vbmeta_system",
+   "size": 8192,
+   "computed_size": 8192,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "5b612390a8bda267ae5f90daedc3bd91b2b8234e78d9ce2b6567761908ecdefa",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "vbmeta_vendor",
+   "size": 4096,
+   "computed_size": 4096,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "a0e16143e2fcd382050d2aca10bcd51abf641d7987ad3d23c3eab3368f8b48dc",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "vcp",
+   "size": 2211840,
+   "computed_size": 2211840,
+   "n_ops": 1,
+   "op_counts": {
+    "REPLACE_ZSTD": 1
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "7ac2d01b372154efbeb80e9d5e554ab2b989aebace23fa3fefdead036e8bf9aa",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "vendor",
+   "size": 3135754240,
+   "computed_size": 3135754240,
+   "n_ops": 94,
+   "op_counts": {
+    "REPLACE_ZSTD": 94
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "08f660d675bb753bb9e359de4bea97888405d73797e439e5ea9fda441962caf2",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "vendor_boot",
+   "size": 134217728,
+   "computed_size": 134217728,
+   "n_ops": 4,
+   "op_counts": {
+    "REPLACE_ZSTD": 4
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "fa1f9687b28a2f6a3d967ace32da0fc884f50ebd99595441fe20a47942372e46",
+   "old_partition_sha256": ""
+  },
+  {
+   "name": "vendor_dlkm",
+   "size": 45801472,
+   "computed_size": 45801472,
+   "n_ops": 2,
+   "op_counts": {
+    "REPLACE_ZSTD": 2
+   },
+   "needs_baseline": false,
+   "extractable": true,
+   "new_partition_sha256": "28e68245a6d606351a95b502525ead5847701d827eab8f9172084315f5219e46",
+   "old_partition_sha256": ""
+  }
+ ]
+}

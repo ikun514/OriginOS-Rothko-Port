@@ -1,0 +1,47 @@
+﻿===== find setup wizard packages in vivo system =====
+system mount rc=0
+product mount rc=0
+--- /mnt/s/system/priv-app
+SetupWizard
+--- /mnt/s/system/app
+BBKAccount
+VivoAccessibility
+--- /mnt/p/app
+--- /mnt/p/priv-app
+===== grep wizard activity names from manifests (strings) =====
+== /mnt/s/system/priv-app/SetupWizard
+-rw-r--r-- 1 root root 27092860 1970-01-01 08:00 /mnt/s/system/priv-app/SetupWizard/SetupWizard.apk
+===== vivo account related apks =====
+BBKAccount
+BBKAppStore
+BBKCloud
+BBKCrontab
+BBKFileManager
+BBKLOG
+BBKLauncher2
+BBKThemeLite
+BBKWeatherProvider
+Vivo3rdAlgoService
+VivoAccessibility
+VivoAssistant
+VivoBaseGallery
+VivoCamera
+VivoDaemonService
+VivoMobileService
+VivoMusicMixCard
+VivoMusicWidgetMix
+VivoSmartMultiWindow
+VivoSmartNlp
+VivoThemeRes
+VivoTws
+com.vivo.quickpay
+vivoDemoVideo
+vivoPay
+vivoPushEngine
+vivogamespace
+VivoBackupRestore
+VivoBrowser
+VivoCredentialManager
+VivoShare
+VivoTelephonyApp
+DONE

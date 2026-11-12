@@ -1,0 +1,68 @@
+﻿===== fstab.enableswap =====
+/dev/block/zram0 none swap defaults zramsize=100%,swapprio=10
+
+===== init.mt6989.rc: swap/zram context =====
+188-    # multi-gen LRU
+189-    write /sys/kernel/mm/lru_gen/enabled y
+190-
+191:    # zram
+192:    write /sys/block/zram0/comp_algorithm lz4
+193-    write /proc/sys/vm/page-cluster 0
+194:    write /proc/sys/vm/swappiness 120
+195:    write /sys/kernel/mm/swap/vma_ra_enabled false
+196-
+197-    # boot time fs tune
+198-    write /sys/block/mmcblk0/queue/iostats 0
+199-    write /sys/block/mmcblk0/queue/read_ahead_kb 2048
+200-    write /sys/block/mmcblk0/queue/nr_requests 256
+201-    write /sys/block/sdc/queue/iostats 0
+202-    write /sys/block/sdc/queue/read_ahead_kb 2048
+203-    write /sys/block/sdc/queue/nr_requests 256
+204-    write /sys/block/dm-0/queue/read_ahead_kb 2048
+205-    write /sys/block/dm-1/queue/read_ahead_kb 2048
+206-    write /sys/block/dm-2/queue/read_ahead_kb 2048
+207-    write /sys/block/dm-3/queue/read_ahead_kb 2048
+--
+1133-    write /sys/block/dm-4/queue/read_ahead_kb 128
+1134-    write /sys/block/dm-5/queue/read_ahead_kb 128
+1135-
+1136:    # zram writeback
+1137:    setprop persist.sys.zram_enabled 1
+1138:    swapon_all /vendor/etc/fstab.enableswap
+1139-
+1140-on property:sys.boot_completed=1
+1141-
+1142-    # stop bootprof
+1143-    write /proc/bootprof 0
+1144-
+1145-service getecid /vendor/bin/get_ecid.sh
+1146-    seclabel u:r:init:s0
+1147-    user root
+1148-    group root
+1149-    oneshot
+1150-    disabled
+===== other vendor rc files with swap =====
+/mnt/v/etc/init/hw/init.mt6989.rc
+===== vendor fstab.mt6989 swap/zram lines =====
+===== vivo system init.rc: zram/swap =====
+1186-    write /proc/sys/vm/dirty_background_ratio  5
+1187-
+1188:    # System server manages zram writeback
+1189:    chown root system /sys/block/zram0/idle
+1190:    chmod 0220 /sys/block/zram0/idle
+1191:    chown root system /sys/block/zram0/writeback
+1192:    chmod 0220 /sys/block/zram0/writeback
+1193-
+1194-    # to access F2FS sysfs on dm-<num> directly
+1195-    mkdir /dev/sys/fs/by-name 0755 system system
+1196-    symlink /sys/fs/f2fs/${dev.mnt.dev.data} /dev/sys/fs/by-name/userdata
+1197-
+1198-    # dev.mnt.dev.data=dm-N, dev.mnt.blk.data=sdaN/mmcblk0pN, dev.mnt.rootdisk.data=sda/mmcblk0, or
+1199-    # dev.mnt.dev.data=sdaN/mmcblk0pN, dev.mnt.blk.data=sdaN/mmcblk0pN, dev.mnt.rootdisk.data=sda/mmcblk0
+1200-    mkdir /dev/sys/block/by-name 0755 system system
+1201-    symlink /sys/class/block/${dev.mnt.dev.data} /dev/sys/block/by-name/userdata
+1202-    symlink /sys/class/block/${dev.mnt.rootdisk.data} /dev/sys/block/by-name/rootdisk
+===== vivo system etc/init files mentioning swap =====
+/mnt/s/system/etc/init/hw/init.rc
+/mnt/s/system/etc/init/init-mmd-prop.rc
+DONE

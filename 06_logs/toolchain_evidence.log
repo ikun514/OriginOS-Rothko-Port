@@ -1,0 +1,146 @@
+﻿############################################################
+# TOOLCHAIN EVIDENCE  Thu Nov 12 01:16:10 CST 2026
+############################################################
+=== [1] device ===
+product: rothko  build: BP2A.250605.031.A3
+android: 16  kernel: 6.1.138-android14-11-g6ab8c9a86a33-ab14396278
+selinux: Enforcing  page_size: 4096
+=== [2] /system/bin tool versions ===
+mkfs.erofs   mkfs.erofs (erofs-utils) 1.8.3
+mke2fs       mke2fs 1.46.6 (1-Feb-2023)
+e2fsdroid    (no --version; usage below)
+e2fsdroid: invalid option -- h
+dump.erofs   dump.erofs (erofs-utils) 1.8.3
+fsck.erofs   fsck.erofs (erofs-utils) 1.8.3
+lpdump       lpdump - command-line tool for dumping Android Logical Partition images.
+=== [3] zstd/lzma 不可用证据 ===
+<E> erofs: Cannot find a valid compressor zstd
+<E> erofs: failed to initialize compressor: [Error 22] Invalid argument
+<E> erofs: 	Could not format the device : [Error 22] Invalid argument
+<E> erofs: Cannot find a valid compressor lzma
+<E> erofs: failed to initialize compressor: [Error 22] Invalid argument
+<E> erofs: 	Could not format the device : [Error 22] Invalid argument
+=== [4] 内核 EROFS 配置 ===
+CONFIG_EROFS_FS=y
+# CONFIG_EROFS_FS_DEBUG is not set
+CONFIG_EROFS_FS_XATTR=y
+CONFIG_EROFS_FS_POSIX_ACL=y
+CONFIG_EROFS_FS_SECURITY=y
+CONFIG_EROFS_FS_ZIP=y
+# CONFIG_EROFS_FS_ZIP_LZMA is not set
+CONFIG_EROFS_FS_PCPU_KTHREAD=y
+CONFIG_EROFS_FS_PCPU_KTHREAD_HIPRI=y
+--- erofs 压缩相关内核符号 ---
+0000000000000000 t z_erofs_lz4_decompress
+=== [5] vendor_boot ramdisk 工具在 Android 用户空间的结果（备份方案） ===
+--- mkfs.erofs ---
+adb.exe : Segmentation fault 
+所在位置 行:6 字符: 8
++ $out = & $adb shell su -c 'sh /data/local/tmp/toolchain/evidence_coll ...
++        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Segmentation fault :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+rc=139
+--- mke2fs ---
+Segmentation fault 
+
+rc=139
+--- e2fsdroid ---
+Segmentation fault 
+
+rc=139
+--- dump.erofs ---
+Segmentation fault 
+
+rc=139
+=== [6] make_super.py 产物 lpdump 交叉验证 ===
+--- /data/local/tmp/lab/lp_super_standard.img ---
+Slot 0:
+Metadata version: 10.2
+Metadata size: 1616 bytes
+Metadata max size: 65536 bytes
+Metadata slot count: 3
+Header flags: virtual_ab_device
+Partition table:
+------------------------
+  Name: odm_a
+  Group: main_a
+  Attributes: readonly
+  Extents:
+lpdump rc=0
+--- /data/local/tmp/lab/lp_super_mtk.img ---
+Slot 0:
+Metadata version: 10.2
+Metadata size: 1616 bytes
+Metadata max size: 65536 bytes
+Metadata slot count: 3
+Header flags: virtual_ab_device
+Partition table:
+------------------------
+  Name: odm_a
+  Group: main_a
+  Attributes: readonly
+  Extents:
+lpdump rc=0
+=== [7] erofs 往返报告（PC 编排 roundtrip.ps1 产生） ===
+=== EROFS ROUNDTRIP REPORT ===
+time: Thu Nov 12 01:12:15 CST 2026
+device: rothko / 16
+kernel: 6.1.138-android14-11-g6ab8c9a86a33-ab14396278
+selinux: Enforcing
+mkfs.erofs: mkfs.erofs (erofs-utils) 1.8.3
+src_tgz: /data/local/tmp/tree.tar.gz
+src_entries: 18
+image: /data/local/tmp/lab/roundtrip/tree.erofs
+image_size: 405504
+mount_fstype: erofs
+checksums_match: YES
+--- dump.erofs ---
+Filesystem magic number:                      0xE0F5E1E2
+Filesystem blocksize:                         4096
+Filesystem blocks:                            99
+Filesystem inode metadata start block:        0
+Filesystem shared xattr metadata start block: 0
+Filesystem root nid:                          38
+Filesystem compr_algs:                        lz4
+Filesystem sb_size:                           128
+Filesystem inode count:                       32
+Filesystem created:                           Wed Nov 15 06:13:20 2023
+Filesystem features:                          sb_csum mtime xattr_filter 0padding compr_cfgs big_pcluster 
+Filesystem UUID:                              07dd0ac2-a12d-43de-8589-59243dbee060
+--- src sha256 ---
+d84a82e6f71702bf44cabd6440389c763532b467c71ce98b4cc4b6adb1212780  ./app/SystemApp/SystemApp.apk
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./bin/test_service.sh
+f8be74567d4aaa20be96625f46b7bf1c147d7b7998cd316427b41d42dc129993  ./etc/file_00.conf
+740801127c1263e33caea713c6185c7b836f78ee8bfaa3b9e777eca3d226a702  ./etc/file_01.conf
+--- 完整报告与镜像已由 roundtrip.ps1 取回到 04_build/lab/from_device/ ---
+=== [8] erofs 压缩率分析摘要（comp_analysis.sh 产生） ===
+odm_a uncompressed_bytes=1272663031 files=1114
+system_a uncompressed_bytes=1333839501 files=3524
+odm_a alg=lz4hc repacked_bytes=814264320 original_bytes=881057792 ratio_vs_orig=0.9242 seconds=22
+odm_a alg=lz4 repacked_bytes=893153280 original_bytes=881057792 ratio_vs_orig=1.0137 seconds=3
+system_a alg=lz4hc repacked_bytes=804454400 original_bytes=879894528 ratio_vs_orig=0.9143 seconds=10
+system_a alg=lz4 repacked_bytes=911020032 original_bytes=879894528 ratio_vs_orig=1.0354 seconds=3
+=== [9] ext4 打包镜像 + 挂载 + 标签 ===
+-rw-r--r-- 1 root root 67108864 2026-11-12 01:15 /data/local/tmp/lab/ext4/system_ext4.img
+Filesystem volume name:   system
+Filesystem features:      ext_attr dir_index filetype extent sparse_super large_file huge_file uninit_bg dir_nlink extra_isize
+Block count:              16384
+Block size:               4096
+[01:16:16] mounted /data/local/tmp/lab/ext4/system_ext4.img on /data/local/tmp/lab/ext4/verify_mnt via /dev/block/loop44 (ext4)
+--- ls -Z (确认 e2fsdroid -e 写入的 SELinux xattr) ---
+u:object_r:system_file:s0 bin
+u:object_r:system_file:s0 hello.txt
+u:object_r:system_file:s0 lost+found
+u:object_r:system_file:s0 sub
+u:object_r:system_file:s0 /data/local/tmp/lab/ext4/verify_mnt/hello.txt
+u:object_r:system_file:s0 /data/local/tmp/lab/ext4/verify_mnt/sub/nested.txt
+u:object_r:system_file:s0 /data/local/tmp/lab/ext4/verify_mnt/sub/rand.bin
+u:object_r:system_file:s0 /data/local/tmp/lab/ext4/verify_mnt/bin/test.sh
+hello ext4 roundtrip
+=== [10] 当前 loop/selinux 状态 ===
+46
+Enforcing
+=== END ===

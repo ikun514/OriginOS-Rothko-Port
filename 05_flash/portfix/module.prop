@@ -1,0 +1,6 @@
+id=portfix
+name=OriginOS Port Fix
+version=1
+versionCode=1
+author=lead
+description=Force SELinux permissive and apply port fixups at boot

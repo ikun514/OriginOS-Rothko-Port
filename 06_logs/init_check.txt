@@ -1,0 +1,87 @@
+﻿===== did init parse/reach portfix rc? =====
+[  436.650058][    T1] init: Service 'vendor.swap-hal-1-0' (pid 1073) received signal 15
+[  436.650062][    T1] init: Sending signal 9 to service 'vendor.swap-hal-1-0' (pid 1073) process group...
+[  439.611471][    T1] init: VmSwap:	    1844 kB
+[  439.612107][    T1] init: VmSwap:	     660 kB
+[  439.612613][    T1] init: VmSwap:	     976 kB
+[  439.613321][    T1] init: VmSwap:	   10508 kB
+[  439.845510][    T1] init: zram closing, normal swapoff path
+[  439.846534][    T1] init: No zram backing device configured
+===== settings binary strings =====
+adb_wifi_enabled/
+development_settings_enabled/
+dlc_adb_enable/
+adb_allowed_connection_time/
+adb_enabled/
+vivo_development_show_times/
+vivo_development_show/
+'setupwizard_numbermark_status_processed/
+setup_skipped/
+device_provisioned/
+user_setup_complete/
+===== circulatedlog files =====
+total 0
+total 0
+===== newest log-like files under /data (top 20 by mtime) =====
+/data/vendor/charge_logger/charge_logger_a.csv
+/data/vendor/fpdump/fp_init_log.txt
+/data/vendor/mitee/mitee.log
+/data/anr/temp_anr_1765142210694762031.txt
+/data/anr/temp_anr_2024456743661694161.txt
+/data/anr/temp_anr_5158565590085750004.txt
+/data/anr/temp_anr_5889899846272737016.txt
+/data/anr/temp_anr_5989742680480896576.txt
+/data/anr/temp_anr_811865962646593726.txt
+/data/anr/temp_anr_4556759529724129947.txt
+/data/anr/temp_anr_6011783164199158002.txt
+/data/anr/temp_anr_5561964547976739156.txt
+/data/anr/temp_anr_4506964506605937772.txt
+/data/anr/temp_anr_7478646416905242507.txt
+/data/anr/temp_anr_1415430509582789977.txt
+/data/anr/temp_anr_1761788950283871582.txt
+/data/anr/temp_anr_7273674090977244502.txt
+/data/anr/temp_anr_6689754569960007626.txt
+/data/anr/temp_anr_8311428314992474843.txt
+/data/anr/temp_anr_1443855277109561544.txt
+===== bbklog / vivo dump dirs =====
+--- /data/vendor/bbklog
+total 0
+--- /data/vendor/aee_exp
+total 4
+-rw-r----- 1 root system 118 2026-07-01 08:00 db_history
+--- /data/vendor/bsplog
+total 30
+drwxrwxr-x 2 system system 3452 2026-07-01 08:50 audio
+drwxrwxr-x 3 system system 3452 2026-07-01 08:50 bt
+drwxrwxr-x 2 system system 3452 2026-07-01 08:50 camera
+drwxrwxr-x 3 system system 3452 2026-07-01 08:50 charge
+drwxrwxr-x 2 system system 3452 2026-07-01 08:50 modem
+--- /data/vendor/diag
+total 0
+===== last_kmsg / dmesg pstore radio context =====
+[  436.559426][  T776] [ccci1/dpmf][dpmaif_rxq_stop_lro] rxq0 lroinfo count: 0
+[  436.559457][  T776] [ccci1/dpmf][dpmaif_rxq_stop_lro] rxq1 lroinfo count: 0
+[  436.559484][  T776] [ccci1/bat][ccci_dpmaif_bat_stop] stop.
+[  436.560791][ T1405] [ccci0/bat][dpmaif_rx_bat_alloc_thread] bat_paused_alloc: 1; bat_need_alloc: 2
+[  436.563005][  T776] [ccci1/dpmf][dpmaif_set_clk] error: clock: infra-dpmaif-blk-clk is NULL.
+[  436.563019][  T776] [ccci1/drv3]drv3_hw_reset_v1, read (infra_ao_base+0x0208) value=3715
+[  436.563525][  T776] [ccci1/drv3][drv3_hw_reset_v1]-1535 read 0xF50 value=1
+[  436.565035][  T776] [ccci1/drv3][drv3_hw_reset_v1]-1584 read 0xF54 value=0
+[  436.565043][  T776] [ccci1/fsm]kern_broadcast_md_sate: 1 start
+[  436.565990][  T776] [ccci1/PORT_KERN]slbc gid invalid and release ret = 0
+[  436.565998][  T776] [ccci1/fsm]broadcast 1 to <0/user3>00000000b6df17c2 cost 949538 ns
+[  436.566012][  T776] [ccci1/fsm]broadcast 1 to <1/user1>00000000b97b01aa cost 8846 ns
+[  436.566017][  T776] [ccci1/fsm]broadcast 1 to <2/user4>00000000e72ef6e7 cost 846 ns
+[  436.566041][  T776] [ccci1/fsm]broadcast 1 to <3/user2>00000000d8441b39 cost 19385 ns
+[  436.566045][  T776] [ccci1/fsm]kern_broadcast_md_sate: 1/0xf end
+[  436.566085][  T776] [ccci1/fsm]command 2 is completed 1 by fsm_main_thread [ccci_md_all]
+[  436.566151][T17729] [ccci1/fsm]IPI send op_id=1/data0=0x0,data1=0xabcddcba,data2=0xaabbccdd size=16
+[  436.654207][    T1] init: Service 'ccci_mdinit' (pid 1134) exited with status 0 oneshot service took 428.583008 seconds in background
+[  436.654212][    T1] init: Sending signal 9 to service 'ccci_mdinit' (pid 1134) process group...
+[  436.668483][    T1] init: Service 'vendor.mitee.vsimservice' (pid 4855) received signal 15
+[  436.668488][    T1] init: Sending signal 9 to service 'vendor.mitee.vsimservice' (pid 4855) process group...
+[  436.704776][T31843] [name:spm&] Pending Wakeup Sources: ccci_ccb_meta ccci_ccb_md_monitor ccci_ccb_dhl 11201000.usb0 
+[  438.499473][  T347] [ccci1/cif]total cnt=7737;rxq0 isr_cnt=10;rxq1 isr_cnt=69;rxq2 isr_cnt=0;rxq3 isr_cnt=2;rxq4 isr_cnt=5227;rxq5 isr_cnt=2433;rxq6 isr_cnt=1;rxq7 isr_cnt=6;rxq8 isr_cnt=0;rxq9 isr_cnt=0;rxq10 isr_cnt=0;rxq11 isr_cnt=0;rxq12 isr_cnt=0;rxq13 isr_cnt=0;rxq14 isr_cnt=0;rxq15 isr_cnt=1;rxq16 isr_cnt=0;rxq17 isr_cnt=0;rxq18 isr_cnt=0;rxq19 isr_cnt=0;rxq20 isr_cnt=0;rxq21 isr_cnt=0;rxq22 isr_cnt=0;rxq23 isr_cnt=0;
+[  439.612434][    T1] init: Name:	ccci_rpcd
+[  439.613647][    T1] init: [service-misbehaving] : service 'vendor.ccci_rpcd' is still running 3000ms after receiving SIGTERM
+DONE

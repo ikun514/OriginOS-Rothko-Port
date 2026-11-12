@@ -1,0 +1,171 @@
+﻿===== check zram in flashed vendor =====
+mount rc=0
+/mnt/v/etc/init/hw/init.mt6989.rc
+/mnt/v/bin/aee_aedv64_v2
+/mnt/v/bin/aee_dumpstatev_v2
+/mnt/v/bin/factory
+/mnt/v/bin/hw/android.hardware.boot-service.mtk
+/mnt/v/etc/camera/IntellFocus_detect_1st.dla
+/mnt/v/etc/camera/af_detect_1st.dla
+/mnt/v/etc/fstab.enableswap
+/mnt/v/etc/init/hw/init.mt6989.rc
+/mnt/v/etc/nn/ot/neuron_detection.mdla3_5
+--- zram rc content (if any) ---
+== /mnt/v/etc/init/hw/init.mt6989.rc
+# MTK platform .rc configure
+
+import ${ro.vendor.rc}init.connectivity.rc
+import ${ro.vendor.rc}init.mt6989.usb.rc
+import /vendor/etc/init/hw/init.project.rc
+import /system_ext/etc/init/hw/init.aee.rc
+import /FWUpgradeInit.rc
+import /vendor/etc/init/hw/init.aee.rc
+import ${ro.vendor.rc}init.volte.rc
+import ${ro.vendor.rc}init.mal.rc
+import ${ro.vendor.rc}${ro.vendor.init.sensor.rc}
+import ${ro.vendor.rc}init.cgroup.rc
+
+# init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
+import ${ro.vendor.rc}init.modem.rc
+# *** DO NOT import the new rc file after this line ***
+
+on early-init
+    write /proc/bootprof "INIT:early-init"
+
+    # initialize vendor.all.modules.ready to 1 here to prevent NOT GKI project blocked
+    setprop vendor.all.modules.ready 1
+
+# Keep debugfs mounted in non-user builds
+on early-init && property:ro.build.type=eng
+    mount debugfs debugfs /sys/kernel/debug
+    chmod 0755 /sys/kernel/debug
+    write /sys/power/pm_print_times 0
+    setprop persist.dbg.keep_debugfs_mounted true
+
+on early-init && property:ro.build.type=userdebug
+    mount debugfs debugfs /sys/kernel/debug
+    chmod 0755 /sys/kernel/debug
+    setprop persist.dbg.keep_debugfs_mounted true
+
+on init
+    write /proc/bootprof "INIT:init"
+
+    # Support legacy paths
+    symlink /sdcard /mnt/sdcard
+--- vendor props mentioning zram ---
+===== check zram in odm =====
+mount rc=0
+===== check zram in system (vivo) =====
+mount rc=0
+/mnt/s/system/etc/init/hw/init.rc
+/mnt/s/system/etc/init/init-mmd-prop.rc
+/mnt/s/system/bin/cotamnt
+/mnt/s/system/bin/gsid
+/mnt/s/system/bin/init
+/mnt/s/system/bin/securemount
+/mnt/s/system/bin/snapshotctl
+/mnt/s/system/bin/surfaceflinger
+/mnt/s/system/bin/ueventd
+/mnt/s/system/bin/update_engine
+== /mnt/s/system/etc/init/hw/init.rc
+# Copyright (C) 2012 The Android Open Source Project
+#
+# IMPORTANT: Do not create world writable files or directories.
+# This is a common source of Android security bugs.
+#
+
+import /init.environ.rc
+import /system/etc/init/hw/init.usb.rc
+import /init.${ro.hardware}.rc
+import /vendor/etc/init/hw/init.${ro.hardware}.rc
+import /system/etc/init/hw/init.usb.configfs.rc
+import /system/etc/init/hw/init.${ro.zygote}.rc
+import /init.vivo.rc
+
+# Cgroups are mounted right before early-init using list from /etc/cgroups.json
+on early-init
+    # Disable sysrq from keyboard
+    write /proc/sys/kernel/sysrq 0
+
+    # Android doesn't need kernel module autoloading, and it causes SELinux
+    # denials.  So disable it by setting modprobe to the empty string.  Note: to
+    # explicitly set a sysctl to an empty string, a trailing newline is needed.
+    write /proc/sys/kernel/modprobe \n
+
+    # Set the security context of /adb_keys if present.
+    restorecon /adb_keys
+
+    # Set the security context of /postinstall if present.
+    restorecon /postinstall
+
+    # memory.pressure_level used by lmkd
+    chown root system /dev/memcg/memory.pressure_level
+    chmod 0040 /dev/memcg/memory.pressure_level
+    # app mem cgroups, used by activity manager, lmkd and zygote
+    mkdir /dev/memcg/apps/ 0755 system system
+    # cgroup for system_server and surfaceflinger
+    mkdir /dev/memcg/system 0550 system system
+
+    # symlink the Android specific /dev/tun to Linux expected /dev/net/tun
+    mkdir /dev/net 0755 root root
+    symlink ../tun /dev/net/tun
+
+    # set RLIMIT_NICE to allow priorities from 19 to -20
+    setrlimit nice 40 40
+
+    # Allow up to 32K FDs per process
+    setrlimit nofile 32768 32768
+
+    # set RLIMIT_MEMLOCK to 64KB
+    # set RLIMIT_MEMLOCK to 64KB
+== /mnt/s/system/etc/init/init-mmd-prop.rc
+on property:sys.boot_completed=1
+    # When mmd package is not included in the image, we need to initialize
+    # `mmd.enabled_aconfig` sysprop instead of `mmd --set-property`.
+    #
+    # This is because of the consideration for devices in Trunkfood and Nextfood
+    # under mmd being launched via AConfig flag. The devices set up zram with
+    # mmd if `mmd_enabled` AConfig flag is enabled, otherwise set up zram with
+    # swapon_all init command. Since AConfig does not support any init script
+    # integration, we use `mmd.enabled_aconfig` copied by `mmd --set-property`
+    # instead of AConfig flag itself and we need mmd.enabled_aconfig to be empty
+    # by default, to let swapon_all command wait until aconfig flag value is
+    # loaded to the system property.
+    # Devices in Trunkfood and Nextfood needs to execute swapon_all command on
+    # `on property:mmd.enabled_aconfig=*` trigger. So initializing
+    # `mmd.enabled_aconfig` sysprop is required on images without mmd package.
+    #
+    # Note that this init file must not be in the image if mmd is built into the
+    # image.
+    setprop mmd.enabled_aconfig false===== current kernel zram module? =====
+coresize
+holders
+initsize
+initstate
+notes
+refcnt
+scmversion
+sections
+taint
+uevent
+dm-0
+dm-1
+dm-2
+dm-3
+dm-4
+dm-5
+dm-6
+dm-7
+dm-8
+dm-9
+loop0
+loop1
+loop10
+loop11
+loop12
+loop13
+loop14
+loop15
+loop2
+loop3
+DONE

@@ -1,0 +1,29 @@
+﻿=== flashed odm (mapper odm_a) ===
+mount rc=0
+--- /odm root ---
+u:object_r:unlabeled:s0 drwxr-xr-x root:root /mnt/o
+--- /odm/apex ---
+ls: /mnt/o/apex: No such file or directory
+ls: /mnt/o/apex: No such file or directory
+--- apex dir content count ---
+0
+--- odm_file_contexts lines ---
+0 /mnt/o/etc/selinux/odm_file_contexts
+=== system v11 apexd policy files ===
+mount rc=0
+__bionic_open_tzdata: couldn't find any tzdata when looking for CST-8!
+__bionic_open_tzdata: couldn't find any tzdata when looking for posixrules!
+total 326912
+-rw-r--r-- 1 root root 10997760 1970-01-01 08:00 com.android.adbd.apex
+-rw-r--r-- 1 root root 19075072 1970-01-01 08:00 com.android.adservices.apex
+-rw-r--r-- 1 root root   360448 1970-01-01 08:00 com.android.apex.cts.shim.apex
+-rw-r--r-- 1 root root  6406144 1970-01-01 08:00 com.android.appsearch.apex
+-rw-r--r-- 1 root root 50552832 1970-01-01 08:00 com.android.art.apex
+-rw-r--r-- 1 root root 31485952 1970-01-01 08:00 com.android.bt.apex
+-rw-r--r-- 1 root root 11530240 1970-01-01 08:00 com.android.configinfrastructure.apex
+__bionic_open_tzdata: couldn't find any tzdata when looking for CST-8!
+__bionic_open_tzdata: couldn't find any tzdata when looking for posixrules!
+total 326912
+-rw-r--r-- 1 root root u:object_r:system_file:s0  10997760 1970-01-01 08:00 com.android.adbd.apex
+-rw-r--r-- 1 root root u:object_r:system_file:s0  19075072 1970-01-01 08:00 com.android.adservices.apex
+DONE

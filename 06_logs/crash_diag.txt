@@ -1,0 +1,87 @@
+﻿=== mounts ===
+/dev/block/sdc15 on /metadata type f2fs (rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc=on,nogc_merge,discard,discard_unit=block,user_xattr,inline_xattr,acl,inline_data,inline_dentry,flush_merge,barrier,extent_cache,mode=adaptive,active_logs=6,alloc_mode=reuse,checkpoint_merge,fsync_mode=posix,memory=normal,lookup_mode=perf)
+/dev/block/dm-10 on /data type f2fs (rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc=on,gc_merge,discard,discard_unit=block,user_xattr,inline_xattr,acl,inline_data,inline_dentry,noflush_merge,barrier,extent_cache,age_extent_cache,mode=adaptive,active_logs=6,reserve_root=134217,resuid=0,resgid=1065,inlinecrypt,alloc_mode=default,checkpoint_merge,fsync_mode=nobarrier,compress_algorithm=lz4,compress_log_size=2,compress_mode=fs,atgc,memory=normal,lookup_mode=perf)
+=== dropbox list ===
+total 0
+=== tombstones ===
+total 144488
+-rw-rw-r-- 1 tombstoned system 30379864 2026-07-01 00:01 tombstone_00
+-rw-rw-r-- 1 tombstoned system 19557987 2026-07-01 00:01 tombstone_00.pb
+-rw-rw-r-- 1 tombstoned system 29947099 2026-07-01 00:03 tombstone_01
+-rw-rw-r-- 1 tombstoned system 19099376 2026-07-01 00:03 tombstone_01.pb
+-rw-rw-r-- 1 tombstoned system 29775217 2026-07-01 00:03 tombstone_02
+-rw-rw-r-- 1 tombstoned system 19029177 2026-07-01 00:03 tombstone_02.pb
+=== anr ===
+-rw------- 1 system system   307 2026-11-11 22:25 temp_anr_8007492615221259753.txt
+-rw------- 1 system system   307 2026-11-11 22:25 temp_anr_811865962646593726.txt
+-rw------- 1 system system   307 2026-11-11 22:25 temp_anr_8163018395023805627.txt
+-rw------- 1 system system   307 2026-11-11 22:25 temp_anr_8298155347502204173.txt
+-rw------- 1 system system   307 2026-11-11 22:25 temp_anr_8311428314992474843.txt
+-rw------- 1 system system   307 2026-11-11 22:25 temp_anr_8540478897276268432.txt
+-rw------- 1 system system   307 2026-11-11 22:25 temp_anr_9061809950810327873.txt
+-rw------- 1 system system   307 2026-11-11 22:25 temp_anr_9076938406602389304.txt
+-rw------- 1 system system   307 2026-11-11 22:25 temp_anr_9079655568321310596.txt
+-rw------- 1 system system   307 2026-11-11 22:25 temp_anr_9164150898556495124.txt
+=== vivo log dirs ===
+/data/vivo-common
+/data/vivo-others
+/data/vivo-updater
+/data/vivodump
+=== collect tarball ===
+-rw-rw-rw- 1 root root 8706849 2026-11-11 22:26 /data/local/tmp/diag/crash.tgz
+adb.exe : __bionic_open_tzdata: couldn't find any tzdata when looking for Asia/Shanghai!
+所在位置 行:8 字符: 1
++ & $adb shell "sh /data/local/tmp/collect_crash_diag.sh" 2>&1 | Out-Fi ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (__bionic_open_t... Asia/Shanghai!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+=== pstore: modem/radio/baseband lines ===
+[  436.559426][  T776] [ccci1/dpmf][dpmaif_rxq_stop_lro] rxq0 lroinfo count: 0
+[  436.559457][  T776] [ccci1/dpmf][dpmaif_rxq_stop_lro] rxq1 lroinfo count: 0
+[  436.559484][  T776] [ccci1/bat][ccci_dpmaif_bat_stop] stop.
+[  436.560791][ T1405] [ccci0/bat][dpmaif_rx_bat_alloc_thread] bat_paused_alloc: 1; bat_need_alloc: 2
+[  436.563005][  T776] [ccci1/dpmf][dpmaif_set_clk] error: clock: infra-dpmaif-blk-clk is NULL.
+[  436.563019][  T776] [ccci1/drv3]drv3_hw_reset_v1, read (infra_ao_base+0x0208) value=3715
+[  436.563525][  T776] [ccci1/drv3][drv3_hw_reset_v1]-1535 read 0xF50 value=1
+[  436.565035][  T776] [ccci1/drv3][drv3_hw_reset_v1]-1584 read 0xF54 value=0
+[  436.565043][  T776] [ccci1/fsm]kern_broadcast_md_sate: 1 start
+[  436.565990][  T776] [ccci1/PORT_KERN]slbc gid invalid and release ret = 0
+[  436.565998][  T776] [ccci1/fsm]broadcast 1 to <0/user3>00000000b6df17c2 cost 949538 ns
+[  436.566012][  T776] [ccci1/fsm]broadcast 1 to <1/user1>00000000b97b01aa cost 8846 ns
+[  436.566017][  T776] [ccci1/fsm]broadcast 1 to <2/user4>00000000e72ef6e7 cost 846 ns
+[  436.566041][  T776] [ccci1/fsm]broadcast 1 to <3/user2>00000000d8441b39 cost 19385 ns
+[  436.566045][  T776] [ccci1/fsm]kern_broadcast_md_sate: 1/0xf end
+[  436.566085][  T776] [ccci1/fsm]command 2 is completed 1 by fsm_main_thread [ccci_md_all]
+[  436.566124][ T3012] clock gate:0x7f00, PCIe HW MODE BIT:0x87411600, Modem HW MODE BIT:0x0, PEXTP_PWRCTL_3:0x1, slp ready:0x1400, SPM ready:0xc0208963, BBCK2:0xc0208962
+[  436.566151][T17729] [ccci1/fsm]IPI send op_id=1/data0=0x0,data1=0xabcddcba,data2=0xaabbccdd size=16
+[  436.654207][    T1] init: Service 'ccci_mdinit' (pid 1134) exited with status 0 oneshot service took 428.583008 seconds in background
+[  436.654212][    T1] init: Sending signal 9 to service 'ccci_mdinit' (pid 1134) process group...
+[  436.659516][    T1] init: Service 'vendor.ril-daemon-mtk' (pid 1370) received signal 15 oneshot service took 428.286011 seconds in background
+[  436.659521][    T1] init: Sending signal 9 to service 'vendor.ril-daemon-mtk' (pid 1370) process group...
+[  436.668483][    T1] init: Service 'vendor.mitee.vsimservice' (pid 4855) received signal 15
+[  436.668488][    T1] init: Sending signal 9 to service 'vendor.mitee.vsimservice' (pid 4855) process group...
+[  436.704776][T31843] [name:spm&] Pending Wakeup Sources: ccci_ccb_meta ccci_ccb_md_monitor ccci_ccb_dhl 11201000.usb0 
+[  438.499473][  T347] [ccci1/cif]total cnt=7737;rxq0 isr_cnt=10;rxq1 isr_cnt=69;rxq2 isr_cnt=0;rxq3 isr_cnt=2;rxq4 isr_cnt=5227;rxq5 isr_cnt=2433;rxq6 isr_cnt=1;rxq7 isr_cnt=6;rxq8 isr_cnt=0;rxq9 isr_cnt=0;rxq10 isr_cnt=0;rxq11 isr_cnt=0;rxq12 isr_cnt=0;rxq13 isr_cnt=0;rxq14 isr_cnt=0;rxq15 isr_cnt=1;rxq16 isr_cnt=0;rxq17 isr_cnt=0;rxq18 isr_cnt=0;rxq19 isr_cnt=0;rxq20 isr_cnt=0;rxq21 isr_cnt=0;rxq22 isr_cnt=0;rxq23 isr_cnt=0;
+[  439.612434][    T1] init: Name:	ccci_rpcd
+[  439.613647][    T1] init: [service-misbehaving] : service 'vendor.ccci_rpcd' is still running 3000ms after receiving SIGTERM
+[  439.634924][ T2189] [ccci0/dbg][dpmaif_debug_close] name: mobile_log_d.rd
+[  439.635832][    T1] init: Sending signal 9 to service 'vendor.ccci_rpcd' (pid 1139) process group...
+[  439.639265][ T1139] [ccci1/chr]port ccci_rpc close by ccci_rpcd rx_len=0 empty=1, clear_cnt=0, drop=0 usagecnt=0
+[  439.639327][ T1139] [ccci1/pot]critical user check: 0x0
+[  439.659995][ T1106] [ccci1/chr]port ccci_raw_audio close by HwBinder:1006_3 rx_len=0 empty=1, clear_cnt=0, drop=0 usagecnt=0
+[  439.660017][ T1106] [ccci1/pot]critical user check: 0x0
+[  439.660133][ T1106] [ccci1/chr]port ccci_aud close by HwBinder:1006_3 rx_len=0 empty=1, clear_cnt=0, drop=0 usagecnt=0
+[  439.660149][ T1106] [ccci1/pot]critical user check: 0x0
+[  439.665522][    T1] init: Service 'vendor.ccci_rpcd' (pid 1139) received signal 9 oneshot service took 431.589996 seconds in background
+[  439.665562][    T1] init: Sending signal 9 to service 'vendor.ccci_rpcd' (pid 1139) process group...
+[  442.603678][    T1] [TP-Driver][22:25:58.387][FTS_TS_I][fts_power_source_ctrl_simplify:1972]: fts_power_source_ctrl_simplify: successs to disable iovdd
+[  442.603742][    T1] [TP-Driver][22:25:58.387][FTS_TS_I][fts_power_source_ctrl_simplify:1980]: successs to disable avdd
+=== pstore: last crash/errors ===
+[  439.790089][    T1] init: Service vold has 'reboot_on_failure' option and failed, shutting down system.
+total 9464
+-rw-rw-rw- 1 root root 8706849 2026-11-11 22:26 crash.tgz
+-r--r--r-- 1 root root  262132 2026-11-11 22:26 pstore_console.txt
+-rw-rw-rw- 1 root root  712308 2026-11-11 22:26 recovery_dmesg.txt
+__bionic_open_tzdata: couldn't find any tzdata when looking for Asia/Shanghai!
+DONE

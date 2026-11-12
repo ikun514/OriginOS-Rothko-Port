@@ -1,0 +1,197 @@
+﻿===== vivo init.usb.rc: sys.usb.config triggers =====
+33:# Set default value on sys.usb.configfs early in boot sequence. It will be
+36:    setprop sys.usb.configfs 0
+39:on property:sys.usb.config=none && property:sys.usb.configfs=0
+43:    setprop sys.usb.state ${sys.usb.config}
+48:on property:sys.usb.config=adb && property:sys.usb.configfs=0
+52:    write /sys/class/android_usb/android0/functions ${sys.usb.config}
+55:    setprop sys.usb.state ${sys.usb.config}
+58:on property:sys.usb.config=accessory && property:sys.usb.configfs=0
+62:    write /sys/class/android_usb/android0/functions ${sys.usb.config}
+64:    setprop sys.usb.state ${sys.usb.config}
+67:on property:sys.usb.config=accessory,adb && property:sys.usb.configfs=0
+71:    write /sys/class/android_usb/android0/functions ${sys.usb.config}
+74:    setprop sys.usb.state ${sys.usb.config}
+77:on property:sys.usb.config=audio_source && property:sys.usb.configfs=0
+81:    write /sys/class/android_usb/android0/functions ${sys.usb.config}
+83:    setprop sys.usb.state ${sys.usb.config}
+86:on property:sys.usb.config=audio_source,adb && property:sys.usb.configfs=0
+90:    write /sys/class/android_usb/android0/functions ${sys.usb.config}
+93:    setprop sys.usb.state ${sys.usb.config}
+96:on property:sys.usb.config=accessory,audio_source && property:sys.usb.configfs=0
+100:    write /sys/class/android_usb/android0/functions ${sys.usb.config}
+102:    setprop sys.usb.state ${sys.usb.config}
+105:on property:sys.usb.config=accessory,audio_source,adb && property:sys.usb.configfs=0
+109:    write /sys/class/android_usb/android0/functions ${sys.usb.config}
+112:    setprop sys.usb.state ${sys.usb.config}
+116:on boot && property:persist.sys.usb.config=*
+117:    setprop sys.usb.config ${persist.sys.usb.config}
+
+===== vivo init.usb.configfs.rc: triggers/actions =====
+1:on boot
+4:on property:sys.usb.config=none && property:sys.usb.configfs=1 && property:persist.adb.tls_server.enable=0
+5:    write /config/usb_gadget/g1/UDC "none"
+6:    stop adbd
+7:    setprop sys.usb.ffs.ready 0
+8:    write /config/usb_gadget/g1/bDeviceClass 0
+9:    write /config/usb_gadget/g1/bDeviceSubClass 0
+10:    write /config/usb_gadget/g1/bDeviceProtocol 0
+15:    setprop sys.usb.state ${sys.usb.config}
+17:### Don't stop adbd if Wi-Fi ADB is on
+18:on property:sys.usb.config=none && property:sys.usb.configfs=1 && property:persist.adb.tls_server.enable=1
+19:    write /config/usb_gadget/g1/UDC "none"
+20:    setprop sys.usb.ffs.ready 0
+21:    write /config/usb_gadget/g1/bDeviceClass 0
+22:    write /config/usb_gadget/g1/bDeviceSubClass 0
+23:    write /config/usb_gadget/g1/bDeviceProtocol 0
+28:    setprop sys.usb.state ${sys.usb.config}
+30:on property:init.svc.adbd=stopped
+31:    setprop sys.usb.ffs.ready 0
+34:on property:ro.boot.fbadb=1 && property:sys.usb.configfs=1
+36:    setprop sys.usb.config none
+37:    setprop sys.usb.config vusbd
+39:on property:sys.usb.config=* && property:sys.usb.configfs=1
+42:on property:ro.vivo.product.overseas=no && property:ro.vivo.market.name=*
+43:    write /config/usb_gadget/g1/strings/0x409/product ${ro.vivo.market.name}
+46:on property:sys.usb.config=adb && property:sys.usb.configfs=1
+47:    start adbd
+49:on property:sys.usb.config=adb && property:sys.usb.configfs=1 && property:init.svc.adbd=restarting
+50:    start adbd
+52:on property:sys.usb.ffs.ready=1 && property:sys.usb.config=adb && property:sys.usb.configfs=1
+53:    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "adb"
+58:    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
+59:    setprop sys.usb.state ${sys.usb.config}
+61:on property:sys.usb.config=mtp,adb && property:sys.usb.configfs=1
+62:    start adbd
+64:on property:sys.usb.config=mtp,adb && property:sys.usb.configfs=1 && property:init.svc.adbd=restarting
+65:    start adbd
+67:on property:sys.usb.config=ptp,adb && property:sys.usb.configfs=1
+68:    start adbd
+70:on property:sys.usb.config=ptp,adb && property:sys.usb.configfs=1 && property:init.svc.adbd=restarting
+71:    start adbd
+73:on property:sys.usb.config=accessory && property:sys.usb.configfs=1
+74:    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "accessory"
+76:    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
+77:    setprop sys.usb.state ${sys.usb.config}
+79:on property:sys.usb.config=accessory,adb && property:sys.usb.configfs=1
+80:    start adbd
+82:on property:sys.usb.config=accessory,adb && property:sys.usb.configfs=1 && property:init.svc.adbd=restarting
+83:    start adbd
+85:on property:sys.usb.ffs.ready=1 && property:sys.usb.config=accessory,adb && property:sys.usb.configfs=1
+86:    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "accessory_adb"
+89:    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
+90:    setprop sys.usb.state ${sys.usb.config}
+92:on property:sys.usb.config=audio_source && property:sys.usb.configfs=1
+93:    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "audiosource"
+95:    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
+96:    setprop sys.usb.state ${sys.usb.config}
+98:on property:sys.usb.config=audio_source,adb && property:sys.usb.configfs=1
+99:    start adbd
+101:on property:sys.usb.ffs.ready=1 && property:sys.usb.config=audio_source,adb && property:sys.usb.configfs=1
+
+===== usbd.rc full =====
+service usbd /system/bin/usbd
+    class late_start
+    oneshot
+    user root
+    group root usb system
+
+===== vusbd strings: paths/props it uses =====
+/data/
+/data/local/tmp
+/data/vusbd/.permissive
+/data/vusbd/.reinit_node
+/data/vusbd/load
+/data/vusbd/sec_certificate
+/dev
+/dev/
+/dev/block/bootdevice/by-name/reserved
+/dev/block/bootdevice/by-name/vendor_boot
+/dev/block/by-name
+/dev/block/by-name/reserved
+/dev/block/by-name/vendor_boot
+/dev/null
+/dev/random
+/dev/socket/
+/dev/socket/mdnsd
+/dev/urandom
+/dev/usb-ffs/adb/ep0
+/dev/usb-ffs/adb/ep1
+/dev/usb-ffs/adb/ep2
+/dev/vusbd/
+/dev/vusbd/.permissive
+/dev/vusbd/.reinit_node
+/dev/vusbd/load
+/dev/vusbd/sec_certificate
+/sys/firmware/devicetree/base/chosen/deviceid
+/sys/module/vr/t
+/system/bin/disable-verity
+/system/bin/enable-verity
+/system/bin/linker64
+/system/bin/reboot
+/system/bin/sh
+/system/bin/vrp
+--- props ---
+persist.adb.tcp.port
+persist.adb.tls_server.enable
+persist.adb.trace_mask
+persist.adb.tradeinmode
+persist.adb.watchdog
+persist.adb.watchdog.timeout_secs
+persist.adb.wifi.guid
+persist.debug.adbd.logging
+persist.sys.export
+persist.sys.shutdowndone
+persist.sys.test_harness
+persist.sys.usb.config
+ro.adb.secure
+ro.arch
+ro.boot.deviceid
+ro.boot.slot_suffix
+ro.boot.vc.overlay_remounter
+ro.boot.verifiedbootstate
+ro.build.fingerprint
+ro.build.software.version
+ro.build.type
+ro.build.version.incremental
+ro.build.version.release
+ro.build.version.sdk
+ro.debuggable
+ro.force.debuggable
+ro.product.device
+ro.product.model
+ro.product.name
+ro.secure
+ro.serialno
+ro.vivo.ftboot.debug
+ro.vivo.product.model
+ro.vivo.product.solution
+ro.vivo.product.version
+sys.usb.adb.disabled
+sys.usb.ffs.ready
+sys.vendor.adbd
+sys.vusbd.root
+
+===== vivo vendor usb related files (all) =====
+usb_audio_accessory_only_policy_configuration.xml
+usb_audio_policy_configuration.xml
+/mnt/v/bin/hw/android.hardware.usb-aidl-service.mediatekv1.0
+/mnt/v/bin/hw/android.hardware.usb.gadget-aidl-service.mediatekv1.0
+/mnt/v/bin/lsusb
+/mnt/v/etc/audio_param/USBCall_AudioParam.xml
+/mnt/v/etc/audio_param/USBCall_ParamUnitDesc.xml
+/mnt/v/etc/audio_param/USBDevice_AudioParam.xml
+/mnt/v/etc/audio_param/USBDevice_ParamUnitDesc.xml
+/mnt/v/etc/init/android.hardware.usb-aidl-service.mediatek.rc
+/mnt/v/etc/init/android.hardware.usb.gadget-aidl-service.mediatek.rc
+/mnt/v/etc/permissions/android.hardware.usb.accessory.prebuilt.xml
+/mnt/v/etc/permissions/android.hardware.usb.host.prebuilt.xml
+/mnt/v/etc/usb_audio_accessory_only_policy_configuration.xml
+/mnt/v/etc/usb_audio_policy_configuration.xml
+/mnt/v/lib/hw/audio.usb.default.so
+/mnt/v/lib/hw/audio.usb.default.so.hbtf
+/mnt/v/lib/libusbhost.so.hbtf
+/mnt/v/lib64/android.hardware.usb-V1-ndk.so
+/mnt/v/lib64/android.hardware.usb.gadget-V1-ndk.so
+/mnt/v/lib64/hw/audio.usb.default.so
+DONE

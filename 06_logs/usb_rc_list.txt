@@ -1,0 +1,47 @@
+﻿===== rothko original /system/etc/init/hw: usb* =====
+rothko mount rc=0
+-rw-r--r-- 1 root root 13017 2009-01-01 08:00 init.usb.configfs.rc
+-rw-r--r-- 1 root root  5932 2009-01-01 08:00 init.usb.rc
+--- all files ---
+drmserver.zygote64.rc
+drmserver.zygote64_32.rc
+init.boringssl.no_zygote.rc
+init.boringssl.zygote32.rc
+init.boringssl.zygote64.rc
+init.boringssl.zygote64_32.rc
+init.rc
+init.usb.configfs.rc
+init.usb.rc
+init.zygote32.rc
+init.zygote64.rc
+init.zygote64_32.rc
+mediaserver.zygote64MTK.rc
+mediaserver.zygote64_32MTK.rc
+
+===== vivo (ported) /system/etc/init/hw =====
+vivo mount rc=0
+-rw-r--r-- 1 root root  6962 1970-01-01 08:00 init.usb.configfs.rc
+-rw-r--r-- 1 root root  6487 1970-01-01 08:00 init.usb.rc
+--- all files ---
+drmserver.zygote64.rc
+drmserver.zygote64_32.rc
+init.boringssl.no_zygote.rc
+init.boringssl.zygote32.rc
+init.boringssl.zygote64.rc
+init.boringssl.zygote64_32.rc
+init.rc
+init.usb.configfs.rc
+init.usb.rc
+init.vivo.zygote64.rc
+init.zygote32.rc
+init.zygote64.rc
+init.zygote64_32.rc
+mediaserver.zygote64.rc
+mediaserver.zygote64_32.rc
+
+===== hashes of candidate usb* files =====
+b261028bb09eb04e38679d5036165dbdb18eb6ffd0687afbacc78e41b8f7e867  /mnt/r/system/etc/init/hw/init.usb.configfs.rc
+b42a64eab42cdb0cbdce037348696b5169e50007109d3dca32acbbcebbb6c4c5  /mnt/r/system/etc/init/hw/init.usb.rc
+96451537848ddb34f233c67e7bcbf2135b3b949a83d1c18c40c429ad58b481b4  /mnt/v/system/etc/init/hw/init.usb.configfs.rc
+6686005319e8afbd0aacddba6139b814a3cd3c95da7b83e9db8cb2e79e82f218  /mnt/v/system/etc/init/hw/init.usb.rc
+DONE

@@ -1,0 +1,60 @@
+﻿=== wifi ===
+
+running
+
+Wifi is enabled
+Wifi scanning is always available
+==== ClientModeManager instance: ConcreteClientModeManager{id=20905 iface=wlan0 role=ROLE_CLIENT_PRIMARY} ====
+Wifi is not connected
+=== bluetooth ===
+
+Unknown command: get-state
+=== audio ===
+running
+
+false
+Output thread 0xb400007a0dffae40, name AudioOut_D, tid 1811, type 0 (MIXER):
+=== camera ===
+running
+running
+=== sensors ===
+Captured at: 02:42:52.516
+Sensor Device:
+Total 50 h/w sensors, 50 running 0 disabled clients:
+0x00000001) active-count = 2; sampling_period(ms) = {66.7, 200.0}, selected = 66.67 ms; batching_period(ms) = {100.0, 2000.0}, selected = 100.00 ms
+0x00000005) active-count = 3; sampling_period(ms) = {80.0, 5.0, 200.0}, selected = 80.00 ms; batching_period(ms) = {0.0, 0.0, 0.0}, selected = 0.00 ms
+0x00000008) active-count = 2; sampling_period(ms) = {66.7, 200.0}, selected = 66.67 ms; batching_period(ms) = {0.0, 0.0}, selected = 0.00 ms
+0x00000009) active-count = 1; sampling_period(ms) = {66.7}, selected = 66.67 ms; batching_period(ms) = {0.0}, selected = 0.00 ms
+0x00000012) active-count = 1; sampling_period(ms) = {200.0}, selected = 200.00 ms; batching_period(ms) = {0.0}, selected = 0.00 ms
+0x00000013) active-count = 4; sampling_period(ms) = {200.0, 1.0, 1000.0, 200.0}, selected = 1.00 ms; batching_period(ms) = {0.0, 0.0, 0.0, 0.0}, selected = 0.00 ms
+0x00000069) active-count = 1; sampling_period(ms) = {1000.0}, selected = 1000.00 ms; batching_period(ms) = {0.0}, selected = 0.00 ms
+0x0000006b) active-count = 1; sampling_period(ms) = {400.0}, selected = 400.00 ms; batching_period(ms) = {0.0}, selected = 0.00 ms
+0x0000006c) active-count = 1; sampling_period(ms) = {50.0}, selected = 50.00 ms; batching_period(ms) = {0.0}, selected = 0.00 ms
+0x0000006e) active-count = 1; sampling_period(ms) = {20.0}, selected = 20.00 ms; batching_period(ms) = {0.0}, selected = 0.00 ms
+0x00000073) active-count = 1; sampling_period(ms) = {10.0}, selected = 10.00 ms; batching_period(ms) = {0.0}, selected = 0.00 ms
+0x02000001) active-count = 1; sampling_period(ms) = {1.0}, selected = 1.00 ms; batching_period(ms) = {0.0}, selected = 0.00 ms
+Sensor List:
+0x00000001) lsm6dsvq_acc              | st              | ver: 1 | type: android.sensor.accelerometer(1) | perm: n/a | flags: 0x00000000
+	continuous | minRate=5.00Hz | maxRate=400.00Hz | FIFO (max,reserved) = (4500, 3000) events | non-wakeUp | 
+=== telephony ===
+LOADED,ABSENT
+33,33,33,33
+
+last known state:
+  Phone Id=0
+    mCallState=0
+    mRingingCallState=0
+    mForegroundCallState=0
+    mBackgroundCallState=0
+    mPreciseCallState=Ringing call state: -1, Foreground call state: -1, Background call state: -1, Disconnect cause: -1, Precise disconnect cause: -1
+    mCallDisconnectCause=-1
+=== display ===
+Display 4627039422300187648 color modes:
+    Current color mode: ColorMode::NATIVE (0)
+  Decouple mode switch: true     Using decouple mode: false
+  Override mode switch: true     Using Override mode: false
+  DispMML[0]: dispId=0, mode=false
+ ├─ Display 0 name="内置屏幕" 11-11 18:41:32.936#47 requestedFrameRate: {0.00 Hz FrameRateCompatibility::Default FrameRateCategory::High} 11-11-18:41:32 flags:2 a:1 pid=1551 uid=1000
+=== input/touch ===
+true
+DONE

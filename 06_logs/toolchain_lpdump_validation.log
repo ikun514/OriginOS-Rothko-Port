@@ -1,0 +1,8 @@
+﻿adb.exe : Failed to read metadata.
+所在位置 行:11 字符: 7
++ $lp = & $adb shell su -c 'lpdump /data/local/tmp/lab/lp_super_mtk.img ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Failed to read metadata.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+rc=66

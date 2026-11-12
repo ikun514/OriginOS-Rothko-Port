@@ -1,0 +1,135 @@
+﻿latest tombstone: /data/tombstones/tombstone_22
+=== header ===
+Softversion: unknown
+Time: 2026-11-11 18:21:02
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'Redmi/rothko/rothko:16/BP2A.250605.031.A3/compiler260908202554:user/release-keys'
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2026-11-11 18:21:02.739476248+0000
+Process uptime: 5s
+Cmdline: system_server
+pid: 18926, tid: 19243, name: SceneSensorServ  >>> system_server <<<
+uid: 1000
+tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0000000000000044
+Cause: null pointer dereference
+    x0  0000000000000001  x1  0000006b3712cb70  x2  0000006d7bb814f0  x3  0000006b3712c848
+    x4  00000000000000ea  x5  0000000000000000  x6  0c3e1b0a08171503  x7  031517080a1b3e0c
+    x8  670c8de77b8989f5  x9  670c8de77b8989f5  x10 0000000000000120  x11 0000000064f704b4
+    x12 00000000000ea00b  x13 0000000000000000  x14 0c3e1b0a08171503  x15 0000000000000020
+    x16 0000006fc5f9f508  x17 0000006fb19933f0  x18 0000006b36bf4000  x19 000000003712cbf8
+    x20 000000003712cc38  x21 0000000000000034  x22 b400006d2bbeb290  x23 0000000000000001
+    x24 0000006b3712d740  x25 0000006b3712cd88  x26 0000000000000001  x27 0000006b3712cd88
+    x28 0000006b3712cdc0  x29 0000006b3712cbf0
+    lr  0000006c645bdf8c  sp  0000006b3712cbe0  pc  0000006c645bdf90  pst 0000000060001000
+
+18 total frames
+backtrace:
+      #00 pc 00000000000c7f90  /system/lib64/libsensorservice.so (android::SensorService::shellCommand(int, int, int, android::Vector<android::String16>&)+80) (BuildId: de8d7886f5806d2417f683a3a637ed87)
+      #01 pc 0000000000011304  /system/lib64/libvivo_servers.so (android::getSceneList(_JNIEnv*, _jclass*, unsigned char)+212) (BuildId: dbb123e15936c256edeea329e066bcf2)
+      #02 pc 0000000000381460  /system/framework/arm64/boot.oat (art_jni_trampoline+112) (BuildId: 3c9e86841d28966958632d6c5e5bbfb442710f64)
+=== backtrace: first threads ===
+27:backtrace:
+28-      #00 pc 00000000000c7f90  /system/lib64/libsensorservice.so (android::SensorService::shellCommand(int, int, int, android::Vector<android::String16>&)+80) (BuildId: de8d7886f5806d2417f683a3a637ed87)
+29-      #01 pc 0000000000011304  /system/lib64/libvivo_servers.so (android::getSceneList(_JNIEnv*, _jclass*, unsigned char)+212) (BuildId: dbb123e15936c256edeea329e066bcf2)
+30-      #02 pc 0000000000381460  /system/framework/arm64/boot.oat (art_jni_trampoline+112) (BuildId: 3c9e86841d28966958632d6c5e5bbfb442710f64)
+31-      #03 pc 00000000006aab88  /apex/com.android.art/lib64/libart.so (nterp_helper+152) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+32-      #04 pc 0000000000787a24  /system/framework/vivo-services.jar (com.vivo.services.scenerecognize.SceneSensorService.getSceneList+12)
+33-      #05 pc 00000000006aba44  /apex/com.android.art/lib64/libart.so (nterp_helper+3924) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+34-      #06 pc 000000000078728c  /system/framework/vivo-services.jar (com.vivo.services.scenerecognize.SceneSensorService.-$$Nest$mgetSceneList+0)
+35-      #07 pc 00000000006aab24  /apex/com.android.art/lib64/libart.so (nterp_helper+52) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+36-      #08 pc 0000000000786b4c  /system/framework/vivo-services.jar (com.vivo.services.scenerecognize.SceneSensorService$SceneHandler.handleMessage+72)
+37-      #09 pc 0000000000769438  /system/framework/arm64/boot-framework.oat (android.os.Handler.dispatchMessage+168) (BuildId: 518a463df5f38572f28418f888788b054bf8e4d1)
+38-      #10 pc 00000000007db6b0  /system/framework/arm64/boot-framework.oat (android.os.Looper.loopOnce+1392) (BuildId: 518a463df5f38572f28418f888788b054bf8e4d1)
+39-      #11 pc 00000000007db07c  /system/framework/arm64/boot-framework.oat (android.os.Looper.loop+252) (BuildId: 518a463df5f38572f28418f888788b054bf8e4d1)
+40-      #12 pc 00000000007b6adc  /system/framework/arm64/boot-framework.oat (android.os.HandlerThread.run+524) (BuildId: 518a463df5f38572f28418f888788b054bf8e4d1)
+41-      #13 pc 0000000000321194  /apex/com.android.art/lib64/libart.so (art_quick_invoke_stub+612) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+42-      #14 pc 00000000002de5a8  /apex/com.android.art/lib64/libart.so (art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)+216) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+43-      #15 pc 0000000000479380  /apex/com.android.art/lib64/libart.so (art::Thread::CreateCallback(void*)+928) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+44-      #16 pc 00000000000cecd0  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+256) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+45-      #17 pc 00000000000c10e0  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+64) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+46-
+47-memory near x1 ([anon:stack_and_tls:19243]):
+48-    0000006b3712cb50 0000006b3712cba0 0000006fa1160920  ...7k... ...o...
+49-    0000006b3712cb60 b400006e7bb3cea8 b400006e7bb3cc78  ...{n...x..{n...
+50-    0000006b3712cb70 b400006e7bb29a70 670c8de77b8989f5  p..{n......{...g
+51-    0000006b3712cb80 0000006b3712cbf0 0000006c645bdf8c  ...7k.....[dl...
+52-    0000006b3712cb90 0000006b3712cdc0 0000006b3712cd88  ...7k......7k...
+--
+8320:backtrace:
+8321-      #00 pc 0000000000128a14  /apex/com.android.runtime/lib64/bionic/libc.so (read+20) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+8322-      #01 pc 000000000002d434  /apex/com.android.art/lib64/libjavacore.so (Linux_readBytes(_JNIEnv*, _jobject*, _jobject*, _jobject*, int, int)+180) (BuildId: 137d070a74e2623ecf6c7cb4e8ee22a7)
+8323-      #02 pc 000000000005e9fc  /system/framework/arm64/boot-core-libart.oat (art_jni_trampoline+140) (BuildId: c4d801c998355f2222a680457bbad6340054d9ff)
+8324-      #03 pc 000000000003fa40  /system/framework/arm64/boot-core-libart.oat (libcore.io.Linux.read+48) (BuildId: c4d801c998355f2222a680457bbad6340054d9ff)
+8325-      #04 pc 0000000000039308  /system/framework/arm64/boot-core-libart.oat (libcore.io.BlockGuardOs.read+232) (BuildId: c4d801c998355f2222a680457bbad6340054d9ff)
+8326-      #05 pc 00000000000cd358  /system/framework/arm64/boot.oat (java.io.FileInputStream.read+328) (BuildId: 3c9e86841d28966958632d6c5e5bbfb442710f64)
+8327-      #06 pc 00000000000b3054  /system/framework/arm64/boot.oat (java.io.BufferedInputStream.read1+132) (BuildId: 3c9e86841d28966958632d6c5e5bbfb442710f64)
+8328-      #07 pc 00000000000b3644  /system/framework/arm64/boot.oat (java.io.BufferedInputStream.read+180) (BuildId: 3c9e86841d28966958632d6c5e5bbfb442710f64)
+8329-      #08 pc 0000000000320e30  /system/framework/arm64/boot.oat (sun.nio.cs.StreamDecoder.readBytes+288) (BuildId: 3c9e86841d28966958632d6c5e5bbfb442710f64)
+8330-      #09 pc 00000000003214dc  /system/framework/arm64/boot.oat (sun.nio.cs.StreamDecoder.implRead+908) (BuildId: 3c9e86841d28966958632d6c5e5bbfb442710f64)
+8331-      #10 pc 0000000000321970  /system/framework/arm64/boot.oat (sun.nio.cs.StreamDecoder.read+496) (BuildId: 3c9e86841d28966958632d6c5e5bbfb442710f64)
+8332-      #11 pc 00000000000ceb9c  /system/framework/arm64/boot.oat (java.io.InputStreamReader.read+60) (BuildId: 3c9e86841d28966958632d6c5e5bbfb442710f64)
+8333-      #12 pc 00000000000b1e94  /system/framework/arm64/boot.oat ([DEDUPED] ?.read+52) (BuildId: 3c9e86841d28966958632d6c5e5bbfb442710f64)
+8334-      #13 pc 00000000006abaa0  /apex/com.android.art/lib64/libart.so (nterp_helper+4016) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+8335-      #14 pc 00000000001f6b36  /system/framework/vivo-services.jar (com.android.server.am.VivoAmsImpl.addErrorToDropBoxByLogcat+206)
+8336-      #15 pc 00000000006acf3c  /apex/com.android.art/lib64/libart.so (nterp_helper+9292) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+8337-      #16 pc 000000000036be8c  /system/framework/services.jar (com.android.server.am.ActivityManagerService$18.run+824)
+8338-      #17 pc 000000000031fffc  /system/framework/oat/arm64/services.odex (com.android.server.am.ActivityManagerService.addErrorToDropBox+4284) (BuildId: 4c4b7dd0c60b05a8c7935be4d716f39111ea7db8)
+8339-      #18 pc 00000000006ac1c8  /apex/com.android.art/lib64/libart.so (nterp_helper+5848) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+8340-      #19 pc 0000000000390a3e  /system/framework/services.jar (com.android.server.am.ActivityManagerService.handleApplicationCrashInner+1242)
+8341-      #20 pc 00000000006aba44  /apex/com.android.art/lib64/libart.so (nterp_helper+3924) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+8342-      #21 pc 0000000000390542  /system/framework/services.jar (com.android.server.am.ActivityManagerService.handleApplicationCrash+90)
+8343-      #22 pc 00000000006acf3c  /apex/com.android.art/lib64/libart.so (nterp_helper+9292) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+8344-      #23 pc 00000000003b9050  /system/framework/framework.jar (offset 0x23d7000) (com.android.internal.os.RuntimeInit$KillApplicationHandler.uncaughtException+108)
+8345-      #24 pc 00000000006ac864  /apex/com.android.art/lib64/libart.so (nterp_helper+7540) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+--
+8378:backtrace:
+8379-      #00 pc 000000000012a448  /apex/com.android.runtime/lib64/bionic/libc.so (__rt_sigtimedwait+8) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+8380-      #01 pc 00000000000d4e80  /apex/com.android.runtime/lib64/bionic/libc.so (sigwait64+112) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+8381-      #02 pc 00000000005478a0  /apex/com.android.art/lib64/libart.so (art::SignalCatcher::WaitForSignal(art::Thread*, art::SignalSet&)+112) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+8382-      #03 pc 000000000054756c  /apex/com.android.art/lib64/libart.so (art::SignalCatcher::Run(void*)+252) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+8383-      #04 pc 00000000000cecd0  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+256) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+=== crash logcat ===
+11-11 18:21:02.979 19350 19350 F DEBUG   : ABI: 'arm64'
+11-11 18:21:02.979 19350 19350 F DEBUG   : Timestamp: 2026-11-11 18:21:02.739476248+0000
+11-11 18:21:02.979 19350 19350 F DEBUG   : Process uptime: 5s
+11-11 18:21:02.979 19350 19350 F DEBUG   : Cmdline: system_server
+11-11 18:21:02.979 19350 19350 F DEBUG   : pid: 18926, tid: 19243, name: SceneSensorServ  >>> system_server <<<
+11-11 18:21:02.979 19350 19350 F DEBUG   : uid: 1000
+11-11 18:21:02.979 19350 19350 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+11-11 18:21:02.979 19350 19350 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+11-11 18:21:02.979 19350 19350 F DEBUG   : signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0000000000000044
+11-11 18:21:02.979 19350 19350 F DEBUG   : Cause: null pointer dereference
+11-11 18:21:02.980 19350 19350 F DEBUG   :     x0  0000000000000001  x1  0000006b3712cb70  x2  0000006d7bb814f0  x3  0000006b3712c848
+11-11 18:21:02.980 19350 19350 F DEBUG   :     x4  00000000000000ea  x5  0000000000000000  x6  0c3e1b0a08171503  x7  031517080a1b3e0c
+11-11 18:21:02.980 19350 19350 F DEBUG   :     x8  670c8de77b8989f5  x9  670c8de77b8989f5  x10 0000000000000120  x11 0000000064f704b4
+11-11 18:21:02.980 19350 19350 F DEBUG   :     x12 00000000000ea00b  x13 0000000000000000  x14 0c3e1b0a08171503  x15 0000000000000020
+11-11 18:21:02.980 19350 19350 F DEBUG   :     x16 0000006fc5f9f508  x17 0000006fb19933f0  x18 0000006b36bf4000  x19 000000003712cbf8
+11-11 18:21:02.980 19350 19350 F DEBUG   :     x20 000000003712cc38  x21 0000000000000034  x22 b400006d2bbeb290  x23 0000000000000001
+11-11 18:21:02.980 19350 19350 F DEBUG   :     x24 0000006b3712d740  x25 0000006b3712cd88  x26 0000000000000001  x27 0000006b3712cd88
+11-11 18:21:02.980 19350 19350 F DEBUG   :     x28 0000006b3712cdc0  x29 0000006b3712cbf0
+11-11 18:21:02.980 19350 19350 F DEBUG   :     lr  0000006c645bdf8c  sp  0000006b3712cbe0  pc  0000006c645bdf90  pst 0000000060001000
+11-11 18:21:02.980 19350 19350 F DEBUG   : 18 total frames
+11-11 18:21:02.980 19350 19350 F DEBUG   : backtrace:
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #00 pc 00000000000c7f90  /system/lib64/libsensorservice.so (android::SensorService::shellCommand(int, int, int, android::Vector<android::String16>&)+80) (BuildId: de8d7886f5806d2417f683a3a637ed87)
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #01 pc 0000000000011304  /system/lib64/libvivo_servers.so (android::getSceneList(_JNIEnv*, _jclass*, unsigned char)+212) (BuildId: dbb123e15936c256edeea329e066bcf2)
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #02 pc 0000000000381460  /system/framework/arm64/boot.oat (art_jni_trampoline+112) (BuildId: 3c9e86841d28966958632d6c5e5bbfb442710f64)
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #03 pc 00000000006aab88  /apex/com.android.art/lib64/libart.so (nterp_helper+152) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #04 pc 0000000000787a24  /system/framework/vivo-services.jar (com.vivo.services.scenerecognize.SceneSensorService.getSceneList+12)
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #05 pc 00000000006aba44  /apex/com.android.art/lib64/libart.so (nterp_helper+3924) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #06 pc 000000000078728c  /system/framework/vivo-services.jar (com.vivo.services.scenerecognize.SceneSensorService.-$$Nest$mgetSceneList+0)
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #07 pc 00000000006aab24  /apex/com.android.art/lib64/libart.so (nterp_helper+52) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #08 pc 0000000000786b4c  /system/framework/vivo-services.jar (com.vivo.services.scenerecognize.SceneSensorService$SceneHandler.handleMessage+72)
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #09 pc 0000000000769438  /system/framework/arm64/boot-framework.oat (android.os.Handler.dispatchMessage+168) (BuildId: 518a463df5f38572f28418f888788b054bf8e4d1)
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #10 pc 00000000007db6b0  /system/framework/arm64/boot-framework.oat (android.os.Looper.loopOnce+1392) (BuildId: 518a463df5f38572f28418f888788b054bf8e4d1)
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #11 pc 00000000007db07c  /system/framework/arm64/boot-framework.oat (android.os.Looper.loop+252) (BuildId: 518a463df5f38572f28418f888788b054bf8e4d1)
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #12 pc 00000000007b6adc  /system/framework/arm64/boot-framework.oat (android.os.HandlerThread.run+524) (BuildId: 518a463df5f38572f28418f888788b054bf8e4d1)
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #13 pc 0000000000321194  /apex/com.android.art/lib64/libart.so (art_quick_invoke_stub+612) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #14 pc 00000000002de5a8  /apex/com.android.art/lib64/libart.so (art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)+216) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #15 pc 0000000000479380  /apex/com.android.art/lib64/libart.so (art::Thread::CreateCallback(void*)+928) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #16 pc 00000000000cecd0  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+256) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+11-11 18:21:02.980 19350 19350 F DEBUG   :       #17 pc 00000000000c10e0  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+64) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+11-11 18:21:05.445 19436 19436 F linker  : CANNOT LINK EXECUTABLE "/system/bin/cameraserver": cannot locate symbol "_ZN7android20SensorPrivacyManager28isXspaceSensorPrivacyEnabledEiNS_8String16E" referenced by "/system/bin/cameraserver"...
+DONE

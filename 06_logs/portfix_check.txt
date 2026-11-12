@@ -1,0 +1,58 @@
+﻿===== portfix logs =====
+--- /data/portfix_early.log
+--- /data/portfix_boot.log
+===== settings_global (adb/dev) =====
+Binary file /data/system/users/0/settings_global.xml matches
+Binary file /data/system/users/0/settings_global.xml matches
+Binary file /data/system/users/0/settings_global.xml matches
+Binary file /data/system/users/0/settings_global.xml matches
+Binary file /data/system/users/0/settings_secure.xml matches
+===== persistent props =====
+persist.adb.tls_server.enable
+persist.sys.adb.simulate.ic
+usb_connect
+persist.sys.zram_enabled
+persist.sys.bbklog.adblimit
+===== vivo log dirs =====
+--- /data/vivo-common
+total 36
+drwxrwx--- 2 root   system 3452 2026-07-01 08:50 aod_cache
+drwxrwxrwx 2 system system 3452 2026-07-01 08:50 circulatedlog
+drwxrwx--x 2 system system 3452 2026-07-01 08:50 dyn
+drwxrwxrwx 2 system system 3452 2026-07-01 08:50 engineermode
+drwxr-xr-x 2 root   root   3452 2026-07-01 08:00 fileobs
+drwxrwxrwx 2 system system 3452 2026-07-01 08:50 fonts
+drwxrwxrwx 2 system system 3452 2026-07-01 08:50 galleryThumbnail
+--- /data/vivo-others
+total 0
+--- /data/vivodump
+total 0
+===== grep Settings crash in vivo logs =====
+/data/vivo-common/fileobs/packages.list
+/data/vendor/security_bsp/packages.list
+===== vendor RIL / modem packages =====
+Secp
+aee_exp
+agps_supl
+audio
+audio_hw_log
+audiohal
+batteryantiaging
+bbklog
+bsplog
+cam_ulog
+camera
+camera_dump
+charge_logger
+cit
+connsyslog
+core
+diag
+dipdebug
+disp_pq
+display
+===== check radio props from pstore =====
+[  436.566124][ T3012] clock gate:0x7f00, PCIe HW MODE BIT:0x87411600, Modem HW MODE BIT:0x0, PEXTP_PWRCTL_3:0x1, slp ready:0x1400, SPM ready:0xc0208963, BBCK2:0xc0208962
+[  436.659516][    T1] init: Service 'vendor.ril-daemon-mtk' (pid 1370) received signal 15 oneshot service took 428.286011 seconds in background
+[  436.659521][    T1] init: Sending signal 9 to service 'vendor.ril-daemon-mtk' (pid 1370) process group...
+DONE

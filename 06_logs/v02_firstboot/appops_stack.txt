@@ -1,0 +1,164 @@
+﻿=== FATAL EXCEPTION blocks in main log ===
+158166-11-11 18:39:22.999  2220  2220 E Zygote  : 	at com.android.server.appop.AppOpsCheckingServiceTracingDecorator.getNonDefaultPackageModes(AppOpsCheckingServiceTracingDecorator.java:99)
+158167-11-11 18:39:22.999  2220  2220 E Zygote  : 	at com.android.server.appop.AppOpsService.initializePackageUidStateLocked(AppOpsService.java:1428)
+158168-11-11 18:39:22.999  2220  2220 E Zygote  : 	at com.android.server.appop.AppOpsService.initializeUserUidStatesLocked(AppOpsService.java:1404)
+158169-11-11 18:39:22.999  2220  2220 E Zygote  : 	at com.android.server.appop.AppOpsService.initializeUidStates(AppOpsService.java:1377)
+158170-11-11 18:39:22.999  2220  2220 E Zygote  : 	at com.android.server.appop.AppOpsService.systemReady(AppOpsService.java:1243)
+158171-11-11 18:39:22.999  2220  2220 E Zygote  : 	at com.android.server.am.ActivityManagerService.systemReady(ActivityManagerService.java:10399)
+158172-11-11 18:39:22.999  2220  2220 E Zygote  : 	at com.android.server.SystemServer.startOtherServices(SystemServer.java:3551)
+158173-11-11 18:39:22.999  2220  2220 E Zygote  : 	at com.android.server.SystemServer.run(SystemServer.java:1134)
+158174-11-11 18:39:22.999  2220  2220 E Zygote  : 	at com.android.server.SystemServer.main(SystemServer.java:744)
+158175-11-11 18:39:22.999  2220  2220 E Zygote  : 	at java.lang.reflect.Method.invoke(Native Method)
+158176-11-11 18:39:22.999  2220  2220 E Zygote  : 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:675)
+158177-11-11 18:39:22.999  2220  2220 E Zygote  : 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:980)
+158178-11-11 18:39:23.000   492   492 W ratelimit: Single process limit 50/s drop 122 lines.
+158179-11-11 18:39:23.000   492   492 I hwservicemanager: getTransport: Cannot find entry vendor.vivo.hardware.configstore@1.0::IVivoConfigStore/default in either framework or device VINTF manifest.
+158180-11-11 18:39:23.001  2220  2271 E VivoConfigStore: hasVivoFeature hidl get exception
+158181-11-11 18:39:23.001  2220  2271 W ratelimit: ratelimit tag System.err limit 250/s drop 3446 lines
+158182-11-11 18:39:23.001  2220  2271 W System.err: java.util.NoSuchElementException
+158183-11-11 18:39:23.001  2220  2271 W System.err: 	at android.os.HwBinder.getService(Native Method)
+158184-11-11 18:39:23.001  2220  2271 W System.err: 	at android.os.HwBinder.getService(HwBinder.java:93)
+158185-11-11 18:39:23.001  2220  2271 W System.err: 	at vendor.vivo.hardware.configstore.V1_0.IVivoConfigStore.getService(IVivoConfigStore.java:74)
+158186-11-11 18:39:23.001  2220  2271 W System.err: 	at vendor.vivo.hardware.configstore.V1_0.IVivoConfigStore.getService(IVivoConfigStore.java:84)
+158187-11-11 18:39:23.001  2220  2271 W System.err: 	at android.util.VivoConfigStoreHelper.getservice(VivoConfigStoreHelper.java:53)
+--
+162876-11-11 18:39:32.710  2929  3213 I AudioSystem: setStreamVolumeIndex: STREAM_MUSIC dev=4000000 idx=0 muted=false
+162877-11-11 18:39:32.711  2929  2929 E Zygote  : System zygote died with fatal exception
+162878:11-11 18:39:32.711  2929  2929 E Zygote  : java.lang.IllegalArgumentException: Unknown operation string: MIUI:10008
+162879-11-11 18:39:32.711  2929  2929 E Zygote  : 	at android.app.AppOpsManager.strOpToOp(AppOpsManager.java:9374)
+162880-11-11 18:39:32.711  2929  2929 E Zygote  : 	at com.android.server.permission.access.appop.AppOpService.opNameMapToOpSparseArray(AppOpService.kt:336)
+162881-11-11 18:39:32.711  2929  2929 E Zygote  : 	at com.android.server.permission.access.appop.AppOpService.getNonDefaultPackageModes(AppOpService.kt:172)
+162882-11-11 18:39:32.711  2929  2929 E Zygote  : 	at com.android.server.appop.AppOpsCheckingServiceTracingDecorator.getNonDefaultPackageModes(AppOpsCheckingServiceTracingDecorator.java:99)
+162883-11-11 18:39:32.711  2929  2929 E Zygote  : 	at com.android.server.appop.AppOpsService.initializePackageUidStateLocked(AppOpsService.java:1428)
+162884-11-11 18:39:32.711  2929  2929 E Zygote  : 	at com.android.server.appop.AppOpsService.initializeUserUidStatesLocked(AppOpsService.java:1404)
+162885-11-11 18:39:32.711  2929  2929 E Zygote  : 	at com.android.server.appop.AppOpsService.initializeUidStates(AppOpsService.java:1377)
+162886-11-11 18:39:32.711  2929  2929 E Zygote  : 	at com.android.server.appop.AppOpsService.systemReady(AppOpsService.java:1243)
+162887-11-11 18:39:32.711  2929  2929 E Zygote  : 	at com.android.server.am.ActivityManagerService.systemReady(ActivityManagerService.java:10399)
+162888-11-11 18:39:32.711  2929  2929 E Zygote  : 	at com.android.server.SystemServer.startOtherServices(SystemServer.java:3551)
+162889-11-11 18:39:32.711  2929  2929 E Zygote  : 	at com.android.server.SystemServer.run(SystemServer.java:1134)
+162890-11-11 18:39:32.711  2929  2929 E Zygote  : 	at com.android.server.SystemServer.main(SystemServer.java:744)
+162891-11-11 18:39:32.711  2929  2929 E Zygote  : 	at java.lang.reflect.Method.invoke(Native Method)
+162892-11-11 18:39:32.711  2929  2929 E Zygote  : 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:675)
+162893-11-11 18:39:32.711  2929  2929 E Zygote  : 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:980)
+162894-11-11 18:39:32.711  2929  3213 I AudioSystem: setStreamVolumeIndex: STREAM_MUSIC dev=8000000 idx=150 muted=false
+162895-11-11 18:39:32.712  2929  3213 I AudioSystem: setStreamVolumeIndex: STREAM_MUSIC dev=20000000 idx=0 muted=false
+162896-11-11 18:39:32.713  2929  2966 E VivoConfigStore: hasVivoFeature hidl get exception
+162897-11-11 18:39:32.713  2929  2966 E VivoConfigStore: getFeatureContent return 
+162898-11-11 18:39:32.714  2929  2966 E VivoConfigStore: hasVivoFeature hidl get exception
+162899-11-11 18:39:32.715  2929  2929 E VivoConfigStore: hasVivoFeature hidl get exception
+162900-11-11 18:39:32.715  2929  2929 E VivoConfigStore: getFeatureContent return 
+162901-11-11 18:39:32.716  2929  2929 E VivoConfigStore: hasVivoFeature hidl get exception
+162902-11-11 18:39:32.717  2929  2929 I PowerHalWrapper: <NotifyAppCrash> pack: ,pid: == myPid:2929 
+162903-11-11 18:39:32.717  2929  2966 E VivoConfigStore: hasVivoFeature hidl get exception
+--
+167521-11-11 18:39:42.385  3451  3451 I CameraManagerGlobal: Connecting to camera service
+167522-11-11 18:39:42.388  3451  3451 E Zygote  : System zygote died with fatal exception
+167523:11-11 18:39:42.388  3451  3451 E Zygote  : java.lang.IllegalArgumentException: Unknown operation string: MIUI:10008
+167524-11-11 18:39:42.388  3451  3451 E Zygote  : 	at android.app.AppOpsManager.strOpToOp(AppOpsManager.java:9374)
+167525-11-11 18:39:42.388  3451  3451 E Zygote  : 	at com.android.server.permission.access.appop.AppOpService.opNameMapToOpSparseArray(AppOpService.kt:336)
+167526-11-11 18:39:42.388  3451  3451 E Zygote  : 	at com.android.server.permission.access.appop.AppOpService.getNonDefaultPackageModes(AppOpService.kt:172)
+167527-11-11 18:39:42.388  3451  3451 E Zygote  : 	at com.android.server.appop.AppOpsCheckingServiceTracingDecorator.getNonDefaultPackageModes(AppOpsCheckingServiceTracingDecorator.java:99)
+167528-11-11 18:39:42.388  3451  3451 E Zygote  : 	at com.android.server.appop.AppOpsService.initializePackageUidStateLocked(AppOpsService.java:1428)
+167529-11-11 18:39:42.388  3451  3451 E Zygote  : 	at com.android.server.appop.AppOpsService.initializeUserUidStatesLocked(AppOpsService.java:1404)
+167530-11-11 18:39:42.388  3451  3451 E Zygote  : 	at com.android.server.appop.AppOpsService.initializeUidStates(AppOpsService.java:1377)
+167531-11-11 18:39:42.388  3451  3451 E Zygote  : 	at com.android.server.appop.AppOpsService.systemReady(AppOpsService.java:1243)
+167532-11-11 18:39:42.388  3451  3451 E Zygote  : 	at com.android.server.am.ActivityManagerService.systemReady(ActivityManagerService.java:10399)
+167533-11-11 18:39:42.388  3451  3451 E Zygote  : 	at com.android.server.SystemServer.startOtherServices(SystemServer.java:3551)
+167534-11-11 18:39:42.388  3451  3451 E Zygote  : 	at com.android.server.SystemServer.run(SystemServer.java:1134)
+167535-11-11 18:39:42.388  3451  3451 E Zygote  : 	at com.android.server.SystemServer.main(SystemServer.java:744)
+167536-11-11 18:39:42.388  3451  3451 E Zygote  : 	at java.lang.reflect.Method.invoke(Native Method)
+167537-11-11 18:39:42.388  3451  3451 E Zygote  : 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:675)
+167538-11-11 18:39:42.388  3451  3451 E Zygote  : 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:980)
+167539-11-11 18:39:42.388  3451  3726 I AudioSystem: setStreamVolumeIndex: STREAM_MUSIC dev=1 idx=0 muted=false
+167540-11-11 18:39:42.389  3451  3726 I AudioSystem: setStreamVolumeIndex: STREAM_MUSIC dev=2 idx=0 muted=false
+167541-11-11 18:39:42.390  3451  3726 I AudioSystem: setStreamVolumeIndex: STREAM_MUSIC dev=4 idx=0 muted=false
+167542-11-11 18:39:42.390  3451  3451 E VivoConfigStore: hasVivoFeature hidl get exception
+167543-11-11 18:39:42.390  3451  3451 E VivoConfigStore: getFeatureContent return 
+167544-11-11 18:39:42.391  3451  3726 I AudioSystem: setStreamVolumeIndex: STREAM_MUSIC dev=10 idx=0 muted=false
+167545-11-11 18:39:42.391  3451  3451 E VivoConfigStore: hasVivoFeature hidl get exception
+167546-11-11 18:39:42.392  3451  3451 I PowerHalWrapper: <NotifyAppCrash> pack: ,pid: == myPid:3451 
+167547-11-11 18:39:42.392  3451  3479 E VivoConfigStore: hasVivoFeature hidl get exception
+167548-11-11 18:39:42.392  3451  3479 E VivoConfigStore: getFeatureContent return 
+=== crash buffer ===
+11-11 18:39:32.711  2929  2929 E AndroidRuntime: *** FATAL EXCEPTION IN SYSTEM PROCESS: main
+11-11 18:39:32.711  2929  2929 E AndroidRuntime: java.lang.IllegalArgumentException: Unknown operation string: MIUI:10008
+11-11 18:39:32.711  2929  2929 E AndroidRuntime: 	at android.app.AppOpsManager.strOpToOp(AppOpsManager.java:9374)
+11-11 18:39:32.711  2929  2929 E AndroidRuntime: 	at com.android.server.permission.access.appop.AppOpService.opNameMapToOpSparseArray(AppOpService.kt:336)
+11-11 18:39:32.711  2929  2929 E AndroidRuntime: 	at com.android.server.permission.access.appop.AppOpService.getNonDefaultPackageModes(AppOpService.kt:172)
+11-11 18:39:32.711  2929  2929 E AndroidRuntime: 	at com.android.server.appop.AppOpsCheckingServiceTracingDecorator.getNonDefaultPackageModes(AppOpsCheckingServiceTracingDecorator.java:99)
+11-11 18:39:32.711  2929  2929 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.initializePackageUidStateLocked(AppOpsService.java:1428)
+11-11 18:39:32.711  2929  2929 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.initializeUserUidStatesLocked(AppOpsService.java:1404)
+11-11 18:39:32.711  2929  2929 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.initializeUidStates(AppOpsService.java:1377)
+11-11 18:39:32.711  2929  2929 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.systemReady(AppOpsService.java:1243)
+11-11 18:39:32.711  2929  2929 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.systemReady(ActivityManagerService.java:10399)
+11-11 18:39:32.711  2929  2929 E AndroidRuntime: 	at com.android.server.SystemServer.startOtherServices(SystemServer.java:3551)
+11-11 18:39:32.711  2929  2929 E AndroidRuntime: 	at com.android.server.SystemServer.run(SystemServer.java:1134)
+11-11 18:39:32.711  2929  2929 E AndroidRuntime: 	at com.android.server.SystemServer.main(SystemServer.java:744)
+11-11 18:39:32.711  2929  2929 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+11-11 18:39:32.711  2929  2929 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:675)
+11-11 18:39:32.711  2929  2929 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:980)
+11-11 18:39:38.657  3372  3372 I meow_lib: mtk-brm-commit-id:9d1b0623a6f41711fe139a6f79cd3baeb9ea843a
+11-11 18:39:38.657  3372  3372 I meow_lib: mtk-brm-change-id:I8f1714af0c8f09e69f657b1cd28e5836cb35e02f
+11-11 18:39:38.657  3372  3372 I meow_lib: mtk-brm-merge-id:none
+11-11 18:39:38.686  3372  3372 I libMEOW_gift: mtk-brm-commit-id:baddce1afc7f505d669af7d6f39eac4d950348d3
+11-11 18:39:38.686  3372  3372 I libMEOW_gift: mtk-brm-change-id:Iefbd3d0ed7e413bb0602db9f0bc751032ab085cd
+11-11 18:39:38.686  3372  3372 I libMEOW_gift: mtk-brm-merge-id:none
+11-11 18:39:42.388  3451  3451 E AndroidRuntime: *** FATAL EXCEPTION IN SYSTEM PROCESS: main
+11-11 18:39:42.388  3451  3451 E AndroidRuntime: java.lang.IllegalArgumentException: Unknown operation string: MIUI:10008
+11-11 18:39:42.388  3451  3451 E AndroidRuntime: 	at android.app.AppOpsManager.strOpToOp(AppOpsManager.java:9374)
+11-11 18:39:42.388  3451  3451 E AndroidRuntime: 	at com.android.server.permission.access.appop.AppOpService.opNameMapToOpSparseArray(AppOpService.kt:336)
+11-11 18:39:42.388  3451  3451 E AndroidRuntime: 	at com.android.server.permission.access.appop.AppOpService.getNonDefaultPackageModes(AppOpService.kt:172)
+11-11 18:39:42.388  3451  3451 E AndroidRuntime: 	at com.android.server.appop.AppOpsCheckingServiceTracingDecorator.getNonDefaultPackageModes(AppOpsCheckingServiceTracingDecorator.java:99)
+11-11 18:39:42.388  3451  3451 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.initializePackageUidStateLocked(AppOpsService.java:1428)
+11-11 18:39:42.388  3451  3451 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.initializeUserUidStatesLocked(AppOpsService.java:1404)
+11-11 18:39:42.388  3451  3451 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.initializeUidStates(AppOpsService.java:1377)
+11-11 18:39:42.388  3451  3451 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.systemReady(AppOpsService.java:1243)
+11-11 18:39:42.388  3451  3451 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.systemReady(ActivityManagerService.java:10399)
+11-11 18:39:42.388  3451  3451 E AndroidRuntime: 	at com.android.server.SystemServer.startOtherServices(SystemServer.java:3551)
+11-11 18:39:42.388  3451  3451 E AndroidRuntime: 	at com.android.server.SystemServer.run(SystemServer.java:1134)
+11-11 18:39:42.388  3451  3451 E AndroidRuntime: 	at com.android.server.SystemServer.main(SystemServer.java:744)
+11-11 18:39:42.388  3451  3451 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+11-11 18:39:42.388  3451  3451 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:675)
+11-11 18:39:42.388  3451  3451 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:980)
+=== system buffer around exception ===
+11-11 18:39:32.711  2929  2929 E System  : 	at com.android.server.permission.access.appop.AppOpService.getNonDefaultPackageModes(AppOpService.kt:172)
+11-11 18:39:32.711  2929  2929 E System  : 	at com.android.server.appop.AppOpsCheckingServiceTracingDecorator.getNonDefaultPackageModes(AppOpsCheckingServiceTracingDecorator.java:99)
+11-11 18:39:32.711  2929  2929 E System  : 	at com.android.server.appop.AppOpsService.initializePackageUidStateLocked(AppOpsService.java:1428)
+11-11 18:39:32.711  2929  2929 E System  : 	at com.android.server.appop.AppOpsService.initializeUserUidStatesLocked(AppOpsService.java:1404)
+11-11 18:39:32.711  2929  2929 E System  : 	at com.android.server.appop.AppOpsService.initializeUidStates(AppOpsService.java:1377)
+11-11 18:39:32.711  2929  2929 E System  : 	at com.android.server.appop.AppOpsService.systemReady(AppOpsService.java:1243)
+11-11 18:39:32.711  2929  2929 E System  : 	at com.android.server.am.ActivityManagerService.systemReady(ActivityManagerService.java:10399)
+11-11 18:39:32.711  2929  2929 E System  : 	at com.android.server.SystemServer.startOtherServices(SystemServer.java:3551)
+11-11 18:39:32.711  2929  2929 E System  : 	at com.android.server.SystemServer.run(SystemServer.java:1134)
+11-11 18:39:32.711  2929  2929 E System  : 	at com.android.server.SystemServer.main(SystemServer.java:744)
+11-11 18:39:32.711  2929  2929 E System  : 	at java.lang.reflect.Method.invoke(Native Method)
+11-11 18:39:32.711  2929  2929 E System  : 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:675)
+11-11 18:39:32.711  2929  2929 E System  : 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:980)
+11-11 18:39:32.743  2929  3213 V ActivityManager: Broadcast: Intent { act=android.media.STREAM_DEVICES_CHANGED_ACTION flg=0x54000010 xflg=0x4 (has extras) } ordered=false userid=-1 options=Bundle[{android:broadcast.deferralPolicy=2, android:broadcast.deliveryGroupMatchingKey=0, android:broadcast.deliveryGroupMatchingNamespace=android.media.STREAM_DEVICES_CHANGED_ACTION, android:broadcast.deliveryGroupPolicy=1}], realCallingUid=1000, realCallingPid=2929, callingUid=1000 ,callingPid=2929, callerPackage=android, resultTo=null, broadcastAllowList=, callers=com.android.server.am.BroadcastController.broadcastIntentLocked:857 com.android.server.am.BroadcastController.broadcastIntentWithFeature:790 com.android.server.am.ActivityManagerService.broadcastIntentWithFeature:16500 android.app.ContextImpl.sendBroadcastAsUser:1551 com.android.server.audio.AudioService.sendBroadcastToAll:6834 com.android.server.audio.AudioService.-$$Nest$msendBroadcastToAll:0 com.android.server.audio.AudioService$AudioHandler.handleMessage:14002 android.os.Handler.dispatchMessage:114 android.os.Looper.loopOnce:266 android.os.Looper.loop:361 com.android.server.audio.AudioService$AudioSystemThread.run:13502 <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> 
+11-11 18:39:32.770  2929  3213 V ActivityManager: Broadcast: Intent { act=android.media.STREAM_DEVICES_CHANGED_ACTION flg=0x54000010 xflg=0x4 (has extras) } ordered=false userid=-1 options=Bundle[{android:broadcast.deferralPolicy=2, android:broadcast.deliveryGroupMatchingKey=11, android:broadcast.deliveryGroupMatchingNamespace=android.media.STREAM_DEVICES_CHANGED_ACTION, android:broadcast.deliveryGroupPolicy=1}], realCallingUid=1000, realCallingPid=2929, callingUid=1000 ,callingPid=2929, callerPackage=android, resultTo=null, broadcastAllowList=, callers=com.android.server.am.BroadcastController.broadcastIntentLocked:857 com.android.server.am.BroadcastController.broadcastIntentWithFeature:790 com.android.server.am.ActivityManagerService.broadcastIntentWithFeature:16500 android.app.ContextImpl.sendBroadcastAsUser:1551 com.android.server.audio.AudioService.sendBroadcastToAll:6834 com.android.server.audio.AudioService.-$$Nest$msendBroadcastToAll:0 com.android.server.audio.AudioService$AudioHandler.handleMessage:14002 android.os.Handler.dispatchMessage:114 android.os.Looper.loopOnce:266 android.os.Looper.loop:361 com.android.server.audio.AudioService$AudioSystemThread.run:13502 <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> 
+11-11 18:39:33.099   562   578 W keystore2: system/security/keystore2/watchdog/src/lib.rs:174 - ### Keystore Watchdog report - BEGIN ###
+11-11 18:39:33.099   562   578 W keystore2: system/security/keystore2/watchdog/src/lib.rs:183 - When extracting from a bug report, please include this header and all 1 records below (to footer)
+11-11 18:39:33.099   562   578 W keystore2: system/security/keystore2/watchdog/src/lib.rs:256 - ThreadId(3) await_boot_completed Started: 11-11 18:29:36.855 UTC Pending: 596.24362919s Overdue 296.243629267s
+--
+11-11 18:39:42.388  3451  3451 E System  : java.lang.IllegalArgumentException: Unknown operation string: MIUI:10008
+11-11 18:39:42.388  3451  3451 E System  : 	at android.app.AppOpsManager.strOpToOp(AppOpsManager.java:9374)
+11-11 18:39:42.388  3451  3451 E System  : 	at com.android.server.permission.access.appop.AppOpService.opNameMapToOpSparseArray(AppOpService.kt:336)
+11-11 18:39:42.388  3451  3451 E System  : 	at com.android.server.permission.access.appop.AppOpService.getNonDefaultPackageModes(AppOpService.kt:172)
+11-11 18:39:42.388  3451  3451 E System  : 	at com.android.server.appop.AppOpsCheckingServiceTracingDecorator.getNonDefaultPackageModes(AppOpsCheckingServiceTracingDecorator.java:99)
+11-11 18:39:42.388  3451  3451 E System  : 	at com.android.server.appop.AppOpsService.initializePackageUidStateLocked(AppOpsService.java:1428)
+11-11 18:39:42.388  3451  3451 E System  : 	at com.android.server.appop.AppOpsService.initializeUserUidStatesLocked(AppOpsService.java:1404)
+11-11 18:39:42.388  3451  3451 E System  : 	at com.android.server.appop.AppOpsService.initializeUidStates(AppOpsService.java:1377)
+11-11 18:39:42.388  3451  3451 E System  : 	at com.android.server.appop.AppOpsService.systemReady(AppOpsService.java:1243)
+11-11 18:39:42.388  3451  3451 E System  : 	at com.android.server.am.ActivityManagerService.systemReady(ActivityManagerService.java:10399)
+11-11 18:39:42.388  3451  3451 E System  : 	at com.android.server.SystemServer.startOtherServices(SystemServer.java:3551)
+11-11 18:39:42.388  3451  3451 E System  : 	at com.android.server.SystemServer.run(SystemServer.java:1134)
+11-11 18:39:42.388  3451  3451 E System  : 	at com.android.server.SystemServer.main(SystemServer.java:744)
+11-11 18:39:42.388  3451  3451 E System  : 	at java.lang.reflect.Method.invoke(Native Method)
+11-11 18:39:42.388  3451  3451 E System  : 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:675)
+11-11 18:39:42.388  3451  3451 E System  : 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:980)
+11-11 18:39:42.428  3451  3726 V ActivityManager: Broadcast: Intent { act=android.media.STREAM_DEVICES_CHANGED_ACTION flg=0x54000010 xflg=0x4 (has extras) } ordered=false userid=-1 options=Bundle[{android:broadcast.deferralPolicy=2, android:broadcast.deliveryGroupMatchingKey=5, android:broadcast.deliveryGroupMatchingNamespace=android.media.STREAM_DEVICES_CHANGED_ACTION, android:broadcast.deliveryGroupPolicy=1}], realCallingUid=1000, realCallingPid=3451, callingUid=1000 ,callingPid=3451, callerPackage=android, resultTo=null, broadcastAllowList=, callers=com.android.server.am.BroadcastController.broadcastIntentLocked:857 com.android.server.am.BroadcastController.broadcastIntentWithFeature:790 com.android.server.am.ActivityManagerService.broadcastIntentWithFeature:16500 android.app.ContextImpl.sendBroadcastAsUser:1551 com.android.server.audio.AudioService.sendBroadcastToAll:6834 com.android.server.audio.AudioService.-$$Nest$msendBroadcastToAll:0 com.android.server.audio.AudioService$AudioHandler.handleMessage:14002 android.os.Handler.dispatchMessage:114 android.os.Looper.loopOnce:266 android.os.Looper.loop:361 com.android.server.audio.AudioService$AudioSystemThread.run:13502 <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> 
+11-11 18:39:42.457  3451  3726 V ActivityManager: Broadcast: Intent { act=android.media.STREAM_DEVICES_CHANGED_ACTION flg=0x54000010 xflg=0x4 (has extras) } ordered=false userid=-1 options=Bundle[{android:broadcast.deferralPolicy=2, android:broadcast.deliveryGroupMatchingKey=2, android:broadcast.deliveryGroupMatchingNamespace=android.media.STREAM_DEVICES_CHANGED_ACTION, android:broadcast.deliveryGroupPolicy=1}], realCallingUid=1000, realCallingPid=3451, callingUid=1000 ,callingPid=3451, callerPackage=android, resultTo=null, broadcastAllowList=, callers=com.android.server.am.BroadcastController.broadcastIntentLocked:857 com.android.server.am.BroadcastController.broadcastIntentWithFeature:790 com.android.server.am.ActivityManagerService.broadcastIntentWithFeature:16500 android.app.ContextImpl.sendBroadcastAsUser:1551 com.android.server.audio.AudioService.sendBroadcastToAll:6834 com.android.server.audio.AudioService.-$$Nest$msendBroadcastToAll:0 com.android.server.audio.AudioService$AudioHandler.handleMessage:14002 android.os.Handler.dispatchMessage:114 android.os.Looper.loopOnce:266 android.os.Looper.loop:361 com.android.server.audio.AudioService$AudioSystemThread.run:13502 <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> 
+11-11 18:39:42.487  3451  3726 V ActivityManager: Broadcast: Intent { act=android.media.STREAM_DEVICES_CHANGED_ACTION flg=0x54000010 xflg=0x4 (has extras) } ordered=false userid=-1 options=Bundle[{android:broadcast.deferralPolicy=2, android:broadcast.deliveryGroupMatchingKey=0, android:broadcast.deliveryGroupMatchingNamespace=android.media.STREAM_DEVICES_CHANGED_ACTION, android:broadcast.deliveryGroupPolicy=1}], realCallingUid=1000, realCallingPid=3451, callingUid=1000 ,callingPid=3451, callerPackage=android, resultTo=null, broadcastAllowList=, callers=com.android.server.am.BroadcastController.broadcastIntentLocked:857 com.android.server.am.BroadcastController.broadcastIntentWithFeature:790 com.android.server.am.ActivityManagerService.broadcastIntentWithFeature:16500 android.app.ContextImpl.sendBroadcastAsUser:1551 com.android.server.audio.AudioService.sendBroadcastToAll:6834 com.android.server.audio.AudioService.-$$Nest$msendBroadcastToAll:0 com.android.server.audio.AudioService$AudioHandler.handleMessage:14002 android.os.Handler.dispatchMessage:114 android.os.Looper.loopOnce:266 android.os.Looper.loop:361 com.android.server.audio.AudioService$AudioSystemThread.run:13502 <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> 
+11-11 18:39:42.518  3451  3726 V ActivityManager: Broadcast: Intent { act=android.media.STREAM_DEVICES_CHANGED_ACTION flg=0x54000010 xflg=0x4 (has extras) } ordered=false userid=-1 options=Bundle[{android:broadcast.deferralPolicy=2, android:broadcast.deliveryGroupMatchingKey=11, android:broadcast.deliveryGroupMatchingNamespace=android.media.STREAM_DEVICES_CHANGED_ACTION, android:broadcast.deliveryGroupPolicy=1}], realCallingUid=1000, realCallingPid=3451, callingUid=1000 ,callingPid=3451, callerPackage=android, resultTo=null, broadcastAllowList=, callers=com.android.server.am.BroadcastController.broadcastIntentLocked:857 com.android.server.am.BroadcastController.broadcastIntentWithFeature:790 com.android.server.am.ActivityManagerService.broadcastIntentWithFeature:16500 android.app.ContextImpl.sendBroadcastAsUser:1551 com.android.server.audio.AudioService.sendBroadcastToAll:6834 com.android.server.audio.AudioService.-$$Nest$msendBroadcastToAll:0 com.android.server.audio.AudioService$AudioHandler.handleMessage:14002 android.os.Handler.dispatchMessage:114 android.os.Looper.loopOnce:266 android.os.Looper.loop:361 com.android.server.audio.AudioService$AudioSystemThread.run:13502 <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> 
+11-11 18:39:42.802   562   578 W keystore2: system/security/keystore2/watchdog/src/lib.rs:174 - ### Keystore Watchdog report - BEGIN ###
+DONE

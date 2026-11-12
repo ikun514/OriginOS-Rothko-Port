@@ -1,0 +1,88 @@
+﻿===== PStore =====
+__bionic_open_tzdata: couldn't find any tzdata when looking for CST-8!
+__bionic_open_tzdata: couldn't find any tzdata when looking for posixrules!
+total 0
+drwxr-x---  2 root root      0 2026-11-12 04:59 .
+drwxr-xr-x 11 root root      0 1970-01-01 08:00 ..
+-r--r--r--  1 root root 262132 2026-11-12 04:59 console-ramoops-0
+-r--r--r--  1 root root 110592 2026-11-12 04:59 pmsg-ramoops-0
+===== console-ramoops strings (filtered) =====
+[  559.160484][   T73] [wdtk] kick watchdog
+[  574.660505][   T73] [wdtk] kick watchdog
+[  590.160525][   T73] [wdtk] kick watchdog
+[  596.868218][ T2035] Kernel panic - not syncing: System is deadlocked on memory
+[  596.868233][ T2035]  panic+0x16c/0x390
+===== dmesg (recovery boot) tail =====
+[   27.343246] read F_IC_STAT success stat=4
+[   27.343248] eoc_stat_count=0
+[   27.343250] not support psy_type to check charger parameters
+[   27.343251] set wls thermal level: 0
+[   27.343254] wls thermal not change, return
+[   27.343256] get_index: value = 4415, index[0] = 2, index[1] = 2
+[   27.343259] get_index: value = 4415, index[0] = 2, index[1] = 2, new_index = 2
+[   27.343262] handle_step_charge index = 2
+[   27.343263] get_index: value = 334, index[0] = 4, index[1] = 4
+[   27.343267] get_index: value = 334, index[0] = 4, index[1] = 4, new_index = 4
+[   27.343269] handle_jeita_charge index = 4,jeita_chg_fcc = 21800
+[   27.343271] CHARGER_FCC: current overrivote enabled:0 val:0 voted by vote FG_I2C_VOTER
+[   27.343275] vote FCC = 2000
+[   27.343278] mt6375-chg 11d02000.i2c:mt6375@34:chg: mt6375_set_ichg ichg=2000000
+[   27.343281] mt6375-chg 11d02000.i2c:mt6375@34:chg: mt6375_chg_set_property psp=29
+[   27.343284] mt6375-chg 11d02000.i2c:mt6375@34:chg: mt6375_chg_field_set F_CC, val=2000
+[   27.343357] CHARGER_FCC: current vote is now 2000 voted by vote_override FFC_VOTER
+[   27.343360] CHARGER_ICL: current overrivote enabled:0 val:0 voted by vote FG_I2C_VOTER
+[   27.343363] vote ICL = 650
+[   27.343365] mt6375-chg 11d02000.i2c:mt6375@34:chg: mt6375_set_aicr aicr=650000
+[   27.343368] mt6375-chg 11d02000.i2c:mt6375@34:chg: mt6375_chg_set_property psp=38
+[   27.343371] mt6375-chg 11d02000.i2c:mt6375@34:chg: mt6375_chg_field_set F_IAICR, val=650
+[   27.343443] CHARGER_ICL: current vote is now 650 voted by vote_override ICL_VOTER
+[   27.343447] smart_chg_handle_sensing_chg act[0->0] scene[1 0] post[0] tbd[0] sic[0 -1 -1 -1 -1 22000] lvl[0]
+[   27.343451] smart_chg_handle_sensing_chg, save upper orgin sic_mode -1.
+[   27.345689] battcont_online_set val:931
+[   27.345692] monitor_slave_connector conn_ok:1, adc:931, gpio:0
+[   27.345695] [monitor_fv_descent][0]  fv_vote[4480,4480,0], FFC[4480, 4480], jeita[4550,4550], isEffective:0
+[   27.345698] handle_switch_pmic_normal_charge_done switch_pmic_normal=0
+[   27.345700] [monitor_fv_overvoltage] 0:4415:4480:0:2000
+===== AEE / crash dirs =====
+-- /data/aee_exp
+-- /data/vendor/aee
+-- /data/vendor/mtklog
+-- /cache/recovery
+total 636
+drwxrwx---  2 system system   4096 2026-11-12 04:59 .
+drwxr-xr-x 10 root   root     4096 2026-11-12 01:49 ..
+-rw-rw-rw-  1 root   root        5 2026-11-12 04:59 .version
+-rw-rw-rw-  1 root   root        1 2026-11-12 04:55 intent
+-rw-------  1 root   root      101 2026-11-10 22:00 last_cust_block.map
+-rw-rw-rw-  1 root   root       36 2026-11-12 01:49 last_extension_parameters
+-rw-r-----  1 root   root   297199 2026-11-12 04:59 last_log.gz
+-- /metadata
+total 0
+drwxr-xr-x  2 root root 0 1970-01-01 08:00 .
+drwxr-xr-x 47 root root 0 2026-11-12 04:59 ..
+===== flashed odm vs original odm =====
+flash mount rc=0
+mount: '/data/local/tmp/build/rothko_odm_orig.img'->'/mnt/odmorig': No such file or directory
+orig mount rc=1
+flash files: 1114
+orig  files: 0
+--- build.prop diff (orig vs flash) ---
+--- label samples flash ---
+
+u:object_r:vendor_configs_file:s0 /mnt/odmflash/etc/build.prop
+
+/mnt/odmflash/bin/hw:
+--- label samples orig ---
+--- size compare ---
+1272709842	/mnt/odmflash
+40	/mnt/odmorig
+===== misc / boot mode info =====
+kvm-arm.mode=protected
+bootconfig
+usb2jtag_mode=0
+bootopt=64S3,32N2,64N2
+aee_aed.pureason=kernel_panic
+mt6375-charger.pureason=kernel_panic
+aee_aed.poffreason=AP_WDT
+bootconfig
+DONE

@@ -1,0 +1,37 @@
+﻿=== rebuild_rothko_super 2026-11-12T01:26:10.7264878+08:00 ===
+01:26:10    input odm_a               881,057,792 B  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_odm_a.img
+01:26:10    input odm_dlkm_a              348,160 B  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_odm_dlkm_a.img
+01:26:10    input product_a         4,478,963,712 B  G:\OriginOS_Work\02_base\lp_parts\product_a.img
+01:26:10    input system_a            879,894,528 B  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_system_a.img
+01:26:10    input system_dlkm_a         7,471,104 B  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_system_dlkm_a.img
+01:26:10    input system_ext_a        936,296,448 B  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_system_ext_a.img
+01:26:10    input vendor_a          1,644,707,840 B  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_vendor_a.img
+01:26:10    input vendor_dlkm_a        21,970,944 B  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_vendor_dlkm_a.img
+01:26:10    input mi_ext_a            126,640,128 B  C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_mi_ext_a.img
+01:26:10 3) verify_super.py
+01:26:10    ====================================================================================
+01:26:10    SUPER 自检: G:\OriginOS_Work\02_base\super_v01_rothko_rebuild.img
+01:26:10    ====================================================================================
+01:26:10      file=G:\OriginOS_Work\02_base\super_v01_rothko_rebuild.img size=9663676416 (9.00 GiB) layout={'geometry_offset': 4096, 'metadata_offset': 12288, 'data_base': 0, 'data_base_scores': {0: 9, 4096: 0, 8192: 0}, 'note': '非标准布局'} container=raw
+01:26:10      metadata v10.2 header_checksum_ok=True tables_checksum_ok=True
+01:26:10      group default  max=0            used=0            (0.00 B)
+01:26:10      group main_a   max=9653190656   used=8977350656   (8.36 GiB)
+01:26:10      group main_b   max=9653190656   used=0            (0.00 B)
+01:26:10      与参考 super 比对: 分区数 18/18, group 数 3/3
+01:26:10      分区（按文件偏移排序）:
+01:26:10      name                       size   file_start     file_end  fs       attrs
+01:26:10      odm_a                 881057792      1048576    882106368  erofs    READONLY
+01:26:10      odm_dlkm_a               348160    882900992    883249152  erofs    READONLY
+01:26:10      product_a            4478963712    883949568   5362913280  erofs    READONLY
+01:26:10      system_a              879894528   5363466240   6243360768  erofs    READONLY
+01:26:10      system_dlkm_a           7471104   6244270080   6251741184  erofs    READONLY
+01:26:10      system_ext_a          936296448   6252658688   7188955136  erofs    READONLY
+01:26:10      vendor_a             1644707840   7189037056   8833744896  erofs    READONLY
+01:26:10      vendor_dlkm_a          21970944   8834252800   8856223744  erofs    READONLY
+01:26:10      mi_ext_a              126640128   8856272896   8982913024  erofs    READONLY
+01:26:10    
+01:26:10    结果: PASS  (0 errors, 0 warnings)
+01:26:10 verify_super rc=0
+01:26:10 4) output
+01:26:19    G:\OriginOS_Work\02_base\super_v01_rothko_rebuild.img  9,663,676,416 bytes  sha256=065da5affaeadb0aff629f72a8ff176983f955ed4e967a0bf062105812b493fd
+01:26:19 === DONE (log: C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\06_logs\rebuild_super.log) ===

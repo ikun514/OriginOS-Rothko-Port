@@ -1,0 +1,42 @@
+# å¤§æ–‡ä»¶ / ç”Ÿæˆç‰©ï¼ˆä¸å…¥åº“ï¼‰
+*.img
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*.bin
+*.apex
+*.apk
+super*
+*.super
+04_build_tmp/
+02_base/images/
+02_base/extracted/
+03_port/
+00_tools/
+06_logs/tmp/
+06_logs/v*/pstore/
+*.log.gz
+*.raw
+*.dec
+*.lz4
+*.cpio
+*.gz
+
+# ç³»ç»Ÿåƒåœ¾
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ä¿ç•™å°äºŒè¿›åˆ¶è¡¥ä¸ä¸æ–‡æ¡£
+!02_base/libvivo_servers_patched.so
+!02_base/libsensorservice_patched.so
+
+# ´óĞÍÈÕÖ¾/±ÀÀ£×ª´¢£¨±£ÁôÎÄ±¾ÕªÒª¼´¿É£©
+06_logs/**/tombstones/
+06_logs/**/*.pb
+06_logs/v12_diag/data/
+06_logs/v02_firstboot/logcat_all.txt
+06_logs/v02_firstboot/logcat_stream.txt
+06_logs/**/*.png

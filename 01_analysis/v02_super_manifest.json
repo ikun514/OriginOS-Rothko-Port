@@ -1,0 +1,68 @@
+﻿{
+    "generated_at":  "2026-11-12T01:41:56.1993663+08:00",
+    "layout":  "mtk",
+    "device_size":  9663676416,
+    "group_main_a_max":  9652142080,
+    "first_logical_sector":  2048,
+    "alignment":  1048576,
+    "sum_partitions":  9382387712,
+    "data_end":  9387200512,
+    "free_after_data":  276475904,
+    "free_vs_group":  269754368,
+    "partitions":  [
+                       {
+                           "name":  "product_a",
+                           "start":  1048576,
+                           "end":  395030528,
+                           "size":  393981952
+                       },
+                       {
+                           "name":  "vendor_a",
+                           "start":  395313152,
+                           "end":  2040020992,
+                           "size":  1644707840
+                       },
+                       {
+                           "name":  "system_ext_a",
+                           "start":  2040528896,
+                           "end":  2452439040,
+                           "size":  411910144
+                       },
+                       {
+                           "name":  "odm_a",
+                           "start":  2452619264,
+                           "end":  3333677056,
+                           "size":  881057792
+                       },
+                       {
+                           "name":  "system_a",
+                           "start":  3334471680,
+                           "end":  9228771328,
+                           "size":  5894299648
+                       },
+                       {
+                           "name":  "mi_ext_a",
+                           "start":  9229565952,
+                           "end":  9356206080,
+                           "size":  126640128
+                       },
+                       {
+                           "name":  "vendor_dlkm_a",
+                           "start":  9356443648,
+                           "end":  9378414592,
+                           "size":  21970944
+                       },
+                       {
+                           "name":  "system_dlkm_a",
+                           "start":  9378463744,
+                           "end":  9385934848,
+                           "size":  7471104
+                       },
+                       {
+                           "name":  "odm_dlkm_a",
+                           "start":  9386852352,
+                           "end":  9387200512,
+                           "size":  348160
+                       }
+                   ]
+}

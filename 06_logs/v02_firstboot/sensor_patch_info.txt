@@ -1,0 +1,18 @@
+﻿mount rc=0
+-rw-r--r-- 1 root root 550064 2026-11-11 18:21 /data/local/tmp/portfix/libsensorservice_vivo.so
+=== convertToSensorEvent symbol ===
+   530: 0000000000074110   620 FUNC    GLOBAL DEFAULT   15 _ZN7android8hardware7sensors4V1_014implementation20convertToSensorEventERKNS2_5EventEP15sensors_event_t
+   660: 000000000003fc30  2336 FUNC    GLOBAL DEFAULT   15 _ZN7android8hardware7sensors14implementation20convertToSensorEventERKN4aidl7android8hardware7sensors5EventEP15sensors_event_t
+=== sections .plt / .rela.plt ===
+  [ 4] .dynsym           DYNSYM          00000000000002c0 0002c0 0042a8 18   A  8  1  8
+  [11] .rela.plt         RELA            000000000000f1c8 00f1c8 002c88 18  AI  4 22  8
+  [15] .text             PROGBITS        000000000002c000 02c000 048528 00  AX  0  0 16
+  [16] .plt              PROGBITS        0000000000074530 074530 001dd0 00  AX  0  0 16
+=== relocations (JUMP_SLOT only, first 80) ===
+=== __assert2 symbols ===
+    22: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt3__122__libcpp_verbose_abortEPKcz
+    29: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __assert
+   109: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __android_log_assert
+   323: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND abort
+   464: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __assert2
+DONE

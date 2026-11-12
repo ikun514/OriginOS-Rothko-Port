@@ -1,0 +1,101 @@
+﻿latest tombstone: /data/tombstones/tombstone_13
+=== header ===
+Softversion: unknown
+Time: 2026-11-11 18:29:39
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'Redmi/rothko/rothko:16/BP2A.250605.031.A3/compiler260908202554:user/release-keys'
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2026-11-11 18:29:39.926358846+0000
+Process uptime: 0s
+Cmdline: /system/bin/init second_stage
+pid: 1349, tid: 1349, name: init  >>> /system/bin/init <<<
+uid: 0
+tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+    x0  0000000000000000  x1  0000000000000545  x2  0000000000000006  x3  0000007fc5d1b750
+    x4  000000000000000a  x5  000000000000000a  x6  000000000000000a  x7  7f7f7f7f7f7f7f7f
+    x8  00000000000000f0  x9  c3d8809f96c6f33b  x10 0000000000000001  x11 0000007fb0706450
+    x12 0000007fc5d1aee4  x13 0000000000000004  x14 0000000000000000  x15 000000000b68286c
+    x16 0000007fb0777e68  x17 0000007fb075a040  x18 0000007fb6c30000  x19 0000000000000545
+    x20 0000000000000545  x21 00000000ffffffff  x22 b400007f406793f0  x23 0000000000000050
+    x24 0000007fb6afaec0  x25 0000000000000000  x26 b400007e2063bc10  x27 b400007f3063d170
+    x28 0000000000000000  x29 0000007fc5d1b7d0
+    lr  0000007fb06ef698  sp  0000007fc5d1b750  pc  0000007fb06ef6bc  pst 0000000000001000
+
+13 total frames
+backtrace:
+      #00 pc 00000000000bd6bc  /system/lib64/bootstrap/libc.so (abort+156) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #01 pc 0000000000014adc  /system/lib64/libbase.so (android::base::DefaultAborter(char const*)+12) (BuildId: a8a5fbe66ccc21182b783470c3efee1d)
+      #02 pc 0000000000016a10  /system/lib64/libbase.so (android::base::SetAborter(std::__1::function<void (char const*)>&&)::$_0::__invoke(char const*)+80) (BuildId: a8a5fbe66ccc21182b783470c3efee1d)
+      #03 pc 0000000000015f4c  /system/lib64/libbase.so (android::base::LogMessage::~LogMessage()+540) (BuildId: a8a5fbe66ccc21182b783470c3efee1d)
+=== backtrace: first threads ===
+26:backtrace:
+27-      #00 pc 00000000000bd6bc  /system/lib64/bootstrap/libc.so (abort+156) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+28-      #01 pc 0000000000014adc  /system/lib64/libbase.so (android::base::DefaultAborter(char const*)+12) (BuildId: a8a5fbe66ccc21182b783470c3efee1d)
+29-      #02 pc 0000000000016a10  /system/lib64/libbase.so (android::base::SetAborter(std::__1::function<void (char const*)>&&)::$_0::__invoke(char const*)+80) (BuildId: a8a5fbe66ccc21182b783470c3efee1d)
+30-      #03 pc 0000000000015f4c  /system/lib64/libbase.so (android::base::LogMessage::~LogMessage()+540) (BuildId: a8a5fbe66ccc21182b783470c3efee1d)
+31-      #04 pc 000000000019fa08  /system/bin/init (android::init::Service::RunService(std::__1::vector<android::init::Descriptor, std::__1::allocator<android::init::Descriptor>> const&, android::init::InterprocessFifo, android::init::InterprocessFifo)+3224) (BuildId: d178185e89fff962595c2f8d414e130a)
+32-      #05 pc 000000000019ea94  /system/bin/init (android::init::Service::Start()+5732) (BuildId: d178185e89fff962595c2f8d414e130a)
+33-      #06 pc 000000000018e1d4  /system/bin/init (android::init::do_start(android::init::BuiltinArguments const&)+308) (BuildId: d178185e89fff962595c2f8d414e130a)
+34-      #07 pc 000000000016f814  /system/bin/init (android::init::RunBuiltinFunction(std::__1::function<android::base::expected<void, android::base::ResultError<android::base::Errno, true>> (android::init::BuiltinArguments const&)> const&, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)+532) (BuildId: d178185e89fff962595c2f8d414e130a)
+35-      #08 pc 0000000000170940  /system/bin/init (android::init::Action::ExecuteCommand(android::init::Command const&) const+160) (BuildId: d178185e89fff962595c2f8d414e130a)
+36-      #09 pc 00000000001707d4  /system/bin/init (android::init::Action::ExecuteOneCommand(unsigned long) const+308) (BuildId: d178185e89fff962595c2f8d414e130a)
+37-      #10 pc 00000000001ad04c  /system/bin/init (android::init::ActionManager::ExecuteOneCommand()+188) (BuildId: d178185e89fff962595c2f8d414e130a)
+38-      #11 pc 00000000001db4bc  /system/bin/init (android::init::SecondStageMain(int, char**)+13020) (BuildId: d178185e89fff962595c2f8d414e130a)
+39-      #12 pc 00000000000b6868  /system/lib64/bootstrap/libc.so (__libc_init+120) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+40-
+41-memory near x3 ([stack]):
+42-    0000007fc5d1b730 b400007f406793f0 b400007ef0659590  ..g@......e.~...
+43-    0000007fc5d1b740 0000007fc5d1b859 0000007fb6afaec0  Y...............
+44-    0000007fc5d1b750 0000000000000000 00000000ffffffff  ................
+45-    0000007fc5d1b760 0000000000000545 0000000000000000  E...............
+46-    0000007fc5d1b770 0000000000000000 0000000000000000  ................
+47-    0000007fc5d1b780 0000000000000000 0000000000000000  ................
+48-    0000007fc5d1b790 0000000000000000 0000000000000000  ................
+49-    0000007fc5d1b7a0 0000000000000000 0000000000000000  ................
+50-    0000007fc5d1b7b0 0000000000000000 0000000000000000  ................
+51-    0000007fc5d1b7c0 0000000000000000 0000000000000000  ................
+=== crash logcat ===
+11-11 18:32:15.963 10266 10266 E AndroidRuntime: *** FATAL EXCEPTION IN SYSTEM PROCESS: main
+11-11 18:32:15.963 10266 10266 E AndroidRuntime: java.lang.IllegalArgumentException: Unknown operation string: MIUI:10008
+11-11 18:32:15.963 10266 10266 E AndroidRuntime: 	at android.app.AppOpsManager.strOpToOp(AppOpsManager.java:9374)
+11-11 18:32:15.963 10266 10266 E AndroidRuntime: 	at com.android.server.permission.access.appop.AppOpService.opNameMapToOpSparseArray(AppOpService.kt:336)
+11-11 18:32:15.963 10266 10266 E AndroidRuntime: 	at com.android.server.permission.access.appop.AppOpService.getNonDefaultPackageModes(AppOpService.kt:172)
+11-11 18:32:15.963 10266 10266 E AndroidRuntime: 	at com.android.server.appop.AppOpsCheckingServiceTracingDecorator.getNonDefaultPackageModes(AppOpsCheckingServiceTracingDecorator.java:99)
+11-11 18:32:15.963 10266 10266 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.initializePackageUidStateLocked(AppOpsService.java:1428)
+11-11 18:32:15.963 10266 10266 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.initializeUserUidStatesLocked(AppOpsService.java:1404)
+11-11 18:32:15.963 10266 10266 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.initializeUidStates(AppOpsService.java:1377)
+11-11 18:32:15.963 10266 10266 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.systemReady(AppOpsService.java:1243)
+11-11 18:32:15.963 10266 10266 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.systemReady(ActivityManagerService.java:10399)
+11-11 18:32:15.963 10266 10266 E AndroidRuntime: 	at com.android.server.SystemServer.startOtherServices(SystemServer.java:3551)
+11-11 18:32:15.963 10266 10266 E AndroidRuntime: 	at com.android.server.SystemServer.run(SystemServer.java:1134)
+11-11 18:32:15.963 10266 10266 E AndroidRuntime: 	at com.android.server.SystemServer.main(SystemServer.java:744)
+11-11 18:32:15.963 10266 10266 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+11-11 18:32:15.963 10266 10266 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:675)
+11-11 18:32:15.963 10266 10266 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:980)
+11-11 18:32:21.675 10699 10699 I meow_lib: mtk-brm-commit-id:9d1b0623a6f41711fe139a6f79cd3baeb9ea843a
+11-11 18:32:21.675 10699 10699 I meow_lib: mtk-brm-change-id:I8f1714af0c8f09e69f657b1cd28e5836cb35e02f
+11-11 18:32:21.675 10699 10699 I meow_lib: mtk-brm-merge-id:none
+11-11 18:32:21.702 10699 10699 I libMEOW_gift: mtk-brm-commit-id:baddce1afc7f505d669af7d6f39eac4d950348d3
+11-11 18:32:21.702 10699 10699 I libMEOW_gift: mtk-brm-change-id:Iefbd3d0ed7e413bb0602db9f0bc751032ab085cd
+11-11 18:32:21.702 10699 10699 I libMEOW_gift: mtk-brm-merge-id:none
+11-11 18:32:25.252 10778 10778 E AndroidRuntime: *** FATAL EXCEPTION IN SYSTEM PROCESS: main
+11-11 18:32:25.252 10778 10778 E AndroidRuntime: java.lang.IllegalArgumentException: Unknown operation string: MIUI:10008
+11-11 18:32:25.252 10778 10778 E AndroidRuntime: 	at android.app.AppOpsManager.strOpToOp(AppOpsManager.java:9374)
+11-11 18:32:25.252 10778 10778 E AndroidRuntime: 	at com.android.server.permission.access.appop.AppOpService.opNameMapToOpSparseArray(AppOpService.kt:336)
+11-11 18:32:25.252 10778 10778 E AndroidRuntime: 	at com.android.server.permission.access.appop.AppOpService.getNonDefaultPackageModes(AppOpService.kt:172)
+11-11 18:32:25.252 10778 10778 E AndroidRuntime: 	at com.android.server.appop.AppOpsCheckingServiceTracingDecorator.getNonDefaultPackageModes(AppOpsCheckingServiceTracingDecorator.java:99)
+11-11 18:32:25.252 10778 10778 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.initializePackageUidStateLocked(AppOpsService.java:1428)
+11-11 18:32:25.252 10778 10778 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.initializeUserUidStatesLocked(AppOpsService.java:1404)
+11-11 18:32:25.252 10778 10778 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.initializeUidStates(AppOpsService.java:1377)
+11-11 18:32:25.252 10778 10778 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.systemReady(AppOpsService.java:1243)
+11-11 18:32:25.252 10778 10778 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.systemReady(ActivityManagerService.java:10399)
+11-11 18:32:25.252 10778 10778 E AndroidRuntime: 	at com.android.server.SystemServer.startOtherServices(SystemServer.java:3551)
+11-11 18:32:25.252 10778 10778 E AndroidRuntime: 	at com.android.server.SystemServer.run(SystemServer.java:1134)
+11-11 18:32:25.252 10778 10778 E AndroidRuntime: 	at com.android.server.SystemServer.main(SystemServer.java:744)
+11-11 18:32:25.252 10778 10778 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+11-11 18:32:25.252 10778 10778 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:675)
+11-11 18:32:25.252 10778 10778 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:980)
+DONE

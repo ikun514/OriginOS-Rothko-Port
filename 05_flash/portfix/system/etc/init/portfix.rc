@@ -1,0 +1,30 @@
+# OriginOS port fixups (image level)
+# --- zram swap: vendor init.mt6989.rc 的 swapon_all 在 vivo init 下未生效（Total swap=0kB -> OOM panic）
+on late-init
+    write /sys/block/zram0/comp_algorithm lz4
+    write /proc/sys/vm/page-cluster 0
+    write /proc/sys/vm/swappiness 120
+
+on post-fs-data
+    swapon_all /vendor/etc/fstab.enableswap
+
+# exec 型 fixup 在 vivo init 下不生效，改用标准 service + start
+service portfix_early /system/bin/sh /system/etc/portfix_early.sh
+    class core
+    user root
+    group root
+    oneshot
+    disabled
+
+service portfix_boot /system/bin/sh /system/etc/portfix_boot.sh
+    class core
+    user root
+    group root
+    oneshot
+    disabled
+
+on post-fs-data
+    start portfix_early
+
+on property:sys.boot_completed=1
+    start portfix_boot

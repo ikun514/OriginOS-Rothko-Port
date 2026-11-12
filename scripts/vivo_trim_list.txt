@@ -1,0 +1,34 @@
+# vivo system trim list (paths relative to image root)
+# 目标：把 lz4hc 重打包后的 system 从 7,782,260,736B 降到 ≤ 6.05GB
+# 原则：只删非启动必需、非桌面前台必须的预装/工具类 App；框架、SystemUI、Settings、
+#       输入法(JoviIme)、相机(VivoCamera)、主题资源(vivo-res/SystemUIPlugin) 全部保留。
+/system/custom/app/SmartOffice
+/system/custom/app/JoviCopilot
+/system/custom/app/VideoPlayer
+/system/custom/app/ihealth
+/system/custom/app/vivogame
+/system/custom/app/BBKMusic
+/system/custom/app/VivoPhoto
+/system/custom/app/VTouch
+/system/custom/app/iReader
+/system/custom/app/IqooSecure
+/system/custom/app/vivospace-v2
+/system/custom/app/vivoWallet
+/system/custom/app/BBKNotes
+/system/custom/app/VideoEditor
+/system/custom/app/BBKWeather
+/system/custom/app/WalkieTalkie
+/system/custom/app/VivoDeformer
+/system/custom/app/ChildrenMode
+/system/custom/app/VivoCalendar
+/system/custom/app/CarNetworking
+/system/custom/app/CarLauncher
+/system/custom/app/RemoteAssistant
+/system/custom/app/VivoTips
+/system/custom/app/healthwidget
+/system/custom/app/AiTranslate
+# round 2: need ~203MB more (image 6,367,236,096 > budget 6,164,054,016)
+/system/app/VivoGptAgent
+/system/app/VivoUnionApk
+/system/priv-app/Baidu
+/system/app/AIService

@@ -1,0 +1,16 @@
+﻿=== restore_stock mode=prepare 2026-11-12T01:33:15.8297771+08:00 ===
+01:33:15 manifest: C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\scripts\toolchain\rollback\stock_manifest.json (2 files)
+01:33:15 1) verify local file hashes (super is 9GB, ~35s)
+01:33:15    [skip-hash] rothko_current_super.img 9663676416 bytes
+01:33:15    [skip-hash] rothko_current_vendor_boot_a.img 67108864 bytes
+01:33:15 2) adb device check
+01:33:16    DYZHAEPVPREYLNTC state=recovery
+01:33:16 3) push files to /sdcard/work/rollback
+01:34:32    push: adb: error: failed to copy 'C:\Users\Administrator\Documents\deepseek-harness\default-workspace\OriginOS_Rothko_Port\02_base\images\rothko_current_super.img' to '/sdcard/work/rollback/rothko_current_super.img': no response: Broken pipe
+01:34:32    pushed rothko_current_super.img in 76.4s
+01:34:32    push: adb: error: failed to get feature set: no devices/emulators found
+01:34:32    pushed rothko_current_vendor_boot_a.img in 0.1s
+01:34:32    push: adb: error: failed to get feature set: no devices/emulators found
+01:34:32    push: adb: error: failed to get feature set: no devices/emulators found
+01:34:32    push: adb: error: failed to get feature set: no devices/emulators found
+01:34:32    adb.exe: no devices/emulators found

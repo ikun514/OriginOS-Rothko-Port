@@ -1,0 +1,77 @@
+﻿=== ADB/DEV ===
+1
+1
+=== BT ===
+
+0
+Bluetooth Status
+  enabled: false
+  state: OFF
+  address: XX:XX:XX:XX:5B:35
+  name: iQOO Neo9 Pro
+
+Bluetooth never enabled!
+
+Bluetooth crashed 0 times
+
+Number of Ble app registered: 0
+
+=== AUDIO ===
+Events log: audio services lifecycle
+11-12 11:10:16:327 AudioService()
+11-12 11:10:16:334 Controller start task complete
+
+Message handler (watch for unhandled messages):
+  Handler (com.android.server.audio.AudioService$AudioHandler) {be23ef3} @ 166164
+    Looper (AudioService, tid 254) {e168eec}
+      (MessageQueue is using Concurrent implementation)
+      State: android.os.MessageQueue$StateNode@172846
+      PriorityQueue Messages: 
+      AsyncPriorityQueue Messages: 
+      (Total messages: 1, polling=true, quitting=false)
+
+Fun with Flags:
+	com.android.media.audio.as_device_connection_failure:false
+=== CAMERA ===
+=== SENSORS ===
+Captured at: 11:12:42.142
+Sensor Device:
+Total 50 h/w sensors, 50 running 0 disabled clients:
+0x00000001) active-count = 1; sampling_period(ms) = {66.7}, selected = 66.67 ms; batching_period(ms) = {100.0}, selected = 100.00 ms
+0x00000013) active-count = 4; sampling_period(ms) = {200.0, 1.0, 1000.0, 200.0}, selected = 1.00 ms; batching_period(ms) = {0.0, 0.0, 0.0, 0.0}, selected = 0.00 ms
+0x0000006c) active-count = 1; sampling_period(ms) = {50.0}, selected = 50.00 ms; batching_period(ms) = {0.0}, selected = 0.00 ms
+0x0000006e) active-count = 1; sampling_period(ms) = {20.0}, selected = 20.00 ms; batching_period(ms) = {0.0}, selected = 0.00 ms
+0x00000073) active-count = 1; sampling_period(ms) = {10.0}, selected = 10.00 ms; batching_period(ms) = {0.0}, selected = 0.00 ms
+0x02000001) active-count = 1; sampling_period(ms) = {1.0}, selected = 1.00 ms; batching_period(ms) = {0.0}, selected = 0.00 ms
+Sensor List:
+0x00000001) lsm6dsvq_acc              | st              | ver: 1 | type: android.sensor.accelerometer(1) | perm: n/a | flags: 0x00000000
+	continuous | minRate=5.00Hz | maxRate=400.00Hz | FIFO (max,reserved) = (4500, 3000) events | non-wakeUp | 
+0x00000002) qmc6308                   | qst             | ver: 1 | type: android.sensor.magnetic_field(2) | perm: n/a | flags: 0x00000000
+	continuous | minRate=5.00Hz | maxRate=50.00Hz | FIFO (max,reserved) = (4500, 600) events | non-wakeUp | 
+0x00000003) orientation               | mtk             | ver: 1 | type: android.sensor.orientation(3) | perm: n/a | flags: 0x00000000
+=== WIFI ===
+Verbose logging is off
+mVerboseLoggingLevel 0
+Stay-awake conditions: 0
+mInIdleMode false
+mScanPending false
+SupportedFeatures: [WIFI_FEATURE_INFRA, WIFI_FEATURE_P2P, WIFI_FEATURE_MOBILE_HOTSPOT, WIFI_FEATURE_AWARE, WIFI_FEATURE_PNO, WIFI_FEATURE_TDLS, WIFI_FEATURE_TDLS_OFFCHANNEL, WIFI_FEATURE_AP_STA, WIFI_FEATURE_LINK_LAYER_STATS, WIFI_FEATURE_RSSI_MONITOR, WIFI_FEATURE_CONTROL_ROAMING, WIFI_FEATURE_TX_POWER_LIMIT, WIFI_FEATURE_WPA3_SAE, WIFI_FEATURE_WPA3_SUITE_B, WIFI_FEATURE_OWE, WIFI_FEATURE_DPP, WIFI_FEATURE_CONNECTED_RAND_MAC, WIFI_FEATURE_AP_RAND_MAC, WIFI_FEATURE_MBO, WIFI_FEATURE_OCE, WIFI_FEATURE_WAPI, WIFI_FEATURE_FILS_SHA256, WIFI_FEATURE_FILS_SHA384, WIFI_FEATURE_SAE_PK, WIFI_FEATURE_DPP_ENROLLEE_RESPONDER, WIFI_FEATURE_PASSPOINT_TERMS_AND_CONDITIONS, WIFI_FEATURE_SAE_H2E, WIFI_FEATURE_WFD_R2, WIFI_FEATURE_DECORATED_IDENTITY, WIFI_FEATURE_TRUST_ON_FIRST_USE, WIFI_FEATURE_DPP_AKM, WIFI_FEATURE_SET_TLS_MINIMUM_VERSION, WIFI_FEATURE_TLS_V1_3, WIFI_FEATURE_DUAL_BAND_SIMULTANEOUS, WIFI_FEATURE_WEP, WIFI_FEATURE_WPA_PERSONAL]
+SettingsStore:
+WifiState 1
+AirplaneModeOn false
+ScanAlwaysAvailable true
+WifiScoringState true
+WifiPasspointState true
+=== DISPLAY ===
+DISPLAY MANAGER (dumpsys display)
+  mSafeMode=false
+  mPendingTraversal=false
+  mViewports=[DisplayViewport{type=INTERNAL, valid=true, isActive=false, displayId=0, uniqueId='local:4627039422300187648', physicalPort=0, orientation=0, logicalFrame=Rect(0, 0 - 1220, 2712), physicalFrame=Rect(0, 0 - 1220, 2712), deviceWidth=1220, deviceHeight=2712}]
+  mDefaultDisplayDefaultColorMode=0
+  mWifiDisplayScanRequestCount=0
+  mStableDisplaySize=Point(1220, 2712)
+  mMinimumBrightnessCurve=[(0.0, 0.0), (2000.0, 50.0), (4000.0, 90.0)]
+  mMaxImportanceForRRCallbacks=200
+
+  mHdrConversionMode=HdrConversionMode{ConversionMode=HDR_CONVERSION_SYSTEM, PreferredHdrOutputType=HDR_TYPE_INVALID}
+

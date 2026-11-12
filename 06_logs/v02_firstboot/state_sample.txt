@@ -1,0 +1,101 @@
+﻿t=5s bc= ss=14485 system_server;
+t=10s bc= ss=
+t=15s bc= ss=15013 [system_server];
+t=20s bc= ss=15533 system_server;
+t=25s bc= ss=
+t=30s bc= ss=16056 system_server;
+t=35s bc= ss=
+t=40s bc= ss=16582 system_server;
+t=45s bc= ss=
+t=50s bc= ss=17108 system_server;
+t=55s bc= ss=
+t=60s bc= ss=17631 system_server;
+=== events: crash/died/proc ===
+11-11 18:34:04.702 16582 16582 I boot_progress_pms_start: 272768
+11-11 18:34:04.985 16582 16582 I boot_progress_pms_system_scan_start: 273052
+11-11 18:34:05.234 16582 16582 I boot_progress_pms_data_scan_start: 273300
+11-11 18:34:05.239 16582 16582 I boot_progress_pms_scan_end: 273305
+11-11 18:34:05.440 16582 16582 I boot_progress_pms_ready: 273507
+11-11 18:34:07.087 16582 16582 I am_crash: [16582,0,system_server,-1,java.lang.IllegalArgumentException,Unknown operation string: MIUI:10008,AppOpsManager.java,9374,0]
+11-11 18:34:08.611 17022 17022 I boot_progress_start: 276677
+11-11 18:34:09.830 17022 17022 I boot_progress_preload_start: 277897
+11-11 18:34:12.956 17022 17022 I boot_progress_preload_end: 281022
+11-11 18:34:13.156 17108 17108 I boot_progress_system_run: 281222
+11-11 18:34:13.917 17108 17108 I boot_progress_pms_start: 281984
+11-11 18:34:14.189 17108 17108 I boot_progress_pms_system_scan_start: 282255
+11-11 18:34:14.432 17108 17108 I boot_progress_pms_data_scan_start: 282498
+11-11 18:34:14.438 17108 17108 I boot_progress_pms_scan_end: 282504
+11-11 18:34:14.639 17108 17108 I boot_progress_pms_ready: 282705
+11-11 18:34:16.253 17108 17108 I am_crash: [17108,0,system_server,-1,java.lang.IllegalArgumentException,Unknown operation string: MIUI:10008,AppOpsManager.java,9374,0]
+11-11 18:34:17.768 17547 17547 I boot_progress_start: 285834
+11-11 18:34:18.987 17547 17547 I boot_progress_preload_start: 287053
+11-11 18:34:22.113 17547 17547 I boot_progress_preload_end: 290179
+11-11 18:34:22.311 17631 17631 I boot_progress_system_run: 290377
+11-11 18:34:23.019 17631 17631 I boot_progress_pms_start: 291085
+11-11 18:34:23.273 17631 17631 I boot_progress_pms_system_scan_start: 291339
+11-11 18:34:23.525 17631 17631 I boot_progress_pms_data_scan_start: 291591
+11-11 18:34:23.531 17631 17631 I boot_progress_pms_scan_end: 291597
+11-11 18:34:23.729 17631 17631 I boot_progress_pms_ready: 291795
+11-11 18:34:25.287 17631 17631 I am_crash: [17631,0,system_server,-1,java.lang.IllegalArgumentException,Unknown operation string: MIUI:10008,AppOpsManager.java,9374,0]
+11-11 18:34:26.808 18072 18072 I boot_progress_start: 294874
+11-11 18:34:28.021 18072 18072 I boot_progress_preload_start: 296087
+11-11 18:34:31.191 18072 18072 I boot_progress_preload_end: 299258
+11-11 18:34:31.446 18155 18155 I boot_progress_system_run: 299512
+=== main log: last 40 non-auditd ===
+11-11 18:34:32.577  1966  1975 D BootAnimation: Playing files = /system/media/bootanimation.zip/part1, Requested repeat = 0, playUntilComplete = false
+11-11 18:34:32.578  1966  1975 D BootAnimation: resolution:1220x2712 orientation=ROTATION_0 layerStack:0
+11-11 18:34:32.603 18155 18155 D PackageManager: No files in app dir /apex/com.android.vndk.v31/overlay
+11-11 18:34:32.603 18155 18155 D PackageManager: No files in app dir /apex/com.google.android.widevine/overlay
+11-11 18:34:32.603 18155 18155 D PackageManager: No files in app dir /apex/com.android.vndk.v33/overlay
+11-11 18:34:32.603 18155 18155 D PackageManager: No files in app dir /apex/com.android.compos/overlay
+11-11 18:34:32.603 18155 18155 D PackageManager: No files in app dir /apex/com.android.vndk.v34/overlay
+11-11 18:34:32.603 18155 18155 D PackageManager: No files in app dir /vgc/overlay
+11-11 18:34:32.603 18155 18155 D PackageManager: No files in app dir /system_ext/overlay
+11-11 18:34:32.608 18155 18155 D PackageManager: No files in app dir /oem/overlay
+11-11 18:34:32.608 18155 18155 D PackageManager: No files in app dir /odm/overlay
+11-11 18:34:32.609 18155 18261 I system_server: AssetManager2(0xb4000077bae6ccd8) locale list changing from [] to [zh-CN]
+11-11 18:34:32.610 18155 18155 D PackageManager: No files in app dir /system/dyn/overlay
+11-11 18:34:32.611  1966  1975 D BootAnimation: Playing files = /system/media/bootanimation.zip/part1, Requested repeat = 0, playUntilComplete = false
+11-11 18:34:32.612  1966  1975 D BootAnimation: resolution:1220x2712 orientation=ROTATION_0 layerStack:0
+11-11 18:34:32.616 18155 18155 D PackageManager: No files in app dir /system/dyn/priv-app
+11-11 18:34:32.616 18155 18155 D PackageManager: No files in app dir /system/dyn/app
+11-11 18:34:32.638  1792  1881 I HidlServiceManagement: getService: Trying again for android.frameworks.sensorservice@1.0::ISensorManager/default...
+11-11 18:34:32.638  1792  1881 W HidlServiceManagement: Waiting one second for android.frameworks.sensorservice@1.0::ISensorManager/default
+11-11 18:34:32.639   492 18265 W libc    : Unable to set property "ctl.interface_start" to "android.frameworks.sensorservice@1.0::ISensorManager/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+11-11 18:34:32.646  1966  1975 D BootAnimation: Playing files = /system/media/bootanimation.zip/part1, Requested repeat = 0, playUntilComplete = false
+11-11 18:34:32.647  1966  1975 D BootAnimation: resolution:1220x2712 orientation=ROTATION_0 layerStack:0
+11-11 18:34:32.650  1771 18060 W ServiceManagerCppClient: Waited one second for android.frameworks.sensorservice.ISensorManager/default (is service started? Number of threads started in the threadpool: 6. Are binder threads started and available?)
+11-11 18:34:32.652   491 18266 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.frameworks.sensorservice.ISensorManager/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+11-11 18:34:32.680  1966  1975 D BootAnimation: Playing files = /system/media/bootanimation.zip/part1, Requested repeat = 0, playUntilComplete = false
+11-11 18:34:32.681  1966  1975 D BootAnimation: resolution:1220x2712 orientation=ROTATION_0 layerStack:0
+11-11 18:34:32.714  1966  1975 D BootAnimation: Playing files = /system/media/bootanimation.zip/part1, Requested repeat = 0, playUntilComplete = false
+11-11 18:34:32.715  1966  1975 D BootAnimation: resolution:1220x2712 orientation=ROTATION_0 layerStack:0
+11-11 18:34:32.722 18155 18155 D PackageManager: No files in app dir /odm/priv-app
+11-11 18:34:32.723 18155 18155 D PackageManager: No files in app dir /oem/app
+11-11 18:34:32.749  1966  1975 D BootAnimation: Playing files = /system/media/bootanimation.zip/part1, Requested repeat = 0, playUntilComplete = false
+11-11 18:34:32.750  1966  1975 D BootAnimation: resolution:1220x2712 orientation=ROTATION_0 layerStack:0
+11-11 18:34:32.756 18155 18155 D PackageManager: No files in app dir /vgc/priv-app
+11-11 18:34:32.756 18155 18155 D PackageManager: No files in app dir /vgc/app
+11-11 18:34:32.756 18155 18155 D PackageManager: No files in app dir /apex/com.android.i18n/priv-app
+11-11 18:34:32.756 18155 18155 D PackageManager: No files in app dir /apex/com.android.i18n/app
+11-11 18:34:32.758 18155 18155 D PackageManager: No files in app dir /apex/com.android.uprobestats/priv-app
+11-11 18:34:32.758 18155 18155 D PackageManager: No files in app dir /apex/com.android.uprobestats/app
+11-11 18:34:32.758 18155 18155 D PackageManager: No files in app dir /apex/com.android.vndk.v34/priv-app
+11-11 18:34:32.758 18155 18155 D PackageManager: No files in app dir /apex/com.android.vndk.v34/app
+=== crash buffer ===
+11-11 18:34:25.284 17631 17631 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.initializeUidStates(AppOpsService.java:1377)
+11-11 18:34:25.284 17631 17631 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.systemReady(AppOpsService.java:1243)
+11-11 18:34:25.284 17631 17631 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.systemReady(ActivityManagerService.java:10399)
+11-11 18:34:25.284 17631 17631 E AndroidRuntime: 	at com.android.server.SystemServer.startOtherServices(SystemServer.java:3551)
+11-11 18:34:25.284 17631 17631 E AndroidRuntime: 	at com.android.server.SystemServer.run(SystemServer.java:1134)
+11-11 18:34:25.284 17631 17631 E AndroidRuntime: 	at com.android.server.SystemServer.main(SystemServer.java:744)
+11-11 18:34:25.284 17631 17631 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+11-11 18:34:25.284 17631 17631 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:675)
+11-11 18:34:25.284 17631 17631 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:980)
+11-11 18:34:31.089 18072 18072 I meow_lib: mtk-brm-commit-id:9d1b0623a6f41711fe139a6f79cd3baeb9ea843a
+11-11 18:34:31.089 18072 18072 I meow_lib: mtk-brm-change-id:I8f1714af0c8f09e69f657b1cd28e5836cb35e02f
+11-11 18:34:31.089 18072 18072 I meow_lib: mtk-brm-merge-id:none
+11-11 18:34:31.125 18072 18072 I libMEOW_gift: mtk-brm-commit-id:baddce1afc7f505d669af7d6f39eac4d950348d3
+11-11 18:34:31.125 18072 18072 I libMEOW_gift: mtk-brm-change-id:Iefbd3d0ed7e413bb0602db9f0bc751032ab085cd
+11-11 18:34:31.125 18072 18072 I libMEOW_gift: mtk-brm-merge-id:none
+DONE

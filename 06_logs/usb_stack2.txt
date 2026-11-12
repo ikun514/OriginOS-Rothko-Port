@@ -1,0 +1,153 @@
+﻿===== tombstones: process/abort =====
+--- tombstone_00
+Cmdline: com.vivo.gallery
+pid: 7965, tid: 14644, name: VG_CheckColumnE  >>> com.vivo.gallery <<<
+backtrace:
+      #00 pc 00000000000bd6bc  /apex/com.android.runtime/lib64/bionic/libc.so (abort+156) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #01 pc 00000000000be5b0  /apex/com.android.runtime/lib64/bionic/libc.so ((anonymous namespace)::AtexitArray::set_writable(bool, unsigned long, unsigned long)+240) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #02 pc 00000000000be254  /apex/com.android.runtime/lib64/bionic/libc.so (__cxa_finalize+164) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #03 pc 00000000000c3294  /apex/com.android.runtime/lib64/bionic/libc.so (exit+36) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+Cmdline: com.vivo.gallery
+pid: 7965, tid: 7965, name: om.vivo.gallery  >>> com.vivo.gallery <<<
+backtrace:
+      #00 pc 00000000000e511c  /apex/com.android.runtime/lib64/bionic/libc.so (syscall+28) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #01 pc 0000000000200968  /apex/com.android.art/lib64/libart.so (art::futex(int volatile*, int, int, timespec const*, int volatile*, int, int) (.__uniq.55395457626730424248235132913560037531.llvm.13353553205014699122)+56) (BuildId: 9fcf5ae9295533ece4d07e9a1210f9d0)
+--- tombstone_01
+Cmdline: com.vivo.gallery
+pid: 19707, tid: 25491, name: VG_CheckColumnE  >>> com.vivo.gallery <<<
+Abort message: 'mprotect failed on atexit array: Out of memory'
+backtrace:
+      #00 pc 00000000000bd6bc  /apex/com.android.runtime/lib64/bionic/libc.so (abort+156) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #01 pc 00000000000be5b0  /apex/com.android.runtime/lib64/bionic/libc.so ((anonymous namespace)::AtexitArray::set_writable(bool, unsigned long, unsigned long)+240) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #02 pc 00000000000be254  /apex/com.android.runtime/lib64/bionic/libc.so (__cxa_finalize+164) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #03 pc 00000000000c3294  /apex/com.android.runtime/lib64/bionic/libc.so (exit+36) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+Cmdline: com.vivo.gallery
+pid: 19707, tid: 19707, name: om.vivo.gallery  >>> com.vivo.gallery <<<
+backtrace:
+      #00 pc 00000000000e511c  /apex/com.android.runtime/lib64/bionic/libc.so (syscall+28) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+--- tombstone_02
+Cmdline: com.vivo.gallery
+pid: 9063, tid: 18283, name: VG_CheckColumnE  >>> com.vivo.gallery <<<
+backtrace:
+      #00 pc 00000000000bd6bc  /apex/com.android.runtime/lib64/bionic/libc.so (abort+156) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #01 pc 00000000000ce298  /apex/com.android.runtime/lib64/bionic/libc.so (__init_additional_stacks(pthread_internal_t*)+392) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #02 pc 00000000000cec70  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+160) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #03 pc 00000000000c10e0  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+64) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+Cmdline: com.vivo.gallery
+pid: 9063, tid: 9063, name: om.vivo.gallery  >>> com.vivo.gallery <<<
+backtrace:
+      #00 pc 000000000012b088  /apex/com.android.runtime/lib64/bionic/libc.so (__epoll_pwait+8) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #01 pc 00000000000169c0  /system/lib64/libutils.so (android::Looper::pollOnce(int, int*, int*, void**)+288) (BuildId: 5a09057affc2ca6a1fa85957a85f369c)
+--- tombstone_03
+Cmdline: /system/bin/init second_stage
+pid: 1318, tid: 1318, name: init  >>> /system/bin/init <<<
+backtrace:
+      #00 pc 00000000000bd6bc  /system/lib64/bootstrap/libc.so (abort+156) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #01 pc 0000000000014adc  /system/lib64/libbase.so (android::base::DefaultAborter(char const*)+12) (BuildId: a8a5fbe66ccc21182b783470c3efee1d)
+      #02 pc 0000000000016a10  /system/lib64/libbase.so (android::base::SetAborter(std::__1::function<void (char const*)>&&)::$_0::__invoke(char const*)+80) (BuildId: a8a5fbe66ccc21182b783470c3efee1d)
+      #03 pc 0000000000015f4c  /system/lib64/libbase.so (android::base::LogMessage::~LogMessage()+540) (BuildId: a8a5fbe66ccc21182b783470c3efee1d)
+--- tombstone_04
+Cmdline: com.vivo.gallery
+pid: 9544, tid: 14891, name: VG_CheckColumnE  >>> com.vivo.gallery <<<
+Abort message: 'shadow stack read-write mprotect(0x5667144000, 16384) failed: Out of memory'
+backtrace:
+      #00 pc 00000000000bd6bc  /apex/com.android.runtime/lib64/bionic/libc.so (abort+156) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #01 pc 00000000000be5b0  /apex/com.android.runtime/lib64/bionic/libc.so ((anonymous namespace)::AtexitArray::set_writable(bool, unsigned long, unsigned long)+240) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #02 pc 00000000000be254  /apex/com.android.runtime/lib64/bionic/libc.so (__cxa_finalize+164) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #03 pc 00000000000c3294  /apex/com.android.runtime/lib64/bionic/libc.so (exit+36) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+Cmdline: com.vivo.gallery
+pid: 9544, tid: 9544, name: om.vivo.gallery  >>> com.vivo.gallery <<<
+backtrace:
+      #00 pc 000000000012b088  /apex/com.android.runtime/lib64/bionic/libc.so (__epoll_pwait+8) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+--- tombstone_05
+Cmdline: com.vivo.gallery
+pid: 20162, tid: 10106, name: VG_CheckColumnE  >>> com.vivo.gallery <<<
+Abort message: 'shadow stack read-write mprotect(0x55f5144000, 16384) failed: Out of memory'
+backtrace:
+      #00 pc 00000000000bd6bc  /apex/com.android.runtime/lib64/bionic/libc.so (abort+156) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #01 pc 00000000000ce298  /apex/com.android.runtime/lib64/bionic/libc.so (__init_additional_stacks(pthread_internal_t*)+392) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #02 pc 00000000000cec70  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+160) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #03 pc 00000000000c10e0  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+64) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+Cmdline: com.vivo.gallery
+pid: 20162, tid: 379, name: VG_CheckColumnE  >>> com.vivo.gallery <<<
+backtrace:
+      #00 pc 00000000000e511c  /apex/com.android.runtime/lib64/bionic/libc.so (syscall+28) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+--- tombstone_06
+Cmdline: com.vivo.gallery.aiservice
+pid: 21186, tid: 12058, name: VG_CheckColumnE  >>> com.vivo.gallery.aiservice <<<
+Abort message: 'shadow stack read-write mprotect(0x55ed84c000, 16384) failed: Out of memory'
+backtrace:
+      #00 pc 00000000000bd6bc  /apex/com.android.runtime/lib64/bionic/libc.so (abort+156) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #01 pc 00000000000ce298  /apex/com.android.runtime/lib64/bionic/libc.so (__init_additional_stacks(pthread_internal_t*)+392) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #02 pc 00000000000cec70  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+160) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #03 pc 00000000000c10e0  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+64) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+Cmdline: com.vivo.gallery.aiservice
+pid: 21186, tid: 300, name: VG_CheckColumnE  >>> com.vivo.gallery.aiservice <<<
+backtrace:
+      #00 pc 00000000000e511c  /apex/com.android.runtime/lib64/bionic/libc.so (syscall+28) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+--- tombstone_07
+Cmdline: com.vivo.gallery
+pid: 21257, tid: 32326, name: VG_CheckColumnE  >>> com.vivo.gallery <<<
+Abort message: 'mprotect failed on atexit array: Out of memory'
+backtrace:
+      #00 pc 00000000000bd6bc  /apex/com.android.runtime/lib64/bionic/libc.so (abort+156) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #01 pc 00000000000be5b0  /apex/com.android.runtime/lib64/bionic/libc.so ((anonymous namespace)::AtexitArray::set_writable(bool, unsigned long, unsigned long)+240) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #02 pc 00000000000be254  /apex/com.android.runtime/lib64/bionic/libc.so (__cxa_finalize+164) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+      #03 pc 00000000000c3294  /apex/com.android.runtime/lib64/bionic/libc.so (exit+36) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+Cmdline: com.vivo.gallery
+pid: 21257, tid: 399, name: VG_CheckColumnE  >>> com.vivo.gallery <<<
+backtrace:
+      #00 pc 00000000000e511c  /apex/com.android.runtime/lib64/bionic/libc.so (syscall+28) (BuildId: 6cf4c89ac6bab286683aa0aac9bd92a0)
+
+===== system usb related binaries (flashed system_a) =====
+mount rc=0
+-rwxr-xr-x 1 root shell u:object_r:system_file:s0  2365472 1970-01-01 08:00 /mnt/s/system/bin/vusbd
+vendor.factory.hardware.vivoatcmd-service
+vendor.vivo.hardware.camera.cameralog@1.0-service
+vendor.vivo.hardware.nativecamera.provider@1.0-service
+--- vivo usbd.rc ---
+service usbd /system/bin/usbd
+    class late_start
+    oneshot
+    user root
+    group root usb system
+--- vusbd references in init rc ---
+/mnt/s/system/etc/init/hw/init.usb.configfs.rc:37:    setprop sys.usb.config vusbd
+/mnt/s/system/etc/init/hw/init.usb.rc:23:service vusbd /system/bin/vusbd --root_seclabel=u:r:su:s0
+
+===== vendor usb HAL (flashed vendor_a) =====
+mount rc=0
+android.hardware.usb-aidl-service.mediatekv1.0
+android.hardware.usb.gadget-aidl-service.mediatekv1.0
+--- vendor rc usb service ---
+1:import /system_ext/etc/init/hw/init.usb.rc
+6:    setprop vendor.usb.vid "0x2717"
+7:    mkdir /dev/usb-ffs 0775 shell shell
+8:    mkdir /dev/usb-ffs/adb 0770 shell shell
+9:    mkdir /config/usb_gadget/g1 0770 shell shell
+10:    write /config/usb_gadget/g1/idVendor ${vendor.usb.vid}
+11:    write /config/usb_gadget/g1/bcdDevice 0x0223
+12:    write /config/usb_gadget/g1/bcdUSB 0x0200
+13:    write /config/usb_gadget/g1/os_desc/use 1
+14:    mkdir /config/usb_gadget/g1/strings/0x409 0770
+15:    write /config/usb_gadget/g1/strings/0x409/serialnumber ${ro.serialno}
+16:    write /config/usb_gadget/g1/strings/0x409/manufacturer ${ro.product.manufacturer}
+17:    write /config/usb_gadget/g1/strings/0x409/product ${ro.product.model}
+18:    mkdir /config/usb_gadget/g1/functions/accessory.gs2
+19:    mkdir /config/usb_gadget/g1/functions/audio_source.gs3
+20:    mkdir /config/usb_gadget/g1/functions/ffs.adb
+21:    mkdir /config/usb_gadget/g1/functions/ffs.mtp
+22:    write /config/usb_gadget/g1/functions/ffs.mtp/os_desc/interface.MTP/compatible_id "MTP"
+23:    mkdir /config/usb_gadget/g1/functions/ffs.ptp
+24:    mkdir /config/usb_gadget/g1/functions/mtk_rndis.gs4
+25:    mkdir /config/usb_gadget/g1/functions/midi.gs5
+26:    mkdir /config/usb_gadget/g1/functions/ncm.gs6
+27:    mkdir /config/usb_gadget/g1/functions/acm.gs0
+28:    mkdir /config/usb_gadget/g1/functions/acm.gs1
+29:    mkdir /config/usb_gadget/g1/functions/acm.gs2
+30:    mkdir /config/usb_gadget/g1/functions/acm.gs3
+31:    mkdir /config/usb_gadget/g1/functions/mass_storage.usb0
+32:    mkdir /config/usb_gadget/g1/functions/hid.gs0
+33:    mkdir /config/usb_gadget/g1/configs/b.1 0770 shell shell
+34:    mkdir /config/usb_gadget/g1/configs/b.1/strings/0x409 0770 shell shell
+DONE
