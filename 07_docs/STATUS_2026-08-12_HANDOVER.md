@@ -400,3 +400,11 @@ overlay list                    -> Devices overlays [x]
 ### 交付（体验包，G 盘）
 - G:\OriginOS_Work\release\OriginOS6_rothko_v28_experience\（含 flash_all.bat + tools\adb.exe/fastboot.exe + images\super_v28.img/vendor_boot_patched.img + SHA256SUMS.txt + README）
 - G:\OriginOS_Work\release\OriginOS6_rothko_v28_experience.zip（同内容压缩包，可直接分享）
+
+### 体验包（G 盘，2026-08-12 12:50）
+- 目录: G:\OriginOS_Work\release\OriginOS6_rothko_v28_experience\
+- 压缩包: G:\OriginOS_Work\release\OriginOS6_rothko_v28_experience.zip (9.07 GB)
+- SHA256: 9D4BBE9B9A3DD97732EC37C2C3032A7DA087179AFC0D2E917579DC1DB9CAEAF2
+- 内容: flash_all.bat、tools\adb.exe/fastboot.exe/AdbWinApi.dll/AdbWinUsbApi.dll、images\super_v28.img、images\vendor_boot_patched.img、SHA256SUMS.txt、README-experience.txt、分享说明.txt
+- flash_all.bat 流程: 校验 fastboot -> 刷 vendor_boot -> 刷 super -> 可选 fastboot -w -> 重启 -> adb wait-for-device -> 自动开 USB 调试 + sm mount emulated;0
+- GitHub 仓库同步: commit 76a4c41（含体验包制作脚本与说明）
